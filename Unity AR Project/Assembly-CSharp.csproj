@@ -62,10 +62,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AR\BasicLightEstimation.cs" />
     <Compile Include="Assets\Scripts\ARInput.cs" />
-    <Compile Include="Assets\Scripts\UIManager.cs" />
-    <Compile Include="Assets\Scripts\UIPanel.cs" />
-    <Compile Include="Assets\Scripts\UIPanelValues.cs" />
+    <Compile Include="Assets\Scripts\BoardController.cs" />
+    <Compile Include="Assets\Scripts\InteractableObject.cs" />
+    <Compile Include="Assets\Scripts\InteractableObjectARButton.cs" />
+    <Compile Include="Assets\Scripts\OldUI\UIManager.cs" />
+    <Compile Include="Assets\Scripts\OldUI\UIPanel.cs" />
+    <Compile Include="Assets\Scripts\OldUI\UIPanelValues.cs" />
+    <Compile Include="Assets\Scripts\PlaceController.cs" />
+    <Compile Include="Assets\Scripts\VillageController.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -243,6 +249,9 @@
     <Reference Include="UnityEditor">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.9f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>E:/__University__/1288 Games Design and Development/Game Project/Git Repo/GDDARProject/Unity AR Project/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>E:/__University__/1288 Games Design and Development/Game Project/Git Repo/GDDARProject/Unity AR Project/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
@@ -251,9 +260,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>E:/__University__/1288 Games Design and Development/Game Project/Git Repo/GDDARProject/Unity AR Project/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>E:/__University__/1288 Games Design and Development/Game Project/Git Repo/GDDARProject/Unity AR Project/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.9f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.UI;
 
 
 [RequireComponent(typeof(ARRaycastManager))]
@@ -15,6 +16,10 @@ public class ARInput : MonoBehaviour
 
     static List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
 
+    [Header("Debug Mode")]
+    public bool spawnMoveState = true;
+    public Text modeDebugText;
+
 
     private void Awake()
     {
@@ -26,16 +31,32 @@ public class ARInput : MonoBehaviour
         if (Input.touchCount > 0)
         {
             touchPos = Input.GetTouch(0).position;
-            Debug.Log("Inside: True");
+            Debug.Log("Inside: True Touch");
             return true;
         }
 
         touchPos = default;
-        Debug.Log("Inside: False");
+        //Debug.Log("Inside: False");
         return false;
     }
 
     private void Update()
+    {
+        //Check the current state of interaction
+        if (spawnMoveState)
+        {
+            SpawnOrMove();
+            modeDebugText.text = "Input Mode : Spawning";
+        }
+        else
+        {
+            Interact();
+            modeDebugText.text = "Input Mode : Interacting";
+        }
+
+    }
+
+    void SpawnOrMove()
     {
         if (!TryGetTouchPosition(out Vector2 touchPos))
         {
@@ -45,13 +66,14 @@ public class ARInput : MonoBehaviour
         if (raycastManager.Raycast(touchPos, s_Hits, TrackableType.PlaneWithinPolygon))
         {
             var hitPos = s_Hits[0].pose;
-            //if (spawnedObject == null)
-            //{
-            //    spawnedObject = Instantiate(placeableObject, hitPos.position, hitPos.rotation);
-            //    Debug.Log("Inside: Instantiate");
-            //}
-            //else
-            //{
+            if (spawnedObject == null)
+            {
+                spawnedObject = Instantiate(placeableObject, hitPos.position, hitPos.rotation);
+                Debug.Log("Inside: Instantiate");
+                spawnMoveState = false;
+            }
+            else
+
             placeableObject.transform.position = hitPos.position;
             placeableObject.transform.rotation = hitPos.rotation;
             Debug.Log("Inside: Move");
@@ -59,6 +81,27 @@ public class ARInput : MonoBehaviour
             if (!placeableObject.activeSelf)
             {
                 placeableObject.SetActive(true);
+            }
+        }
+    }
+
+    void Interact()
+    {
+        for (var i = 0; i < Input.touchCount; ++i)
+        {
+            if (Input.GetTouch(i).phase == TouchPhase.Began)
+            {
+                RaycastHit hit = new RaycastHit();
+                Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
+                // Create a particle if hit
+                if (Physics.Raycast(ray, out hit))
+                {
+                    if (hit.collider.gameObject.tag == "InteractableObject")
+                    {
+                        Debug.Log("Interactable Object Hit : " + hit.collider.gameObject.name);
+                        hit.collider.gameObject.GetComponent<InteracbleObject>().Interact();
+                    }
+                }         
             }
         }
     }

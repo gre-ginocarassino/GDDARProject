@@ -247,6 +247,9 @@
     <Reference Include="UnityEditor">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.9f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>E:/__University__/1288 Games Design and Development/Game Project/Git Repo/GDDARProject/Unity AR Project/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>E:/__University__/1288 Games Design and Development/Game Project/Git Repo/GDDARProject/Unity AR Project/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
@@ -255,9 +258,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>E:/__University__/1288 Games Design and Development/Game Project/Git Repo/GDDARProject/Unity AR Project/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>E:/__University__/1288 Games Design and Development/Game Project/Git Repo/GDDARProject/Unity AR Project/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.9f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
