@@ -91,6 +91,7 @@ public class ARInput : MonoBehaviour
         {
             if (Input.GetTouch(i).phase == TouchPhase.Began)
             {
+                Debug.Log("In");
                 RaycastHit hit = new RaycastHit();
                 Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
                 // Create a particle if hit

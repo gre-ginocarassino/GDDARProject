@@ -27,6 +27,8 @@ public class VillageController : PlaceController
 
     public override void LoadPlace()
     {
+        base.LoadPlace();
+
         StartCoroutine(VillageGrower());
     }
 
@@ -54,6 +56,8 @@ public class VillageController : PlaceController
 
     public override void ShrinkPlace()
     {
+        base.ShrinkPlace();
+
         StartCoroutine(VillageShrinker());
     }
 
@@ -64,7 +68,7 @@ public class VillageController : PlaceController
         //check to see which village sections are unlocked
         for (int v = 0; v < villageParts.Length; v++)
         {
-            villageParts[v].transform.DOScaleY(1, 1);
+            villageParts[v].transform.DOScaleY(0, 1);
         }
 
         //yield return new WaitForSeconds(1);

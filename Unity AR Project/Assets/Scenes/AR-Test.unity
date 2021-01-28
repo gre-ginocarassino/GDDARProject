@@ -687,6 +687,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PlanePrefab: {fileID: 1775711860436721056, guid: e12877b5a7e0e044aaf74454f8c335e1,
     type: 3}
+  planeMaterials:
+  - {fileID: 0}
+  - {fileID: 0}
   m_DetectionMode: 1
 --- !u!114 &1609810546
 MonoBehaviour:
@@ -740,7 +743,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30c213106669184697f6e87b5b4d56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placeableObject: {fileID: 81523429012286144, guid: 062a103827faeb044bb65d2864bb01e6,
-    type: 3}
+  placeableObject: {fileID: 0}
   spawnMoveState: 1
   modeDebugText: {fileID: 980121060}
