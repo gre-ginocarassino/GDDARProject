@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\OldUI\UIPanel.cs" />
      <Compile Include="Assets\Scripts\OldUI\UIPanelValues.cs" />
      <Compile Include="Assets\Scripts\PlaceController.cs" />
+     <Compile Include="Assets\Scripts\PlayFab Scripts\PlayFabLogin.cs" />
      <Compile Include="Assets\Scripts\VillageController.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -692,13 +693,13 @@
       <Project>{9F7EB5A9-1512-6253-6254-504EBC711635}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
-    <ProjectReference Include="PlayFabEditorExtensions.csproj">
-      <Project>{07D6EFD8-0CA1-63B2-0592-0F0E6659C053}</Project>
-      <Name>PlayFabEditorExtensions</Name>
-    </ProjectReference>
     <ProjectReference Include="PlayFab.csproj">
       <Project>{CD2639A9-9411-9B25-618A-6D52F5C7CC45}</Project>
       <Name>PlayFab</Name>
+    </ProjectReference>
+    <ProjectReference Include="PlayFabEditorExtensions.csproj">
+      <Project>{07D6EFD8-0CA1-63B2-0592-0F0E6659C053}</Project>
+      <Name>PlayFabEditorExtensions</Name>
     </ProjectReference>
     <ProjectReference Include="PlayFabSDKEditor.csproj">
       <Project>{1D5E1342-945F-5F4F-FEEE-C87287BA7A31}</Project>

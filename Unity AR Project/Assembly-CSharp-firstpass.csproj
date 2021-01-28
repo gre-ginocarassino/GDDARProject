@@ -686,13 +686,13 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="PlayFabEditorExtensions.csproj">
-      <Project>{07D6EFD8-0CA1-63B2-0592-0F0E6659C053}</Project>
-      <Name>PlayFabEditorExtensions</Name>
-    </ProjectReference>
     <ProjectReference Include="PlayFab.csproj">
       <Project>{CD2639A9-9411-9B25-618A-6D52F5C7CC45}</Project>
       <Name>PlayFab</Name>
+    </ProjectReference>
+    <ProjectReference Include="PlayFabEditorExtensions.csproj">
+      <Project>{07D6EFD8-0CA1-63B2-0592-0F0E6659C053}</Project>
+      <Name>PlayFabEditorExtensions</Name>
     </ProjectReference>
     <ProjectReference Include="PlayFabSDKEditor.csproj">
       <Project>{1D5E1342-945F-5F4F-FEEE-C87287BA7A31}</Project>
