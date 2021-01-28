@@ -26,18 +26,19 @@ public class PlaceController : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
-        
+
     }
 
     public virtual void LoadPlace()
     {
-        boardController.activeSection = this;
+        //boardController.activeSection = this;
 
         if (baseSections == null)
         {
             baseSections = Instantiate(baseSectionsPrefabs, transform);
         }
 
+        //Make the place grow
         baseSections.transform.DOScaleY(1, 1);
     }
 
