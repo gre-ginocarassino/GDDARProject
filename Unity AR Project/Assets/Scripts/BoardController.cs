@@ -7,7 +7,6 @@ using UnityEngine.XR.ARFoundation;
 public class BoardController : MonoBehaviour
 {
     public PlaceController activeSection;
-    public ARPlaneManager arPlane;
     //TODO: Prefabs -> Asset Bundles
 
     [Header("Loaded GameObjects")]
@@ -17,7 +16,7 @@ public class BoardController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        arPlane.planePrefab.gameObject.GetComponent<MeshRenderer>().material = arPlane.planeMaterials[1];
+        //arPlane.planePrefab.gameObject.GetComponent<MeshRenderer>().material = arPlane.planeMaterials[1];
     }
 
     // Update is called once per frame
