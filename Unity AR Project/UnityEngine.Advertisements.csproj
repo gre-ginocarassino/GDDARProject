@@ -5,9 +5,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D6E266C6-3D1F-28C8-9FEB-2A01E44DBF77}</ProjectGuid>
+    <ProjectGuid>{FAD5181A-2F1E-8CC2-6012-6250E1C07FAC}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Unity.Analytics.DataPrivacy</AssemblyName>
+    <AssemblyName>UnityEngine.Advertisements</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -47,11 +47,11 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Managed/UnityEngine/UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.9f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -610,9 +610,47 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Packages\com.unity.analytics\DataPrivacy\AssemblyInfo.cs" />
-    <Compile Include="Packages\com.unity.analytics\DataPrivacy\DataPrivacy.cs" />
-    <Compile Include="Packages\com.unity.analytics\DataPrivacy\DataPrivacyButton.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Advertisement.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\AssemblyInfo.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Banner.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\BannerLoadOptions.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\BannerOptions.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Configuration.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Enums\BannerPosition.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Enums\PlacementState.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Enums\ShowResult.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Events\FinishEventArgs.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Events\StartEventArgs.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\IBanner.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\INativeBanner.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\IUnityAdsListener.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\MetaData.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Platform\Android\AndroidBanner.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Platform\Android\AndroidPlatform.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Platform\Android\BannerBundle.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Platform\Editor\BannerPlaceholder.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Platform\Editor\EditorBanner.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Platform\Editor\EditorPlatform.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Platform\Editor\Placeholder.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Platform\INativePlatform.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Platform\IPlatform.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Platform\Platform.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Platform\Unsupported\UnsupportedBanner.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Platform\Unsupported\UnsupportedPlatform.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Platform\iOS\IosBanner.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Platform\iOS\IosPlatform.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Purchasing\IPurchase.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Purchasing\IPurchasingEventSender.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Purchasing\Purchase.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Purchasing\Purchasing.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Purchasing\PurchasingPlatform.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\ShowOptions.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Utilities\ApplicationQuit.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Utilities\Color.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Utilities\CoroutineExecutor.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Utilities\IUnityLifecycleManager.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Utilities\MiniJSON.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Advertisement\Utilities\UnityLifecycleManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PlayFabEditorExtensions\Editor\PlayFabEditorExtensions.asmdef" />

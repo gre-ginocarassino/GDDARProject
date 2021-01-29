@@ -5,9 +5,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D6E266C6-3D1F-28C8-9FEB-2A01E44DBF77}</ProjectGuid>
+    <ProjectGuid>{BBEBA545-3AE6-D857-D820-FEA751BB72E8}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Unity.Analytics.DataPrivacy</AssemblyName>
+    <AssemblyName>UnityEngine.Monetization</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -610,9 +610,48 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Packages\com.unity.analytics\DataPrivacy\AssemblyInfo.cs" />
-    <Compile Include="Packages\com.unity.analytics\DataPrivacy\DataPrivacy.cs" />
-    <Compile Include="Packages\com.unity.analytics\DataPrivacy\DataPrivacyButton.cs" />
+    <ProjectReference Include="UnityEngine.Advertisements.csproj">
+      <Project>{FAD5181A-2F1E-8CC2-6012-6250E1C07FAC}</Project>
+      <Name>UnityEngine.Advertisements</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\Analytics.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\AndroidAnalytics.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\AndroidJavaObjectExtensions.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\AndroidNativePromoAdapter.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\AndroidPlacementContentOperations.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\AssemblyInfo.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\Configuration.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\Creator.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\EditorNativePromoAdapter.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\EditorPlacementContentOperations.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\IMonetizationPlatform.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\INativePromoAdapter.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\IPlacementContentOperations.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\IPurchasingAdapter.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\IosAnalytics.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\IosNativePromoAdapter.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\IosPlacementContentOperations.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\JavaEnumUtilities.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\JavaMapUtilities.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\MetaData.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\MiniJSON.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\Monetization.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\MonetizationPlatform.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\Placeholder.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\PlacementContent.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\PlacementContentReadyEventArgs.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\PlacementContentState.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\PlacementContentStateChangeEventArgs.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\PlacementContentType.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\Product.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\PromoMetadata.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\PurchasingAdapterCallbacks.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\Store.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\TransactionError.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\UnityServicesErrorEventArgs.cs" />
+    <Compile Include="Packages\com.unity.ads\Runtime\Monetization\UnsupportedPlatform.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PlayFabEditorExtensions\Editor\PlayFabEditorExtensions.asmdef" />

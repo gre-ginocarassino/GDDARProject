@@ -5,9 +5,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D6E266C6-3D1F-28C8-9FEB-2A01E44DBF77}</ProjectGuid>
+    <ProjectGuid>{ED5A4B89-D54F-2EB2-5FDB-5EFDFD72CDD2}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Unity.Analytics.DataPrivacy</AssemblyName>
+    <AssemblyName>Unity.XR.ARCore</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -610,9 +610,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Packages\com.unity.analytics\DataPrivacy\AssemblyInfo.cs" />
-    <Compile Include="Packages\com.unity.analytics\DataPrivacy\DataPrivacy.cs" />
-    <Compile Include="Packages\com.unity.analytics\DataPrivacy\DataPrivacyButton.cs" />
+    <ProjectReference Include="Unity.XR.ARSubsystems.csproj">
+      <Project>{5C4B56E0-C4A7-2098-2B16-041850FBE6CB}</Project>
+      <Name>Unity.XR.ARSubsystems</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Management.csproj">
+      <Project>{61EF8CBA-9111-4BC4-D310-70E79B91C531}</Project>
+      <Name>Unity.XR.Management</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Packages\com.unity.xr.arcore\Runtime\ARCoreCameraSubsystem.cs" />
+    <Compile Include="Packages\com.unity.xr.arcore\Runtime\ARCoreFaceRegion.cs" />
+    <Compile Include="Packages\com.unity.xr.arcore\Runtime\ARCoreFaceRegionData.cs" />
+    <Compile Include="Packages\com.unity.xr.arcore\Runtime\ARCoreFaceSubsystem.cs" />
+    <Compile Include="Packages\com.unity.xr.arcore\Runtime\ARCoreImageTrackingProvider.cs" />
+    <Compile Include="Packages\com.unity.xr.arcore\Runtime\ARCoreLoader.cs" />
+    <Compile Include="Packages\com.unity.xr.arcore\Runtime\ARCoreLoaderConstants.cs" />
+    <Compile Include="Packages\com.unity.xr.arcore\Runtime\ARCoreLoaderSettings.cs" />
+    <Compile Include="Packages\com.unity.xr.arcore\Runtime\ARCorePermissionManager.cs" />
+    <Compile Include="Packages\com.unity.xr.arcore\Runtime\ARCorePlaneProvider.cs" />
+    <Compile Include="Packages\com.unity.xr.arcore\Runtime\ARCorePromise.cs" />
+    <Compile Include="Packages\com.unity.xr.arcore\Runtime\ARCoreRaycastSubsystem.cs" />
+    <Compile Include="Packages\com.unity.xr.arcore\Runtime\ARCoreReferencePointSubsystem.cs" />
+    <Compile Include="Packages\com.unity.xr.arcore\Runtime\ARCoreSessionSubsystem.cs" />
+    <Compile Include="Packages\com.unity.xr.arcore\Runtime\ArPrestoApi.cs" />
+    <Compile Include="Packages\com.unity.xr.arcore\Runtime\Assembly.cs" />
+    <Compile Include="Packages\com.unity.xr.arcore\Runtime\Depth\ARCoreXRDepthSubsystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PlayFabEditorExtensions\Editor\PlayFabEditorExtensions.asmdef" />
