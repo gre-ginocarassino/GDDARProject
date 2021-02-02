@@ -5,12 +5,17 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Authentication.unity
     guid: 28711c3bb1b6cad4d9084b4a723c4247
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AR-Dan.unity
     guid: b45614617c4c3f049bf2495c399733e6
+  - enabled: 1
+    path: Assets/Scenes/crowdTest.unity
+    guid: 2d549788afd03d747a588ad51f8f7ee9
   m_configObjects:
     com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: 4c90d4353fd2c644a8b37a28d16d4072,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 178c4175ef741e5439e64bed15a52513,
       type: 2}
