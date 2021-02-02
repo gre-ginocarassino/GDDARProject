@@ -4,10 +4,12 @@ using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine.UI;
+using PlayFab.PfEditor.Json;
 
-
-public class PlayFabLogin : MonoBehaviour
+public class PlayFabController : MonoBehaviour
 {
+    public static PlayFabController PFC; //Singleton
+
     public GameObject loginPanel;
     public GameObject registerPanel;
     public GameObject addLoginPanel;
@@ -19,6 +21,22 @@ public class PlayFabLogin : MonoBehaviour
     private string userPassword;
     private string username;
 
+    private void OnEnable()
+    {
+        if (PlayFabController.PFC == null)
+        {
+            PlayFabController.PFC = this;
+        }
+        else
+        {
+            if (PlayFabController.PFC != this)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     public void Start()
     {
         //If the Title ID is null or empty, goes in here
@@ -26,10 +44,6 @@ public class PlayFabLogin : MonoBehaviour
         {
             PlayFabSettings.TitleId = "2B652";
         }
-
-        //test
-        //var request = new LoginWithCustomIDRequest { CustomId = "GettingStartedGuide", CreateAccount = true }; //request to log in
-        //PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnLoginFailure); //submit the request
 
         if (PlayerPrefs.HasKey("EMAIL"))
         {
@@ -40,14 +54,15 @@ public class PlayFabLogin : MonoBehaviour
         }
         else
         {
-#if UNITY_ANDROID
+            #if UNITY_ANDROID
             var requestAndroid = new LoginWithAndroidDeviceIDRequest { AndroidDeviceId = ReturnMobileID(), CreateAccount = true };
             PlayFabClientAPI.LoginWithAndroidDeviceID(requestAndroid, OnLoginAndroidSuccess, OnLoginAndroidFailure);
-#endif
+            #endif
         }
 
     }
 
+    #region LOGIN
     #region LOGIN ANDROID
     private static string ReturnMobileID()
     {
@@ -59,6 +74,8 @@ public class PlayFabLogin : MonoBehaviour
         Debug.Log("Congratulations, you made your first successful API call!");
 
         loginPanel.SetActive(false);
+
+        GetStatistics();
     }
     private void OnLoginAndroidFailure(PlayFabError error)
     {
@@ -73,6 +90,8 @@ public class PlayFabLogin : MonoBehaviour
         PlayerPrefs.SetString("PASSWORD", userPassword);
 
         addLoginPanel.SetActive(false);
+
+        GetStatistics();
     }
     #endregion
 
@@ -85,6 +104,8 @@ public class PlayFabLogin : MonoBehaviour
 
         loginPanel.SetActive(false);
         recoverButton.SetActive(false);
+
+        GetStatistics();
     }
 
     private void OnLoginFailure(PlayFabError error)
@@ -102,6 +123,8 @@ public class PlayFabLogin : MonoBehaviour
 
         loginPanel.SetActive(false);
         registerPanel.SetActive(false);
+
+        GetStatistics();
     }
 
     private void OnRegisterFailure(PlayFabError error)
@@ -110,7 +133,6 @@ public class PlayFabLogin : MonoBehaviour
         errorMessage.text = "ERROR: " + error.GenerateErrorReport();
     }
     #endregion
-
 
     #region GET
     public void getUserEmail(string p_email)
@@ -128,7 +150,6 @@ public class PlayFabLogin : MonoBehaviour
         username = p_username;
     }
     #endregion
-
 
     public void onClickLogin()
     {
@@ -154,4 +175,79 @@ public class PlayFabLogin : MonoBehaviour
     {
         addLoginPanel.SetActive(true);
     }
+    #endregion
+
+    #region PlayerStats
+    public int playerLevel;
+    public int playerPoints;
+
+    public void SetStats()
+    {
+        //sending POST request with UpdatePlayerStatistic function
+        PlayFabClientAPI.UpdatePlayerStatistics(new UpdatePlayerStatisticsRequest
+        {
+            // request.Statistics is a list, so multiple StatisticUpdate objects can be defined if required.
+            Statistics = new List<StatisticUpdate> {
+        new StatisticUpdate { StatisticName = "PlayerLevel", Value = playerLevel },
+    }
+        },
+        result => { Debug.Log("User statistics updated"); }, //callback for successful POST
+        error => { Debug.LogError(error.GenerateErrorReport()); }); //failed POST
+    }
+
+    void GetStatistics()
+    {
+        PlayFabClientAPI.GetPlayerStatistics(
+            new GetPlayerStatisticsRequest(),
+            OnGetStatistics,
+            error => Debug.LogError(error.GenerateErrorReport())
+        );
+    }
+
+    void OnGetStatistics(GetPlayerStatisticsResult result)
+    {
+        Debug.Log("Received the following Statistics:");
+        foreach (var eachStat in result.Statistics)
+        {
+            Debug.Log("Statistic (" + eachStat.StatisticName + "): " + eachStat.Value);
+            switch (eachStat.StatisticName)
+            {
+                case "PlayerLevel":
+                    playerLevel = eachStat.Value;
+                    break;
+                case "PlayerPoints":
+                    playerPoints = eachStat.Value;
+                    break;
+            }
+        }
+            
+    }
+    // Build the request object and access the API
+    public void StartCloudUpdatePlayerStats()
+    {
+        PlayFabClientAPI.ExecuteCloudScript(new ExecuteCloudScriptRequest()
+        {
+            FunctionName = "UpdatePlayerStats", // Arbitrary function name (must exist in your uploaded cloud.js file)
+            FunctionParameter = new { argsPlayerLevel = playerLevel, argsPlayerPoints = playerPoints }, // The parameter provided to your function
+            GeneratePlayStreamEvent = true, // Optional - Shows this event in PlayStream
+        }, OnCloudUpdateStats, OnErrorShared);
+    }
+    // OnCloudHelloWorld defined in the next code block
+
+    private static void OnCloudUpdateStats(ExecuteCloudScriptResult result)
+    {
+        // CloudScript returns arbitrary results, so you have to evaluate them one step and one parameter at a time
+        Debug.Log(JsonWrapper.SerializeObject(result.FunctionResult));
+        JsonObject jsonResult = (JsonObject)result.FunctionResult;
+        object messageValue;
+        jsonResult.TryGetValue("messageValue", out messageValue); // note how "messageValue" directly corresponds to the JSON values set in CloudScript
+        Debug.Log((string)messageValue);
+    }
+
+    private static void OnErrorShared(PlayFabError error)
+    {
+        Debug.Log(error.GenerateErrorReport());
+    }
+    #endregion
+
 }
