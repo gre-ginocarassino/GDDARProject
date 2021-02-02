@@ -71,7 +71,8 @@
     <Compile Include="Assets\Scripts\OldUI\UIPanel.cs" />
     <Compile Include="Assets\Scripts\OldUI\UIPanelValues.cs" />
     <Compile Include="Assets\Scripts\PlaceController.cs" />
-    <Compile Include="Assets\Scripts\PlayFab Scripts\PlayFabLogin.cs" />
+    <Compile Include="Assets\Scripts\PlayFab Scripts\PlayFabController.cs" />
+    <Compile Include="Assets\Scripts\SceneIndexes.cs" />
     <Compile Include="Assets\Scripts\VillageController.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
