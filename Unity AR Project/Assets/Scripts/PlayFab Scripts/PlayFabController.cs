@@ -124,7 +124,13 @@ public class PlayFabController : MonoBehaviour
         loginPanel.SetActive(false);
         registerPanel.SetActive(false);
 
+        PlayFabClientAPI.UpdateUserTitleDisplayName(new UpdateUserTitleDisplayNameRequest { DisplayName = username }, onDisplayName, OnLoginAndroidFailure); //set displayname as username
+
         GetStatistics();
+    }
+    void onDisplayName(UpdateUserTitleDisplayNameResult result)
+    {
+        Debug.Log(result.DisplayName + " is your new display name.");
     }
 
     private void OnRegisterFailure(PlayFabError error)
@@ -247,6 +253,45 @@ public class PlayFabController : MonoBehaviour
     private static void OnErrorShared(PlayFabError error)
     {
         Debug.Log(error.GenerateErrorReport());
+    }
+    #endregion
+
+    #region LeaderBoard
+    public GameObject leaderboardPanel;
+    public GameObject listingPrefab;
+    public Transform listingContainer;
+
+    public void getLeaderBoard()
+    {
+        var requestLeaderboard = new GetLeaderboardRequest { StartPosition = 0, StatisticName = "PlayerLevel", MaxResultsCount = 20 };
+        PlayFabClientAPI.GetLeaderboard(requestLeaderboard, onGetLeaderboard, onErrorLeaderboard);
+    }
+
+    void onGetLeaderboard(GetLeaderboardResult result)
+    {
+        leaderboardPanel.SetActive(true);
+
+        //loops through each player in the leaderbord
+        foreach (PlayerLeaderboardEntry player in result.Leaderboard)
+        {
+            GameObject tempListin = Instantiate(listingPrefab, listingContainer);
+            LeaderboardListing LL = tempListin.GetComponent<LeaderboardListing>();
+            LL.playerNameText.text = player.DisplayName;
+            LL.playerScoreText.text = player.StatValue.ToString();
+
+            Debug.Log(player.DisplayName + ": " + player.StatValue);
+        }
+    }
+    void onErrorLeaderboard(PlayFabError error)
+    { Debug.Log(error.GenerateErrorReport());  }
+
+    public void closeLeaderboardPanel()
+    {
+        leaderboardPanel.SetActive(false);
+        for (int i = listingContainer.childCount - 1; i >= 0; i--)
+        {
+            Destroy(listingContainer.GetChild(i).gameObject);
+        }
     }
     #endregion
 
