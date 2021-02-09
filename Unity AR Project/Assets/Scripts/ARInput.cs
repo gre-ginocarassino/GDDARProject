@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class ARInput : MonoBehaviour
 {
     private ARRaycastManager raycastManager;
+    private ARPlaneManager planeManager;
     private GameObject spawnedObject;
 
     public GameObject placeableObject;
@@ -24,6 +25,7 @@ public class ARInput : MonoBehaviour
     private void Awake()
     {
         raycastManager = GetComponent<ARRaycastManager>();
+        planeManager = GetComponent<ARPlaneManager>();
     }
 
     bool TryGetTouchPosition(out Vector2 touchPos)
@@ -56,6 +58,40 @@ public class ARInput : MonoBehaviour
 
     }
 
+    public void EnablePlaneScanning()
+    {
+        planeManager.enabled = true;
+
+        GameObject[] planes = GameObject.FindGameObjectsWithTag("Plane");
+
+        if (planes.Length != 0)
+        {
+            foreach (GameObject a in planes)
+            {
+                a.SetActive(false);
+            }
+        }
+
+        Debug.Log("ARInput : ENABLING Plane Scanning");
+    }
+
+    public void DisablePlaneScanning()
+    {
+        planeManager.enabled = false;
+
+        GameObject[] planes = GameObject.FindGameObjectsWithTag("Plane");
+
+        if (planes.Length != 0)
+        {
+            foreach (GameObject a in planes)
+            {
+                a.SetActive(false);
+            }
+        }
+
+        Debug.Log("ARInput : DISABLING Plane Scanning");
+    }
+
     void SpawnOrMove()
     {
         if (!TryGetTouchPosition(out Vector2 touchPos))
@@ -70,7 +106,6 @@ public class ARInput : MonoBehaviour
             {
                 spawnedObject = Instantiate(placeableObject, hitPos.position, hitPos.rotation);
                 Debug.Log("Inside: Instantiate");
-                spawnMoveState = false;
             }
             else
 
@@ -83,6 +118,10 @@ public class ARInput : MonoBehaviour
                 placeableObject.SetActive(true);
             }
         }
+
+        spawnMoveState = false;
+        DisablePlaneScanning();
+        UIManager.Instance.SlideInOut(UIManager.Instance.scanningPanel);
     }
 
     void Interact()
