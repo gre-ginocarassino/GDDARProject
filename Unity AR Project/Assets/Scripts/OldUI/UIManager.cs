@@ -6,16 +6,21 @@ using UnityEngine.XR.ARFoundation;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject titleText;
-    public bool playScene;
-    public UIPanelValues loadingPanel;
-    public RectTransform canvas;
+    [Header("Game Flow Variables")]
+    public UIPanelValues introPanel;
+    public UIPanelValues scanningPanel;
+    public GameObject scanningIcon;
     public GameObject planeLoadingIcon;
+    public bool planeSearch = false;
 
+    [Header("Scalable Variables Variables")]
+    public RectTransform canvas;
     float screenWidth, screenHeight;
     public Vector3[] newPlacement;
 
-    public bool planeSearch = false;
+    [Header("UI Variables")]
+    public UIPanelValues questionPanel;
+
 
     private static UIManager _instance;
 
@@ -36,9 +41,7 @@ public class UIManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
 
-        if (playScene)
-            StartCoroutine(StartPanelMove());
-
+        //Scalable UI. Getting the Phone's Screen Size and using this.
         screenHeight = canvas.rect.height;
         screenWidth = canvas.rect.width;
 
@@ -53,14 +56,7 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         //TitleTilter();
-        LoadingRotater(planeLoadingIcon);
-    }
-
-    IEnumerator StartPanelMove()
-    {
-        yield return new WaitForSeconds(0.5f);
-
-        LoadingOut(loadingPanel);
+        LoadingRotater(scanningIcon);
     }
 
     public void SlideInOut(UIPanelValues panelS)
@@ -76,18 +72,6 @@ public class UIManager : MonoBehaviour
             panelS.transform.DOLocalMove(new Vector3(0,0,0), 1f);
             panelS.isOpen = true;
         }
-    }
-
-    public void LoadingIn(UIPanelValues panel)
-    {
-        loadingPanel.transform.localPosition = new Vector3(0, -2600, 0);
-
-        SlideInOut(loadingPanel);
-    }
-
-    public void LoadingOut(UIPanelValues panel)
-    {
-        SlideInOut(loadingPanel);
     }
 
     void LoadingRotater(GameObject loadingIcon)
