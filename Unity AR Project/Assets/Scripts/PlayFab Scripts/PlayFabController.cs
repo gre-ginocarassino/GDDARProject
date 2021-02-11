@@ -228,7 +228,8 @@ public class PlayFabController : MonoBehaviour
         }
             
     }
-    // Build the request object and access the API
+    // Build the request object and access the API 
+    //
     public void StartCloudUpdatePlayerStats()
     {
         PlayFabClientAPI.ExecuteCloudScript(new ExecuteCloudScriptRequest()
