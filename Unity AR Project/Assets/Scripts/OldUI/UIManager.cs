@@ -61,7 +61,7 @@ public class UIManager : MonoBehaviour
 
     public void SlideInOut(UIPanelValues panelS)
     {
-        Debug.Log(newPlacement);
+        //Debug.Log(newPlacement);
 
         if (panelS.isOpen)
         {
