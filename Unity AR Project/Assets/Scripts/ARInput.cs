@@ -106,22 +106,27 @@ public class ARInput : MonoBehaviour
             {
                 spawnedObject = Instantiate(placeableObject, hitPos.position, hitPos.rotation);
                 Debug.Log("Inside: Instantiate");
+
+                spawnMoveState = false;
+                DisablePlaneScanning();
+                UIManager.Instance.SlideInOut(UIManager.Instance.scanningPanel);
             }
             else
+            {
+                placeableObject.transform.position = hitPos.position;
+                placeableObject.transform.rotation = hitPos.rotation;
+                Debug.Log("Inside: Move");
 
-            placeableObject.transform.position = hitPos.position;
-            placeableObject.transform.rotation = hitPos.rotation;
-            Debug.Log("Inside: Move");
+                spawnMoveState = false;
+                DisablePlaneScanning();
+                UIManager.Instance.SlideInOut(UIManager.Instance.scanningPanel);
+            }
 
             if (!placeableObject.activeSelf)
             {
                 placeableObject.SetActive(true);
             }
         }
-
-        spawnMoveState = false;
-        DisablePlaneScanning();
-        UIManager.Instance.SlideInOut(UIManager.Instance.scanningPanel);
     }
 
     void Interact()
