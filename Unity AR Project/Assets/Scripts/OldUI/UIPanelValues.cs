@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class UiPanelValues : MonoBehaviour
+public class UIPanelValues : MonoBehaviour
 {
     //public Vector3 startVector3;
     //public Vector3 endVector3;
@@ -23,7 +23,7 @@ public class UiPanelValues : MonoBehaviour
             transform.DOLocalMove(new Vector3(0, 0, 0), 0);
         else
         {
-            transform.DOLocalMove(UiManager.Instance.newPlacement[placement], 0f);
+            transform.DOLocalMove(UIManager.Instance.newPlacement[placement], 0f);
         }
     }
 }

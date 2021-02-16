@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 
 [RequireComponent(typeof(ARRaycastManager))]
-public class ArInput : MonoBehaviour
+public class ARInput : MonoBehaviour
 {
     private ARRaycastManager raycastManager;
     private ARPlaneManager planeManager;
@@ -99,9 +99,9 @@ public class ArInput : MonoBehaviour
             return;
         }
 
-        if (_raycastManager.Raycast(touchPos, _sHits, TrackableType.PlaneWithinPolygon))
+        if (raycastManager.Raycast(touchPos, _sHits, TrackableType.PlaneWithinPolygon))
         {
-            var hitPos = s_Hits[0].pose;
+            var hitPos = _sHits[0].pose;
             if (spawnedObject == null)
             {
                 spawnedObject = Instantiate(placeableObject, hitPos.position, hitPos.rotation);
