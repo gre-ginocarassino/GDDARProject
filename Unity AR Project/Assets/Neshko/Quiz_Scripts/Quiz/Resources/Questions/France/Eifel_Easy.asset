@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f611d797432e3f846885b2b12fde5f35, type: 3}
+  m_Name: Eifel_Easy
+  m_EditorClassIdentifier: 
+  categoryName: Easy
+  timeToComplete: 30
+  questions:
+  - questionInfo: How tall is the Eiffel Tower?
+    answerOptions:
+    - 1
+    - 2
+    - 3
+    - 4
+    correctAnswer: 4
+  - questionInfo: Who is the Eiffel tower named after?
+    answerOptions:
+    - 1
+    - 2
+    - 3
+    - 4
+    correctAnswer: 4
+  - questionInfo: 'How long did the tower hold the title of tallest man-made structure? '
+    answerOptions:
+    - 1
+    - 2
+    - 3
+    - 4
+    correctAnswer: 4
+  - questionInfo: 'How long did the tower hold the title of tallest man-made structure? '
+    answerOptions:
+    - 1
+    - 2
+    - 3
+    - 4
+    correctAnswer: 4
+  - questionInfo: 'How long did the tower hold the title of tallest man-made structure? '
+    answerOptions:
+    - 1
+    - 2
+    - 3
+    - 4
+    correctAnswer: 4
