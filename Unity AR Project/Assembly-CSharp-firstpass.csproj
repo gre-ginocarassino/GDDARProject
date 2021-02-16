@@ -696,9 +696,17 @@
       <Project>{07D6EFD8-0CA1-63B2-0592-0F0E6659C053}</Project>
       <Name>PlayFabEditorExtensions</Name>
     </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{188F2351-FECA-C6A2-FFC9-25FEEAC408DA}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="PlayFabSDKEditor.csproj">
       <Project>{1D5E1342-945F-5F4F-FEEE-C87287BA7A31}</Project>
       <Name>PlayFabSDKEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{9EDAC328-28BF-7BBD-D202-3CD57BF965E5}</Project>
+      <Name>NavMeshComponents</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

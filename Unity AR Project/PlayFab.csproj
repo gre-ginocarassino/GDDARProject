@@ -355,11 +355,7 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-<<<<<<< HEAD
       <HintPath>D:/University_folder/Year 3/Advanced game design/Term 2/Repository_Git/GDDARProject/Unity AR Project/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
-=======
-      <HintPath>E:/__University__/1288 Games Design and Development/Game Project/Git Repo/GDDARProject/Unity AR Project/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
->>>>>>> main
     </Reference>
     <Reference Include="DOTweenEditor">
       <HintPath>D:/University_folder/Year 3/Advanced game design/Term 2/Repository_Git/GDDARProject/Unity AR Project/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
@@ -374,11 +370,7 @@
       <HintPath>D:/University_folder/Year 3/Advanced game design/Term 2/Repository_Git/GDDARProject/Unity AR Project/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-<<<<<<< HEAD
       <HintPath>D:/University_folder/Year 3/Advanced game design/Term 2/Repository_Git/GDDARProject/Unity AR Project/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
-=======
-      <HintPath>E:/__University__/1288 Games Design and Development/Game Project/Git Repo/GDDARProject/Unity AR Project/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
->>>>>>> main
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.9f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -726,17 +718,10 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.9f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-<<<<<<< HEAD
       <HintPath>D:/University_folder/Year 3/Advanced game design/Term 2/Repository_Git/GDDARProject/Unity AR Project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>D:/University_folder/Year 3/Advanced game design/Term 2/Repository_Git/GDDARProject/Unity AR Project/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-=======
-      <HintPath>E:/__University__/1288 Games Design and Development/Game Project/Git Repo/GDDARProject/Unity AR Project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>E:/__University__/1288 Games Design and Development/Game Project/Git Repo/GDDARProject/Unity AR Project/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
->>>>>>> main
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
