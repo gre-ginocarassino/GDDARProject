@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class UIPanel : MonoBehaviour
+public class UiPanel : MonoBehaviour
 {
     public bool open;
     public float openX, openY, openZ;

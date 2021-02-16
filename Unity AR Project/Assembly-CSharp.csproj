@@ -65,7 +65,25 @@
   <ItemGroup>
     <Compile Include="Assets\CrowdTestFolder\Stylized Astronaut\Character\Player.cs" />
     <Compile Include="Assets\CrowdTestFolder\Stylized Astronaut\Character\ThirdPersonCamera.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\AR\ARInput_altered\ARInput_Altered.cs" />
+=======
+    <Compile Include="Assets\Neshko\Language Menu\Buttons\ButtonAlphaHit.cs" />
+    <Compile Include="Assets\Neshko\Language Menu\Buttons\ContinentObject.cs" />
+    <Compile Include="Assets\Neshko\Language Menu\Buttons\LanguageBackBtn.cs" />
+    <Compile Include="Assets\Neshko\Language Menu\Buttons\english_button.cs" />
+    <Compile Include="Assets\Neshko\Language Menu\ChosenLanguageAndFlag.cs" />
+    <Compile Include="Assets\Neshko\Language Menu\ContinentPicker.cs" />
+    <Compile Include="Assets\Neshko\Language Menu\Countries\Europe\CountryAssigner.cs" />
+    <Compile Include="Assets\Neshko\Language Menu\Flag_and_language.cs" />
+    <Compile Include="Assets\Neshko\Language Menu\Singleton.cs" />
+    <Compile Include="Assets\Neshko\Language Menu\contentCountries.cs" />
+    <Compile Include="Assets\Neshko\Quiz_Scripts\Quiz\Scripts\CategoryBtnScript.cs" />
+    <Compile Include="Assets\Neshko\Quiz_Scripts\Quiz\Scripts\QuizDataScriptable.cs" />
+    <Compile Include="Assets\Neshko\Quiz_Scripts\Quiz\Scripts\QuizGameUI.cs" />
+    <Compile Include="Assets\Neshko\Quiz_Scripts\Quiz\Scripts\QuizManager.cs" />
+    <Compile Include="Assets\Neshko\Quiz_Scripts\Quiz\Scripts\RandomAnswersList.cs" />
+>>>>>>> main
     <Compile Include="Assets\Scripts\AR\BasicLightEstimation.cs" />
     <Compile Include="Assets\Scripts\ARInput.cs" />
     <Compile Include="Assets\Scripts\BoardController.cs" />
@@ -89,6 +107,63 @@
     <Compile Include="Assets\Scripts\PlayFab Scripts\PlayFabController.cs" />
     <Compile Include="Assets\Scripts\SceneIndexes.cs" />
     <Compile Include="Assets\Scripts\VillageController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\flagSprite.cs" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -267,7 +342,11 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.9f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
+<<<<<<< HEAD
       <HintPath>D:/University_folder/Year 3/Advanced game design/Term 2/Repository_Git/GDDARProject/Unity AR Project/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+=======
+      <HintPath>E:/__University__/1288 Games Design and Development/Game Project/Git Repo/GDDARProject/Unity AR Project/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+>>>>>>> main
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>D:/University_folder/Year 3/Advanced game design/Term 2/Repository_Git/GDDARProject/Unity AR Project/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
@@ -276,7 +355,11 @@
       <HintPath>D:/University_folder/Year 3/Advanced game design/Term 2/Repository_Git/GDDARProject/Unity AR Project/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
+<<<<<<< HEAD
       <HintPath>D:/University_folder/Year 3/Advanced game design/Term 2/Repository_Git/GDDARProject/Unity AR Project/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+=======
+      <HintPath>E:/__University__/1288 Games Design and Development/Game Project/Git Repo/GDDARProject/Unity AR Project/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+>>>>>>> main
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.9f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -624,7 +707,11 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.9f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Management">
+<<<<<<< HEAD
       <HintPath>D:/University_folder/Year 3/Advanced game design/Term 2/Repository_Git/GDDARProject/Unity AR Project/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
+=======
+      <HintPath>E:/__University__/1288 Games Design and Development/Game Project/Git Repo/GDDARProject/Unity AR Project/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
+>>>>>>> main
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/University_folder/Year 3/Advanced game design/Term 2/Repository_Git/GDDARProject/Unity AR Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
@@ -702,7 +789,11 @@
       <HintPath>D:/University_folder/Year 3/Advanced game design/Term 2/Repository_Git/GDDARProject/Unity AR Project/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
+<<<<<<< HEAD
       <HintPath>D:/University_folder/Year 3/Advanced game design/Term 2/Repository_Git/GDDARProject/Unity AR Project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+=======
+      <HintPath>E:/__University__/1288 Games Design and Development/Game Project/Git Repo/GDDARProject/Unity AR Project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+>>>>>>> main
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -15,7 +15,7 @@ public class ARInput : MonoBehaviour
 
     public GameObject placeableObject;
 
-    static List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
+    static List<ARRaycastHit> _sHits = new List<ARRaycastHit>();
 
     [Header("Debug Mode")]
     public bool spawnMoveState = true;
@@ -99,9 +99,9 @@ public class ARInput : MonoBehaviour
             return;
         }
 
-        if (raycastManager.Raycast(touchPos, s_Hits, TrackableType.PlaneWithinPolygon))
+        if (raycastManager.Raycast(touchPos, _sHits, TrackableType.PlaneWithinPolygon))
         {
-            var hitPos = s_Hits[0].pose;
+            var hitPos = _sHits[0].pose;
             if (spawnedObject == null)
             {
                 spawnedObject = Instantiate(placeableObject, hitPos.position, hitPos.rotation);
