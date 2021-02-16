@@ -89,6 +89,9 @@ public class ARInput : MonoBehaviour
             }
         }
 
+        UIManager.Instance.SlideInOut(UIManager.Instance.scanningPanel);
+        UIManager.Instance.SlideInOut(UIManager.Instance.playPanel);
+
         Debug.Log("ARInput : DISABLING Plane Scanning");
     }
 
@@ -109,7 +112,7 @@ public class ARInput : MonoBehaviour
 
                 spawnMoveState = false;
                 DisablePlaneScanning();
-                UIManager.Instance.SlideInOut(UIManager.Instance.scanningPanel);
+
             }
             else
             {
@@ -119,7 +122,7 @@ public class ARInput : MonoBehaviour
 
                 spawnMoveState = false;
                 DisablePlaneScanning();
-                UIManager.Instance.SlideInOut(UIManager.Instance.scanningPanel);
+
             }
 
             if (!placeableObject.activeSelf)

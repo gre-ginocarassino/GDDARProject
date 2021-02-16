@@ -9,8 +9,8 @@ public class UIManager : MonoBehaviour
     [Header("Game Flow Variables")]
     public UIPanelValues introPanel;
     public UIPanelValues scanningPanel;
+    public UIPanelValues playPanel;
     public GameObject scanningIcon;
-    public GameObject planeLoadingIcon;
     public bool planeSearch = false;
 
     [Header("Scalable Variables Variables")]
