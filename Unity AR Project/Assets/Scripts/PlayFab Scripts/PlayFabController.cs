@@ -15,7 +15,9 @@ public class PlayFabController : MonoBehaviour
     public GameObject registerPanel;
     public GameObject addLoginPanel;
     public GameObject recoverButton;
-    
+
+    public GameObject loadingPanel;
+
     public Text errorMessage;
 
     private string userEmail;
@@ -38,8 +40,25 @@ public class PlayFabController : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+    private IEnumerator ActivationRoutine()
+    {
+        //Wait for 14 secs.
+        //yield return new WaitForSeconds(0);
+
+        //Turn My game object that is set to false(off) to True(on).
+        loadingPanel.SetActive(true);
+
+        //Turn the Game Oject back off after 1 sec.
+        yield return new WaitForSeconds(3);
+
+        //Game object will turn off
+        loadingPanel.SetActive(false);
+    }   
+
     public void Start()
     {
+        StartCoroutine(ActivationRoutine());
+
         //If the Title ID is null or empty, goes in here
         if (string.IsNullOrEmpty(PlayFabSettings.TitleId))
         {
@@ -124,7 +143,6 @@ public class PlayFabController : MonoBehaviour
         registerPanel.SetActive(false);
 
         PlayFabClientAPI.UpdateUserTitleDisplayName(new UpdateUserTitleDisplayNameRequest { DisplayName = username }, onDisplayName, OnLoginAndroidFailure); //set displayname as username
-
         OnChangeScene();
     }
     void onDisplayName(UpdateUserTitleDisplayNameResult result)

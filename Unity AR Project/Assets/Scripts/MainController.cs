@@ -19,6 +19,8 @@ public class MainController : MonoBehaviour
     public Text UsernameText;
     public Text LVText;
 
+    public GameObject loadingPanel;
+
 
     private void OnEnable()
     {
@@ -38,6 +40,8 @@ public class MainController : MonoBehaviour
 
     public void Start()
     {
+        StartCoroutine(ActivationRoutine());
+
         //If the Title ID is null or empty, goes in here
         if (string.IsNullOrEmpty(PlayFabSettings.TitleId))
         {
@@ -47,8 +51,19 @@ public class MainController : MonoBehaviour
         GetAccountInfo();
     }
 
+    private IEnumerator ActivationRoutine()
+    {
+        loadingPanel.SetActive(true);
+
+        //Turn the Game Oject back off after 1 sec.
+        yield return new WaitForSeconds(3);
+
+        //Game object will turn off
+        loadingPanel.SetActive(false);
+    }
+
     #region AccountInfo
-    
+
 
     void GetAccountInfo()
     {
