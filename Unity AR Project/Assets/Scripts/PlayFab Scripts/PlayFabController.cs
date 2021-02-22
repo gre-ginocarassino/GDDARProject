@@ -5,6 +5,7 @@ using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine.UI;
 using PlayFab.Json;
+using UnityEngine.SceneManagement;
 
 public class PlayFabController : MonoBehaviour
 {
@@ -76,6 +77,8 @@ public class PlayFabController : MonoBehaviour
         loginPanel.SetActive(false);
 
         GetStatistics();
+
+        OnChangeScene();
     }
     private void OnLoginAndroidFailure(PlayFabError error)
     {
@@ -92,6 +95,7 @@ public class PlayFabController : MonoBehaviour
         addLoginPanel.SetActive(false);
 
         GetStatistics();
+        OnChangeScene();
     }
     #endregion
 
@@ -106,6 +110,7 @@ public class PlayFabController : MonoBehaviour
         recoverButton.SetActive(false);
 
         GetStatistics();
+        OnChangeScene();
     }
 
     private void OnLoginFailure(PlayFabError error)
@@ -127,6 +132,7 @@ public class PlayFabController : MonoBehaviour
         PlayFabClientAPI.UpdateUserTitleDisplayName(new UpdateUserTitleDisplayNameRequest { DisplayName = username }, onDisplayName, OnLoginAndroidFailure); //set displayname as username
 
         GetStatistics();
+        OnChangeScene();
     }
     void onDisplayName(UpdateUserTitleDisplayNameResult result)
     {
@@ -297,4 +303,8 @@ public class PlayFabController : MonoBehaviour
     }
     #endregion
 
+    public void OnChangeScene()
+    {
+        SceneManager.LoadScene("AR-Dan");
+    }
 }

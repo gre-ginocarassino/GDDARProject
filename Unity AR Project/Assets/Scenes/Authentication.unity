@@ -2797,7 +2797,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1445825290}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9019f4508d268bf489b8895fb71b4d51, type: 3}
+  m_Script: {fileID: 11500000, guid: a51b6ddb1f6d76e46ba1a6aa02995c01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   loginPanel: {fileID: 1376908436}
@@ -2808,9 +2808,8 @@ MonoBehaviour:
   playerLevel: 0
   playerPoints: 0
   leaderboardPanel: {fileID: 386181198}
-  listingPrefab: {fileID: 724851115290810525, guid: 71ed4569baadc3646bfa7fc690fb97dc,
-    type: 3}
-  listingContainer: {fileID: 1260220729}
+  listingPrefab: {fileID: 0}
+  listingContainer: {fileID: 0}
 --- !u!4 &1445825292
 Transform:
   m_ObjectHideFlags: 0
