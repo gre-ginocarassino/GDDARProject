@@ -96,6 +96,7 @@
     <Compile Include="Assets\Scripts\InteractableObject.cs" />
     <Compile Include="Assets\Scripts\InteractableObjectARButton.cs" />
     <Compile Include="Assets\Scripts\InteractableObjectQuestionMark.cs" />
+    <Compile Include="Assets\Scripts\MainController.cs" />
     <Compile Include="Assets\Scripts\OldUI\UIManager.cs" />
     <Compile Include="Assets\Scripts\OldUI\UIPanel.cs" />
     <Compile Include="Assets\Scripts\OldUI\UIPanelValues.cs" />

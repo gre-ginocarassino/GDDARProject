@@ -7,4 +7,5 @@ public class LeaderboardListing : MonoBehaviour
 {
     public Text playerNameText;
     public Text playerScoreText;
+    public Text playerLVText;
 }
