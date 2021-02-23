@@ -20,6 +20,7 @@ public class AIMovement : MonoBehaviour
 
     private float randomTime;
 
+
     NavMeshAgent _navMeshAgent;
     private Animator _animator;
     private void Start()

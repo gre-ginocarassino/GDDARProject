@@ -6,55 +6,54 @@ using UnityEngine.AI;
 
 public class CharacterBase : MonoBehaviour
 {
-    //variables affecting the agent
+    //time to wait until next random location selected
     private float waitTime;
     public float startWaitTime;
-    public float speed;
-    
 
-    //all waypoints
-    public Transform[] moveLocation;
+    //target location and variables for random range
+    public Transform targetLocation;
     private int randomLocation;
 
+    private float randomDistance;
+
+    private float randomTime;
+
+    //Navmesh and animator
     NavMeshAgent _navMeshAgent;
     private Animator _animator;
+
+
     private void Start()
     {
         _navMeshAgent = this.GetComponent<NavMeshAgent>();
+        targetLocation = endNode._endNode.nodePoint.transform;
         _animator = GetComponent<Animator>();
-        waitTime = startWaitTime;
-        _navMeshAgent.speed = speed;
-        randomLocation = Random.Range(0, moveLocation.Length);
-
     }
 
     private void Update()
     {
-        //call the method SetDestination in Navmeshagent to move towards it
-        Vector3 targetLocation = moveLocation[randomLocation].position;
+        _navMeshAgent.SetDestination(targetLocation.localPosition);
         _animator.SetBool("shouldAnimating", true);
-        _navMeshAgent.SetDestination(targetLocation);
-
-        //if distance between the current location and destination is lower than 0.2, output following
-        if (Vector3.Distance(transform.position, moveLocation[randomLocation].position) < 0.2f)
-        {
-            _animator.SetBool("shouldAnimating", false);
-            //if waittimes is less than or equal to zero
-            if (waitTime <= 0)
-            {
-                //choose random waypoint and refill waittime
-                randomLocation = Random.Range(0, moveLocation.Length);
-                waitTime = startWaitTime;
-            }
-            //otherwise, reduce waittime by time.deltatime
-            else
-            {
-                waitTime -= Time.deltaTime;
-            }
-        }
-
-
     }
 
+    public void chooseAction(int action)
+    {
+        switch (action)
+        {
+            case 0:
+                targetLocation = Spawn._Spawn.allDirection[Random.Range(0, Spawn._Spawn.allDirection.Length)].transform;
+
+                break;
+            case 1: 
+                break;
+        }
+    }
+
+    public void setInactive()
+    {
+        gameObject.SetActive(false);
+    }
+
+    
 
 }
