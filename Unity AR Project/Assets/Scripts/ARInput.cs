@@ -11,7 +11,7 @@ public class ARInput : MonoBehaviour
 {
     private ARRaycastManager raycastManager;
     private ARPlaneManager planeManager;
-    private GameObject spawnedObject;
+    //private GameObject spawnedObject;
 
     public GameObject placeableObject;
 
@@ -105,25 +105,25 @@ public class ARInput : MonoBehaviour
         if (raycastManager.Raycast(touchPos, _sHits, TrackableType.PlaneWithinPolygon))
         {
             var hitPos = _sHits[0].pose;
-            if (spawnedObject == null)
-            {
-                spawnedObject = Instantiate(placeableObject, hitPos.position, hitPos.rotation);
-                Debug.Log("Inside: Instantiate");
+            //if (spawnedObject == null)
+            //{
+            //    spawnedObject = Instantiate(placeableObject, hitPos.position, hitPos.rotation);
+            //    Debug.Log("Inside: Instantiate");
 
-                spawnMoveState = false;
-                DisablePlaneScanning();
+            //    spawnMoveState = false;
+            //    DisablePlaneScanning();
 
-            }
-            else
-            {
-                placeableObject.transform.position = hitPos.position;
-                placeableObject.transform.rotation = hitPos.rotation;
-                Debug.Log("Inside: Move");
+           //}
+            
+            placeableObject.transform.position = hitPos.position;
+            placeableObject.transform.rotation = hitPos.rotation;
+            placeableObject.SetActive(true);
+            Debug.Log("Inside: Move");
 
-                spawnMoveState = false;
-                DisablePlaneScanning();
+            spawnMoveState = false;
+            DisablePlaneScanning();
 
-            }
+            
 
             if (!placeableObject.activeSelf)
             {

@@ -7,8 +7,8 @@ public class VillageController : PlaceController
 {
     [Header("Village Specific Variables")]
     public bool[] villageUnlocked;
-    public GameObject[] villagePartsPrefabs;
-    public GameObject[] villageParts;
+    //public GameObject[] villagePartsPrefabs;
+    //public GameObject[] villageParts;
 
     public override void Awake()
     {
@@ -29,27 +29,15 @@ public class VillageController : PlaceController
     {
         base.LoadPlace();
 
-        StartCoroutine(VillageGrower());
-    }
-
-    IEnumerator VillageGrower()
-    {
-        yield return new WaitForSeconds(0.2f);
-
-        //check to see which village sections are unlocked
-        for (int v = 0; v < villageParts.Length; v++)
+        for (int v = 0; v < baseSectionVariables.variables.Length - 2; v++)
         {
             if (villageUnlocked[v])
             {
-                if (villageParts[v] == null)
-                {
-                    villageParts[v] = Instantiate(villagePartsPrefabs[v], transform);
-                }
-
-                //This village section is unlocked 
-                //villageParts[v].SetActive(true);
-                villageParts[v].transform.DOScaleY(1, 1);
-                yield return new WaitForSeconds(0.2f);
+                baseSectionVariables.variables[v + 1].SetActive(true);
+            }
+            else
+            {
+                baseSectionVariables.variables[v + 1].SetActive(true);
             }
         }
     }
@@ -57,25 +45,5 @@ public class VillageController : PlaceController
     public override void ShrinkPlace()
     {
         base.ShrinkPlace();
-
-        StartCoroutine(VillageShrinker());
-    }
-
-    IEnumerator VillageShrinker()
-    {
-        yield return new WaitForSeconds(0.2f);
-
-        //check to see which village sections are unlocked
-        for (int v = 0; v < villageParts.Length; v++)
-        {
-            villageParts[v].transform.DOScaleY(0, 1);
-        }
-
-        //yield return new WaitForSeconds(1);
-
-        //for (int v = 0; v < villageParts.Length; v++)
-        //{
-        //    villageParts[v].SetActive(false);
-        //}
     }
 }
