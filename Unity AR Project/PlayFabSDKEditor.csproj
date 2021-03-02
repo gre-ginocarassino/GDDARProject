@@ -62,9 +62,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PlayFabSDK\Shared\Editor\MakeSharedSettingsObj.cs" />
-    <Compile Include="Assets\PlayFabSDK\Shared\Editor\PlayFabHelp.cs" />
-    <None Include="Assets\PlayFabSDK\Shared\Editor\PlayFabSdkEditor.asmdef" />
+    <Compile Include="Assets\PlayFab\PlayFabSDK\Shared\Editor\MakeSharedSettingsObj.cs" />
+    <Compile Include="Assets\PlayFab\PlayFabSDK\Shared\Editor\PlayFabHelp.cs" />
+    <None Include="Assets\PlayFab\PlayFabSDK\Shared\Editor\PlayFabSdkEditor.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
