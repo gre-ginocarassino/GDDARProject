@@ -18,7 +18,7 @@ public class Pooler : MonoBehaviour
     {
         if (isSpawned == true && wait <= 0)
         {
-            spawn.SpawnFromPool("walker", transform.position, Quaternion.identity);
+            spawn.SpawnFromPool("walker", transform.position, transform.rotation);
             wait = .5f;
         }
         else

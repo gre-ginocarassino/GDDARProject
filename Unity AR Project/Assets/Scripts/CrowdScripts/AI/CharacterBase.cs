@@ -22,17 +22,33 @@ public class CharacterBase : MonoBehaviour
     NavMeshAgent _navMeshAgent;
     private Animator _animator;
 
-
+    private NavMeshPath path;
     private void Start()
     {
         _navMeshAgent = this.GetComponent<NavMeshAgent>();
-        targetLocation = endNode._endNode.nodePoint.transform;
+        //targetLocation = endNode._endNode.nodePoint.transform;
         _animator = GetComponent<Animator>();
+
+        if (targetLocation == null)
+        {
+            targetLocation = endNode._endNode.nodePoint.transform;
+        }
+
+        path = new NavMeshPath();
     }
 
     private void Update()
     {
-        _navMeshAgent.SetDestination(targetLocation.localPosition);
+        if (_navMeshAgent.hasPath == true)
+        {
+            //Debug.LogError("yes it has path");
+        }
+        else
+        {
+            NavMesh.CalculatePath(transform.position, targetLocation.position, NavMesh.AllAreas, path);
+            //Debug.LogError("no it does not have path");
+        }
+        _navMeshAgent.SetDestination(targetLocation.position);
         _animator.SetBool("shouldAnimating", true);
     }
 

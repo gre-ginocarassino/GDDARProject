@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 202495825}
   - component: {fileID: 202495824}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,9 +150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baa0c6ae296a7284ca1da1eb0c2a0063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instantiateobj: {fileID: 3830539291880450687, guid: dcd24ace3cb7a304c8588cbbbe09a145,
+  instantiateobj: {fileID: 6096939773058305472, guid: fd31018b28e3df142a32b89d9f0d8424,
     type: 3}
-  chars: {fileID: 7514010143750318705, guid: 43cc599a55831174bb0d201c76b795ba, type: 3}
+  chars: {fileID: 282839842958190333, guid: 09e37e2227c071c45ba37ddb8655cbfd, type: 3}
 --- !u!4 &202495825
 Transform:
   m_ObjectHideFlags: 0
@@ -273,8 +273,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   introPanel: {fileID: 2385908008324571108}
   scanningPanel: {fileID: 2385908008184359358}
+  playPanel: {fileID: 0}
   scanningIcon: {fileID: 2385908007659123169}
-  planeLoadingIcon: {fileID: 0}
   planeSearch: 0
   canvas: {fileID: 2385908008635389203}
   newPlacement:
@@ -2773,7 +2773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 272bcf29f52351349a25f7842bbd3a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placeableObject: {fileID: 3830539291880450687, guid: dcd24ace3cb7a304c8588cbbbe09a145,
+  placeableObject: {fileID: 4980604789168832278, guid: fd31018b28e3df142a32b89d9f0d8424,
     type: 3}
   spawnMoveState: 1
   modeDebugText: {fileID: 1984033299330761249}
