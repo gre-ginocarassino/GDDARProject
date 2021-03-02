@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class InteractableObjectARButton : InteracbleObject
 {
-    public BoardController boardCont;
-    public PlaceController thePlace;
+    //public BoardController boardCont;
+    //public PlaceController thePlace;
+    public UIPanelValues uiPanel;
 
     public int loadPlaceType;
 
@@ -23,6 +24,7 @@ public class InteractableObjectARButton : InteracbleObject
 
     public override void Interact()
     {
-        boardCont.NewSection(thePlace);
+        //ardCont.NewSection(thePlace);
+        UIManager.Instance.SlideInOut(uiPanel);
     }
 }
