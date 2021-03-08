@@ -72,7 +72,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         {
             if (args.lightEstimation.averageBrightness.HasValue)
             {
-                brightness = args.lightEstimation.averageBrightness.Value;
+                brightness = args.lightEstimation.averageBrightness.Value + 0.2f;
                 m_Light.intensity = brightness.Value;
             }
             else

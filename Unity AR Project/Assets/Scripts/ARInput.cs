@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.UI;
-
+using UnityEngine.XR.ARFoundation.Samples;
 
 [RequireComponent(typeof(ARRaycastManager))]
 public class ARInput : MonoBehaviour
@@ -17,6 +17,14 @@ public class ARInput : MonoBehaviour
 
     static List<ARRaycastHit> _sHits = new List<ARRaycastHit>();
 
+    public Material scanning;
+    public Material playing;
+
+    [Header("Light Variables")]
+    public BasicLightEstimation bLE;
+    public Color lColor;
+    Light dLight;
+
     [Header("Debug Mode")]
     public bool spawnMoveState = true;
     public Text modeDebugText;
@@ -26,6 +34,7 @@ public class ARInput : MonoBehaviour
     {
         raycastManager = GetComponent<ARRaycastManager>();
         planeManager = GetComponent<ARPlaneManager>();
+        dLight = bLE.gameObject.GetComponent<Light>();
     }
 
     bool TryGetTouchPosition(out Vector2 touchPos)
@@ -68,7 +77,7 @@ public class ARInput : MonoBehaviour
         {
             foreach (GameObject a in planes)
             {
-                a.SetActive(false);
+                a.SetActive(true);
             }
         }
 
@@ -151,6 +160,26 @@ public class ARInput : MonoBehaviour
                     }
                 }         
             }
+        }
+    }
+
+    public void LightEstimationToggler()
+    {
+        if (bLE.enabled == true)
+        {
+            Debug.Log("Disabling BLE");
+            bLE.enabled = false;
+            Debug.Log("Disabled BLE");
+
+            dLight.intensity = 1;
+            dLight.color = lColor;
+            
+        }
+        else
+        {
+            Debug.Log("Enabling BLE");
+            bLE.enabled = true;
+            Debug.Log("Enabled BLE");
         }
     }
 }

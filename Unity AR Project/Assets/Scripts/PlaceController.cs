@@ -37,6 +37,9 @@ public class PlaceController : MonoBehaviour
 
         if (baseSections == null)
         {
+
+            //TODO Instatiate -> Microsoft Azure
+
             baseSections = Instantiate(baseSectionsPrefabs, transform);
         }
 

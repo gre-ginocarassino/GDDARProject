@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boardController: {fileID: 81523429012286147}
-  baseSectionsPrefabs: {fileID: 8880611974441717634, guid: b4fd181d7dc1d334da5080e7ba75c7c5,
+  baseSectionsPrefabs: {fileID: 6860175542010292705, guid: c191814aca1a1784eaa8b98203c758f0,
     type: 3}
   baseSections: {fileID: 0}
   baseSectionVariables: {fileID: 0}
