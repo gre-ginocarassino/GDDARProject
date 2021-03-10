@@ -6,9 +6,9 @@ public class endRoute : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<CharacterBase>(out CharacterBase _characterBase))
+        if (other.TryGetComponent<characterAI>(out characterAI _characterAI))
         {
-            _characterBase.setInactive();
+            _characterAI.SetInactive();
         }
     }
 }

@@ -114,8 +114,6 @@
     <Compile Include="Assets\Scripts\CrowdScripts\AI\TypeA.cs" />
     <Compile Include="Assets\Scripts\CrowdScripts\AI\TypeB.cs" />
     <Compile Include="Assets\Scripts\CrowdScripts\AI\TypeC.cs" />
-    <Compile Include="Assets\Scripts\CrowdScripts\AI\endRoute.cs" />
-    <Compile Include="Assets\Scripts\CrowdScripts\AI\navigationSign.cs" />
     <Compile Include="Assets\Scripts\CrowdScripts\Instantiation\Pooler.cs" />
     <Compile Include="Assets\Scripts\CrowdScripts\Instantiation\Spawn.cs" />
     <Compile Include="Assets\Scripts\CrowdScripts\Instantiation\SpawnAround.cs" />
@@ -123,6 +121,16 @@
     <Compile Include="Assets\Scripts\CrowdScripts\Navmesh code\BakeNavmesh.cs" />
     <Compile Include="Assets\Scripts\CrowdScripts\New movement script\AIMovement.cs" />
     <Compile Include="Assets\Scripts\CrowdScripts\New movement script\endNode.cs" />
+    <Compile Include="Assets\Scripts\CrowdScripts\New\CharacterScripts\FormGroup.cs" />
+    <Compile Include="Assets\Scripts\CrowdScripts\New\CharacterScripts\SetLeader.cs" />
+    <Compile Include="Assets\Scripts\CrowdScripts\New\CharacterScripts\characterAI.cs" />
+    <Compile Include="Assets\Scripts\CrowdScripts\New\CharacterScripts\characterTypes.cs" />
+    <Compile Include="Assets\Scripts\CrowdScripts\New\EventsScripts\eventSubscriber.cs" />
+    <Compile Include="Assets\Scripts\CrowdScripts\New\EventsScripts\eventTypes.cs" />
+    <Compile Include="Assets\Scripts\CrowdScripts\New\Movement\GetPoint.cs" />
+    <Compile Include="Assets\Scripts\CrowdScripts\New\Signs\endRoute.cs" />
+    <Compile Include="Assets\Scripts\CrowdScripts\New\Signs\navigationSign.cs" />
+    <Compile Include="Assets\Scripts\CrowdScripts\New\spawnManager.cs" />
     <Compile Include="Assets\Scripts\CrowdScripts\waypoint system\WayPointControl.cs" />
     <Compile Include="Assets\Scripts\InteractableObject.cs" />
     <Compile Include="Assets\Scripts\InteractableObjectARButton.cs" />
@@ -180,6 +188,8 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Scripts\InvisibleShadowReciever.shader" />
+    <None Include="Assets\Materials\TransparentShadowCollector.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />

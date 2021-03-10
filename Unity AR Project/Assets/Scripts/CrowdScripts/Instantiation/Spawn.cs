@@ -51,7 +51,6 @@ public class Spawn : MonoBehaviour
 
             for (int i = 0; i < pool.size; i++)
             {
-                
                 GameObject obj = Instantiate(pool.charTypes[Random.Range(0, pool.charTypes.Length)]);
                 obj.transform.SetParent(parent.transform);
                 //obj.GetComponent<UnityEngine.AI.NavMeshAgent>().Warp(poolerPosition.transform.position);
@@ -62,7 +61,6 @@ public class Spawn : MonoBehaviour
                     //obj.AddComponent<NavMeshAgent>().speed = Random.Range(1f, 3f);
                     //obj.GetComponent<NavMeshAgent>().radius = 0.09f;
                     //obj.GetComponent<NavMeshAgent>().height = 0.4f;
-                    
                 }
                 else
                 {
@@ -84,16 +82,20 @@ public class Spawn : MonoBehaviour
             Debug.LogWarning("Pool with tag" + tag + "doesnt exist");
             return null;
         }
-
-        GameObject objectToSpawn = spawnPool[tag].Dequeue();
+        GameObject objectToSpawn = spawnPool[tag].Dequeue(); //remove from item at the start of queue 
 
         objectToSpawn.transform.position = position;
         objectToSpawn.transform.rotation = rotation;
 
         objectToSpawn.SetActive(true);
-
-        spawnPool[tag].Enqueue(objectToSpawn);
-
+        
+        //spawnPool[tag].Enqueue(objectToSpawn); //put item in the end of queue
+        
         return objectToSpawn;
+    }
+
+    public void ReturnObjToQueue(GameObject obj, String tag)
+    {
+        spawnPool[tag].Enqueue(obj);
     }
 }
