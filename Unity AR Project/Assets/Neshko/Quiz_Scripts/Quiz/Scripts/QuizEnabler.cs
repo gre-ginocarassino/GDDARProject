@@ -17,10 +17,14 @@ public class QuizEnabler : MonoBehaviour
 
      [SerializeField]private GameObject _removeContinents;
      private string _country;
+
+    //Board controller hjolding all the gameplay variables
+    private BoardController bCont;
      
      private void Start()
      {
-       
+        //finding the board controller in the scene
+        bCont = (BoardController)FindObjectOfType(typeof(BoardController));
       
         _removeContinents.gameObject.SetActive(false);
      }
@@ -39,9 +43,13 @@ public class QuizEnabler : MonoBehaviour
                      Prefabs[0].gameObject.SetActive(true);
                      ShrinkToInitialSize();
                      _removeContinents.gameObject.SetActive(true);
-                     
-                     // AR Spawn Method for that country can be called here
-                     // Activate the button that can take the player to the quiz section
+
+                // AR Spawn Method for that country can be called here
+                // Activate the button that can take the player to the quiz section
+                //this is the code for growing england
+                bCont = (BoardController)FindObjectOfType(typeof(BoardController));
+                bCont.NewSection(bCont.englandController);
+
                    
                      break;
                  

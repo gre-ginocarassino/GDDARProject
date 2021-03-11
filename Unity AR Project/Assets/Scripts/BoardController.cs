@@ -11,7 +11,7 @@ public class BoardController : MonoBehaviour
 
     [Header("Loaded GameObjects")]
     public PlaceController villageController;
-    public PlaceController bigBenController;
+    public PlaceController englandController;
 
     // Start is called before the first frame update
     void Start()

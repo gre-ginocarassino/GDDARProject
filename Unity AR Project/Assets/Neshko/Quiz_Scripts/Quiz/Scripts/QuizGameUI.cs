@@ -50,8 +50,12 @@ public class QuizGameUI : MonoBehaviour
         
         Button btn = _interactBtn.GetComponent<Button>();
         btn.onClick.AddListener(CloseLandMark);
-        Button btn1 = _closeBtn.GetComponent<Button>();
-        btn1.onClick.AddListener(OpenLandMark);
+        if (_closeBtn)
+        {
+            Button btn1 = _closeBtn.GetComponent<Button>();
+            btn1.onClick.AddListener(OpenLandMark);
+        }
+
        
         foreach (var button in answerButtons)
         {
