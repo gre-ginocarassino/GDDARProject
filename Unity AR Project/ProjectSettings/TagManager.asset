@@ -6,6 +6,13 @@ TagManager:
   tags:
   - InteractableObject
   - Plane
+  - collumn
+  - Education
+  - countryAssigner
+  - singleton
+  - Flag
+  - QuizObjectToSpawn
+  - QuizTrigger
   layers:
   - Default
   - TransparentFX

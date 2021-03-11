@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -10,38 +11,111 @@ public class QuizGameUI : MonoBehaviour
     [SerializeField] private QuizManager quizManager; 
     [SerializeField] private CategoryBtnScript difficultyButtonPrefab;
     [SerializeField] private GameObject scrollHolder;
-    [SerializeField] private Text scoreText, timerText;
+    [SerializeField] private TextMeshProUGUI scoreText, timerText, gradingText;
     [SerializeField] private List<Image> answerAttemptsList;
     
     [SerializeField] public List<Image> scoreImageList;
     [SerializeField] private GameObject gameOverPanel, mainMenu, gamePanel;
     [SerializeField] private Color correctCol, wrongCol, normalCol; 
-    [SerializeField] private Text questionInfoText; 
+    [SerializeField] private TextMeshProUGUI questionInfoText; 
     [SerializeField] private List<Button> answerButtons;
+    public CanvasGroup SpotWelcomePage, SpotQuizUI, GameOverUI;
+    
+    [SerializeField] public Image timerImage;
+    [SerializeField] private Button _interactBtn;
+    [SerializeField] private Button _closeBtn;
 
+   
+    public Button _retryButton;
+    [SerializeField] public TextMeshProUGUI endGameReasonText;
+
+     
     private Question _question;          //store current question data
     private bool itWasAnswered = false;      //bool to keep track if answered or not
+  
 
-    public Text TimerText { get => timerText; }
-    public Text ScoreText { get => scoreText; }
-    public GameObject GameOverPanel { get => gameOverPanel; }//getter
+    public TextMeshProUGUI TimerText { get => timerText; }
+
+    public TextMeshProUGUI GradingText { get => gradingText; }
+    public TextMeshProUGUI ScoreText { get => scoreText; }
+    public GameObject GameOverPanel { get => gameOverPanel; }
+
+    
 
     private void Start()
     {
+        CanvasGroup _canvasGroup = GetComponent<CanvasGroup>();
+        TextMeshProUGUI questionInfoText = GetComponent<TextMeshProUGUI>();
         
-        for (int i = 0; i < answerButtons.Count; i++)
+        
+        Button btn = _interactBtn.GetComponent<Button>();
+        btn.onClick.AddListener(CloseLandMark);
+        Button btn1 = _closeBtn.GetComponent<Button>();
+        btn1.onClick.AddListener(OpenLandMark);
+       
+        foreach (var button in answerButtons)
         {
-            Button button = answerButtons[i];
-            button.onClick.AddListener(() => OnClick(button));
+            var button1 = button;
+            button.onClick.AddListener(() => OnClick(button1));
         }
-        
         CreateDifficultyButtons();
+    }
 
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
+    private void Update()
+    {
+        CheckAlpha();
+    }
+
+    private void CheckAlpha()
+    {
+        if (GameOverUI.alpha < 0.1)
+        {
+            gameOverPanel.gameObject.SetActive(false);
+           
+        }
+        if (GameOverUI.alpha > 0.1)
+        {
+            gameOverPanel.gameObject.SetActive(true);
+            
+        }
+        if (SpotQuizUI.alpha < 0.1)
+        {
+            gamePanel.gameObject.SetActive(false);
+        }
+        if (SpotQuizUI.alpha > 0.1)
+        {
+            gamePanel.gameObject.SetActive(true);
+        }
+        if (SpotWelcomePage.alpha < 0.1)
+        {
+            mainMenu.gameObject.SetActive(false);
+        }
+        if (SpotWelcomePage.alpha > 0.1)
+        {
+            mainMenu.gameObject.SetActive(true);
+        }
+    }
+
+    private void CloseLandMark()
+    {
+        StartCoroutine(FadeUI.Fade(0, SpotWelcomePage,1));
+        gamePanel.SetActive(false);
+        gameOverPanel.SetActive(false);
+    }
+
+    private void OpenLandMark()
+    {
+        
+        StartCoroutine(FadeUI.Fade(1, SpotWelcomePage,1));
     }
 
     public void SetQuestion(Question question)
     {
-      
         this._question = question;
         questionInfoText.text = question.questionInfo; 
 
@@ -51,7 +125,7 @@ public class QuizGameUI : MonoBehaviour
         //Put different questions in the buttons
         for (int i = 0; i < answerButtons.Count; i++)
         {
-            answerButtons[i].GetComponentInChildren<Text>().text = answerOptions[i];
+            answerButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = answerOptions[i];
             answerButtons[i].name = answerOptions[i];    
             answerButtons[i].image.color = normalCol; 
         }
@@ -81,9 +155,9 @@ public class QuizGameUI : MonoBehaviour
     //Method called by Category Button
     private void DifficultyButton(int index, string category)
     {
+        StartCoroutine(FadeUI.Fade(1, SpotQuizUI, 0.8f));
         quizManager.StartGame(index, category);
-        mainMenu.SetActive(false);             
-        gamePanel.SetActive(true);            
+        gamePanel.SetActive(true);
     }
 
     // Coroutine that makes sprite blink
@@ -104,7 +178,7 @@ public class QuizGameUI : MonoBehaviour
         {
             image.color = Color.white;
             yield return new WaitForSeconds(0.1f);
-            image.color = correctCol;
+            image.color = wrongCol;
             yield return new WaitForSeconds(0.1f);
         }
     }
@@ -129,10 +203,16 @@ public class QuizGameUI : MonoBehaviour
             }
         }
     }
-    public void RegisterButton()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
 
+    public void RetryButton()
+    {
+        _retryButton.interactable = false;
+        StartCoroutine(FadeUI.Fade(0, SpotQuizUI, 1f));
+        StartCoroutine(FadeUI.Fade( 1,SpotWelcomePage, 1f));
+        StartCoroutine(FadeUI.Fade( 0,GameOverUI, 1f));
+    }
     
+   
+    
+   
 }

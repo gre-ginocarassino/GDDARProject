@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/AR-Dan.unity
     guid: b45614617c4c3f049bf2495c399733e6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/crowdTest.unity
     guid: 2d549788afd03d747a588ad51f8f7ee9
+  - enabled: 1
+    path: Assets/Neshko/Continents.unity
+    guid: a9c2d22c8a5486443b85fcf27c791fe7
   m_configObjects:
     com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: 4c90d4353fd2c644a8b37a28d16d4072,
       type: 2}

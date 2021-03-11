@@ -11,9 +11,9 @@ using UnityEngine.UI;
 public class QuizManager : MonoBehaviour
 {
     [SerializeField] private List<QuizDataScriptable> quizDataList;
-    [SerializeField] public Image timerImage;
-    [SerializeField] private TextMeshProUGUI endGameReasonText;
-    [SerializeField] private TextMeshProUGUI scoreTitleText;
+    
+  
+    
     [SerializeField] private QuizGameUI quizUi;
     
     private float _timeInSeconds;
@@ -32,7 +32,7 @@ public class QuizManager : MonoBehaviour
     private QuizDataScriptable _dataScriptable;
 
 
-    private GameStatus _gameStatus = GameStatus.NextQuestion;
+    private GameStatus _gameStatus = GameStatus.NextGame;
     private ScoreStatus _scoreStatus;
 
     public GameStatus GameStatus
@@ -99,26 +99,28 @@ public class QuizManager : MonoBehaviour
         switch (_scoreStatus)
         {
             case ScoreStatus.Poor:
-                scoreTitleText.text = "Poor!";
-                quizUi.scoreImageList[0].color = Color.yellow;
+                quizUi.GradingText.text = "Poor!";
+                quizUi.scoreImageList[0].GetComponent<Image>().color = Color.yellow; 
+                
                 break;
             case ScoreStatus.VeryGood:
-                scoreTitleText.text = "Very Good!";
-                quizUi.scoreImageList[0].color = Color.yellow;
-                quizUi.scoreImageList[1].color = Color.yellow;
+                quizUi.GradingText.text = "Very Good!";
+                quizUi.scoreImageList[0].GetComponent<Image>().color = Color.yellow;   
+                quizUi.scoreImageList[1].GetComponent<Image>().color = Color.yellow;   
                 break;
             case ScoreStatus.Excellent:
-                scoreTitleText.text = "Excellent!";
-                quizUi.scoreImageList[0].color = Color.yellow;
-                quizUi.scoreImageList[1].color = Color.yellow;
-                quizUi.scoreImageList[2].color = Color.yellow;
+                quizUi.GradingText.text = "Excellent!";
+                foreach (var stars in quizUi.scoreImageList)
+                {
+                    stars.GetComponent<Image>().color = Color.yellow; 
+                } 
                 break;
         }
     }
     private void Update()
     {
 
-        timerImage.fillAmount = _currentTime / _timeInSeconds;
+        quizUi.timerImage.fillAmount = _currentTime / _timeInSeconds;
         if (_gameStatus == GameStatus.Playing)
         {
             _currentTime -= Time.deltaTime;
@@ -135,13 +137,13 @@ public class QuizManager : MonoBehaviour
         if (_currentTime <= 0)
         {
             GameOver();
-            endGameReasonText.text = "Time's Up!";
+                quizUi.endGameReasonText.text = "Time's Up!";
         }
 
         if (_currentTime <= 5)
         {
                 quizUi.TimerText.color = Color.red;
-                timerImage.color = Color.red;
+                quizUi.timerImage.color = Color.red;
         }
     }
 // Method for checking if the answer is right
@@ -185,8 +187,8 @@ public class QuizManager : MonoBehaviour
 
             if (remainingAttempts == 0)
             {
-                GameOver();
-                endGameReasonText.text = "Game Over";
+                GameOver(); 
+                quizUi.endGameReasonText.text = "Game Over";
             }
         }
         if (_gameStatus == GameStatus.Playing)
@@ -195,7 +197,7 @@ public class QuizManager : MonoBehaviour
             {
                 //Wait until the next random question is displayed
                 Invoke("SelectQuestion", 0.4f);
-            }
+            } 
             else
             {
                 GameOver();
@@ -208,8 +210,10 @@ public class QuizManager : MonoBehaviour
     private void GameOver()
     {
         PlayerPrefs.SetInt(currentCategory, correctAnswers); // Saving final score int to PlayerPrefs
-        _gameStatus = GameStatus.NextQuestion;
-        quizUi.GameOverPanel.SetActive(true);
+        _gameStatus = GameStatus.NextGame;
+        quizUi._retryButton.interactable = true;
+        StartCoroutine(FadeUI.Fade( 1,quizUi.GameOverUI,1f));
+        //quizUi.GameOverPanel.SetActive(true);
     }
 }
 
@@ -227,7 +231,7 @@ public class Question
 public enum GameStatus
 {
     Playing,
-    NextQuestion
+    NextGame
 }
 
 public enum ScoreStatus

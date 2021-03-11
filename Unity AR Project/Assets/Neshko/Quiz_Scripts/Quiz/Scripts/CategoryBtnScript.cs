@@ -7,9 +7,9 @@ using TMPro;
 
 public class CategoryBtnScript : MonoBehaviour
 {
-    [SerializeField] private Text categoryTitleText;
-    [SerializeField] public TextMeshProUGUI timeToComplete;
-    [SerializeField] private Text scoreText;
+    [SerializeField] private TextMeshProUGUI categoryTitleText;
+    [SerializeField] private TextMeshProUGUI timeToComplete;
+    [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private Button btn;
 
     public Button Btn { get => btn; }
@@ -19,7 +19,7 @@ public class CategoryBtnScript : MonoBehaviour
        
         categoryTitleText.text = title;
         this.timeToComplete.text = timeToComplete;
-        scoreText.text = PlayerPrefs.GetInt(title, 0) + "/" + totalQuestion; //we get the score save for this category
+        scoreText.text = PlayerPrefs.GetInt(title, 0) + "/" + totalQuestion; 
     }
 
 }

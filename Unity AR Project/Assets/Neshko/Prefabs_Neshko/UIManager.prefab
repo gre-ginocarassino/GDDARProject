@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1169317461748381262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1169317461748381263}
+  - component: {fileID: 1169317461748381256}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1169317461748381263
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169317461748381262}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1169317461748381256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169317461748381262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187c968b65082c94e8abcfe1654dcf5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quizManager: {fileID: 0}
+  difficultyButtonPrefab: {fileID: 6252794732191836936, guid: fa786989370b9e048886ad7aa47746bd,
+    type: 3}
+  scrollHolder: {fileID: 0}
+  scoreText: {fileID: 0}
+  timerText: {fileID: 0}
+  gradingText: {fileID: 0}
+  answerAttemptsList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  scoreImageList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  gameOverPanel: {fileID: 0}
+  mainMenu: {fileID: 0}
+  gamePanel: {fileID: 0}
+  correctCol: {r: 0.2737452, g: 0.8207547, b: 0.20518868, a: 1}
+  wrongCol: {r: 1, g: 0, b: 0, a: 1}
+  normalCol: {r: 0.11764707, g: 0.043137256, b: 0.08627451, a: 1}
+  questionInfoText: {fileID: 0}
+  answerButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  SpotWelcomePage: {fileID: 0}
+  SpotQuizUI: {fileID: 0}
+  GameOverUI: {fileID: 0}
+  timerImage: {fileID: 0}
+  _interactBtn: {fileID: 0}
+  _closeBtn: {fileID: 0}
+  endGameReasonText: {fileID: 0}
