@@ -13,6 +13,22 @@ sysinfo.txt
 */.csproj
 *.csproj
 *.unitypackage
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
  
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
@@ -20,7 +36,6 @@ sysinfo.txt
 [Ee]xported[Oo]bj/
 .vs/
 /*.userprefs
-/*.csproj
 /*.pidb
 *.pidb.meta
 /*.suo

@@ -6,6 +6,9 @@ ModelImporter:
   - first:
       74: 3797491503568197834
     second: IdleCycle
+  - first:
+      74: 5522812681064789136
+    second: Run
   externalObjects: {}
   materials:
     materialImportMode: 1
