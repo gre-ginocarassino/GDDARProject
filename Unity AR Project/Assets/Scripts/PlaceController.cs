@@ -16,10 +16,13 @@ public class PlaceController : MonoBehaviour
     public GameObject baseSections;
     public PlacementVariables baseSectionVariables;
 
+    private bool isTesting;
+
     public virtual void Awake()
     {
         //setting the variables we need as this object is going to be spawned at runtime :)
         boardController = (BoardController)FindObjectOfType(typeof(BoardController));
+        isTesting = boardController.isTesting;
         az = (AssetBundleAzure)FindObjectOfType(typeof(AssetBundleAzure));
     }
 
@@ -42,9 +45,13 @@ public class PlaceController : MonoBehaviour
 
         if (baseSections == null)
         {
-            StartCoroutine(downloader());
-
-            //baseSections = Instantiate(baseSectionsPrefabs, transform);
+            if (isTesting)
+            {
+                baseSections = Instantiate(baseSectionsPrefabs, transform);
+            } else
+            {
+                StartCoroutine(downloader());
+            }      
         }
 
     }

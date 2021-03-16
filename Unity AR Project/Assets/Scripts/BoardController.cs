@@ -13,6 +13,8 @@ public class BoardController : MonoBehaviour
     public PlaceController villageController;
     public PlaceController englandController;
 
+    public bool isTesting;
+
     // Start is called before the first frame update
     void Start()
     {
