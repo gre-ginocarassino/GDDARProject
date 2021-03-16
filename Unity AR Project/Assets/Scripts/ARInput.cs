@@ -83,7 +83,13 @@ public class ARInput : MonoBehaviour
 
         Debug.Log("ARInput : ENABLING Plane Scanning");
 
-        CameraTesting camTest = FindObjectOfType(typeof(CameraTesting));
+        //Disable if thingy
+        CameraTesting camTest = (CameraTesting)FindObjectOfType(typeof(CameraTesting));
+        if (camTest.usingUnity)
+        {
+            DisablePlaneScanning();
+            placeableObject.SetActive(true);
+        }
     }
 
     public void DisablePlaneScanning()
