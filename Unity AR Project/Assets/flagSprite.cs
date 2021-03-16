@@ -4,12 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class FlagSprite : MonoBehaviour
-{
-    
+{ 
     void Start()
     {
         gameObject.GetComponent<Image>().enabled = false;
     }
-
-
 }

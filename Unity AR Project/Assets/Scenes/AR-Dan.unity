@@ -3672,6 +3672,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903953746}
   m_CullTransparentMesh: 0
+--- !u!1 &1929138858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7011202967638144799, guid: 81495db337220db4d8155e3a1df18d88,
+    type: 3}
+  m_PrefabInstance: {fileID: 2101423003}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1929138860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929138858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba7a009bf2fad954eb8a6c72a571f292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1936659825
 GameObject:
   m_ObjectHideFlags: 0
@@ -3872,7 +3890,7 @@ PrefabInstance:
     - target: {fileID: 81523429012286144, guid: 062a103827faeb044bb65d2864bb01e6,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 81523429012286146, guid: 062a103827faeb044bb65d2864bb01e6,
         type: 3}
@@ -4898,6 +4916,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnableQuizUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7011202968525284371, guid: 81495db337220db4d8155e3a1df18d88,
+        type: 3}
+      propertyPath: flagSprite
+      value: 
+      objectReference: {fileID: 1929138860}
     - target: {fileID: 7011202968525284380, guid: 81495db337220db4d8155e3a1df18d88,
         type: 3}
       propertyPath: m_AnchorMin.y
