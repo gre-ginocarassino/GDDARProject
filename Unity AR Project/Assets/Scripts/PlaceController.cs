@@ -48,6 +48,13 @@ public class PlaceController : MonoBehaviour
             if (isTesting)
             {
                 baseSections = Instantiate(baseSectionsPrefabs, transform);
+
+                if (baseSectionVariables == null)
+                {
+                    baseSectionVariables = baseSections.GetComponent<PlacementVariables>();
+                }
+                baseSections.SetActive(true);
+                StartCoroutine(VariablesResizing(1));
             } else
             {
                 StartCoroutine(downloader());
