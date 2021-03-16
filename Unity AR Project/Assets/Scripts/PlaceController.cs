@@ -6,6 +6,10 @@ using DG.Tweening;
 public class PlaceController : MonoBehaviour
 {
     public BoardController boardController;
+    private AssetBundleAzure az;
+
+    public string AssetbundleName;
+    public string AssetName;
 
     [Header("Base Variables")]
     public GameObject baseSectionsPrefabs;
@@ -16,6 +20,7 @@ public class PlaceController : MonoBehaviour
     {
         //setting the variables we need as this object is going to be spawned at runtime :)
         boardController = (BoardController)FindObjectOfType(typeof(BoardController));
+        az = (AssetBundleAzure)FindObjectOfType(typeof(AssetBundleAzure));
     }
 
     // Start is called before the first frame update
@@ -37,11 +42,24 @@ public class PlaceController : MonoBehaviour
 
         if (baseSections == null)
         {
+            StartCoroutine(downloader());
 
-            //TODO Instatiate -> Microsoft Azure
-
-            baseSections = Instantiate(baseSectionsPrefabs, transform);
+            //baseSections = Instantiate(baseSectionsPrefabs, transform);
         }
+
+    }
+
+    IEnumerator downloader()
+    {
+        az.assetBundleName = AssetbundleName;
+        az.assetName = AssetName;
+
+        az.TappedLoadAssetBundle(this);
+
+        yield return new WaitForSeconds(1);
+
+        baseSectionVariables = transform.GetComponentInChildren<PlacementVariables>();
+        baseSections = baseSectionVariables.gameObject;
 
         //Make the place grow
 

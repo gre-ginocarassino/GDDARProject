@@ -22,10 +22,11 @@ public class AssetBundleAzure : MonoBehaviour
 
     private StorageServiceClient client;
     private BlobService blobService;
+    private PlaceController pc;
 
     [Header("Asset Bundle Scene")]
     public Text label;
-    public string assetBundleName = "cloud";
+    public string assetBundleName;
     public string assetName;
     private AssetBundle assetBundle;
     private GameObject loadedObject;
@@ -71,13 +72,17 @@ public class AssetBundleAzure : MonoBehaviour
         }
     }
 
-    public void TappedLoadAssetBundle()
+    public void TappedLoadAssetBundle(PlaceController currencity)
     {
+        pc = currencity;
+
         UnloadAssetBundle();
         string filename = assetBundleName + "-" + GetAssetBundlePlatformName() + ".unity3d";
         string resourcePath = container + "/" + filename;
         Log.Text(label, "Load asset bundle: " + resourcePath);
         StartCoroutine(blobService.GetAssetBundle(GetAssetBundleComplete, resourcePath));
+
+        currencity.baseSections = loadedObject;
     }
 
     private void GetAssetBundleComplete(IRestResponse<AssetBundle> response)
@@ -122,9 +127,10 @@ public class AssetBundleAzure : MonoBehaviour
             Log.Text(label, "Load asset bundle first", "Error, Asset Bundle was null", Log.Level.Warning);
             return;
         }
-        GameObject gameObject = Instantiate(loadedObject, position, rotation);
+        GameObject gameObject = Instantiate(loadedObject, pc.transform);
         gameObject.transform.localScale = scale;
-        gameObject.transform.GetComponent<Renderer>().material.SetColor("_EmissionColor", color);
+
+        //gameObject.transform.GetComponent<Renderer>().material.SetColor("_EmissionColor", color);
     }
 
     public void TappedRemovePrefabs()

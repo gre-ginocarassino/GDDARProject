@@ -14,7 +14,7 @@ public class CreateAssetBundles
 		//BuildAssetBundleAndRename (BuildTarget.WSAPlayer, "WSA");
 		#endif
 
-		//BuildAssetBundleAndRename (BuildTarget.StandaloneWindows, "x86");
+		BuildAssetBundleAndRename (BuildTarget.StandaloneWindows, "x86");
 		BuildAssetBundleAndRename (BuildTarget.StandaloneWindows64, "x64");
 
 		BuildAssetBundleAndRename (BuildTarget.Android, "Android");

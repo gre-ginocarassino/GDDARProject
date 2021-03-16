@@ -1,7 +1,10 @@
 ManifestFileVersion: 0
-CRC: 245772385
+CRC: 2618860935
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: cloud
+      Dependencies: {}
+    Info_1:
+      Name: england
       Dependencies: {}

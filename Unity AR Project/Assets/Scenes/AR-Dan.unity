@@ -2737,8 +2737,8 @@ MonoBehaviour:
   accessKey: jSqIxr58D3rAMLjeQR7JlPDVFYYrDiIdSOYCp0VEfcHYzelNyc+YbUfpABNqN9fpRj10QXukmTkL7KPI0GnV2A==
   container: android
   label: {fileID: 1031816197}
-  assetBundleName: cloud
-  assetName: CuboBlu
+  assetBundleName: 
+  assetName: 
   audioSource: {fileID: 0}
 --- !u!4 &1449627677
 Transform:
@@ -3882,6 +3882,21 @@ PrefabInstance:
       propertyPath: uiPanel
       value: 
       objectReference: {fileID: 1787548588}
+    - target: {fileID: 81523428533681213, guid: 062a103827faeb044bb65d2864bb01e6,
+        type: 3}
+      propertyPath: name
+      value: england
+      objectReference: {fileID: 0}
+    - target: {fileID: 81523428533681213, guid: 062a103827faeb044bb65d2864bb01e6,
+        type: 3}
+      propertyPath: AssetbundleName
+      value: england
+      objectReference: {fileID: 0}
+    - target: {fileID: 81523428533681213, guid: 062a103827faeb044bb65d2864bb01e6,
+        type: 3}
+      propertyPath: AssetName
+      value: England
+      objectReference: {fileID: 0}
     - target: {fileID: 81523429012286144, guid: 062a103827faeb044bb65d2864bb01e6,
         type: 3}
       propertyPath: m_Name
@@ -3952,6 +3967,21 @@ PrefabInstance:
       propertyPath: englandController
       value: 
       objectReference: {fileID: 1023427457}
+    - target: {fileID: 8239282708638017168, guid: 062a103827faeb044bb65d2864bb01e6,
+        type: 3}
+      propertyPath: name
+      value: france
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239282708638017168, guid: 062a103827faeb044bb65d2864bb01e6,
+        type: 3}
+      propertyPath: AssetbundleName
+      value: france
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239282708638017168, guid: 062a103827faeb044bb65d2864bb01e6,
+        type: 3}
+      propertyPath: AssetName
+      value: France
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 062a103827faeb044bb65d2864bb01e6, type: 3}
 --- !u!1001 &2101423003
