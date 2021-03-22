@@ -6,30 +6,43 @@ public class Pooler : MonoBehaviour
 {
     Spawn spawn;
     bool isSpawned;
-    private float wait;
+    bool ShouldSpawn;
+    public float wait;
+    public float startWait;
 
     private void Start()
     {
         spawn = Spawn._Spawn;
         isSpawned = false;
+        ShouldSpawn = this;
         wait = 2f;
     }
+
+    public void startSpawn(bool shouldSpawn)
+    {
+        this.ShouldSpawn = shouldSpawn;
+        //Debug.Log(ShouldSpawn);
+    }
+
     private void Update()
     {
-        if (isSpawned == true && wait <= 0)
+        if (ShouldSpawn == true)
         {
-            spawn.SpawnFromPool("walker", transform.position, transform.rotation);
-            wait = .5f;
-        }
-        else
-        {
-           if (wait <= 0)
+            if (isSpawned == true && wait <= 0)
             {
-                isSpawned = true;
+                spawn.SpawnFromPool("walker", transform.position, transform.rotation);
+                wait = startWait;
             }
-           else
+            else
             {
-                wait -= Time.deltaTime;
+                if (wait <= 0)
+                {
+                    isSpawned = true;
+                }
+                else
+                {
+                    wait -= Time.deltaTime;
+                }
             }
         }
     }

@@ -5,6 +5,7 @@ using CharacterScript;
 public class characterAI : characterTypes
 {
     public bool IsLeaderFormed;
+    public bool confirmLeader;
     public bool IsGroupFormed;
     public float time;
     
@@ -16,6 +17,7 @@ public class characterAI : characterTypes
     //public SoloAction currentSoloAction;
     //public GroupAction currentGroupAction;
     public CurrentStatus currentStatus;
+
 
     protected override void Start()
     {
@@ -44,6 +46,7 @@ public class characterAI : characterTypes
         if (currentStatus == CurrentStatus.Solo)
         {
             navmeshAgent.SetDestination(targetLocation.position);
+            //navmeshAgent.destination = targetLocation.position;
             animator.SetBool("shouldAnimating", true);
 
             switch (currentCharacterType) //switch from type to type
@@ -63,15 +66,17 @@ public class characterAI : characterTypes
                         {
                             chooseLocation();
                             time = Random.Range(2,5);
-                            //int i = Random.Range(1, 5);
-                            //IsLeaderFormed = SetLeader.IfLeaderAvailable(i);
-                            //Debug.Log(i);
+                            int i = Random.Range(1, 11);
+                            IsLeaderFormed = SetLeader.IfLeaderAvailable(i, false);
+                            confirmLeader = CharacterParent.characterParent.ChooseLeader(IsLeaderFormed);
+                            Debug.Log(i);
+                            
                         }
                     }
-                    //if (IsLeaderFormed == true)
-                    //{
-                    //    currentCharacterType = CharacaterType.Leader;
-                    //}
+                    if (confirmLeader == true)
+                    {
+                        currentCharacterType = CharacaterType.Leader;
+                    }
                     break;
                 case CharacaterType.Leader:
                     Debug.Log("yes formed leader");
@@ -113,8 +118,7 @@ public class characterAI : characterTypes
 
     private void chooseLocation()
     {
-        targetLocation = Spawn._Spawn.allDirection[Random.Range(0, Spawn._Spawn.allDirection.Length)].transform;
-        
+        targetLocation = AttrationPoints.attrationPoints.allDirection[Random.Range(0, AttrationPoints.attrationPoints.allDirection.Length)].transform;
     }
 
 

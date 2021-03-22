@@ -22,24 +22,33 @@ public class Spawn : MonoBehaviour
 
     public static Spawn _Spawn;
 
-   
+
     //public CharacterBase characterBase;
 
-    public NavMeshSurface surface;
+    //public NavMeshSurface surface;
+    //public NavMeshData[] data;
+    //NavMeshDataInstance navMeshInstance = new NavMeshDataInstance();
 
     public List<Pool> pools;
 
-    public Transform[] allDirection;
-
     public Dictionary<string, Queue<GameObject>> spawnPool;
 
-    void Awake()
+
+    private void Awake()
     {
         _Spawn = this;
 
+       
+    }
+    public void PrepareCharacters()
+    {
         //bake navmesh
-        surface.BuildNavMesh();
-
+        //surface.BuildNavMesh();
+        
+        //Debug.Log(surface);
+        //navMeshInstance = NavMesh.AddNavMeshData(data[0]);
+        //navMeshInstance.Remove();
+                
         NavMeshHit closestHit;
 
         spawnPool = new Dictionary<string, Queue<GameObject>>();
@@ -51,13 +60,14 @@ public class Spawn : MonoBehaviour
 
             for (int i = 0; i < pool.size; i++)
             {
-                GameObject obj = Instantiate(pool.charTypes[Random.Range(0, pool.charTypes.Length)]);
+                GameObject obj = Instantiate(pool.charTypes[Random.Range(0, pool.charTypes.Length)], poolerPosition.position, Quaternion.identity);
                 obj.transform.SetParent(parent.transform);
-                //obj.GetComponent<UnityEngine.AI.NavMeshAgent>().Warp(poolerPosition.transform.position);
-               
+                //obj.GetComponent<NavMeshAgent>().Warp(poolerPosition.transform.position);
+
                 if (NavMesh.SamplePosition(poolerPosition.transform.position, out closestHit, 500, NavMesh.AllAreas))
                 {
                     obj.transform.position = closestHit.position;
+
                     //obj.AddComponent<NavMeshAgent>().speed = Random.Range(1f, 3f);
                     //obj.GetComponent<NavMeshAgent>().radius = 0.09f;
                     //obj.GetComponent<NavMeshAgent>().height = 0.4f;
@@ -65,13 +75,29 @@ public class Spawn : MonoBehaviour
                 else
                 {
                     Debug.LogError("could not find position on NavMesh");
+
                 }
+
+                //NavMeshAgent agentobj = obj.GetComponent<NavMeshAgent>();
+
+                //if (!agentobj.isOnNavMesh)
+                //{
+                //    agentobj.transform.position = poolerPosition.transform.position;
+                //    agentobj.enabled = false;
+                //    agentobj.enabled = true;
+                //    Debug.Log("agent not on navmesh");
+                //}
+
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
             }
 
             spawnPool.Add(pool.tag, objectPool);
+
+            
         }
+
+        
     }
 
     //method to be called from Pooler, to "spawn" objects (set active)
@@ -86,6 +112,7 @@ public class Spawn : MonoBehaviour
 
         objectToSpawn.transform.position = position;
         objectToSpawn.transform.rotation = rotation;
+
 
         objectToSpawn.SetActive(true);
         
