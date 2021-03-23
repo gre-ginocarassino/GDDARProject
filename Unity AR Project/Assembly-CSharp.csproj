@@ -84,6 +84,14 @@
      <Compile Include="Assets\Dependencies\StorageServices-master\model\ContainerResults.cs" />
      <Compile Include="Assets\Dependencies\StorageServices-master\model\ErrorResult.cs" />
      <Compile Include="Assets\DontDestroyObject.cs" />
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+=======
+     <Compile Include="Assets\FakeLoadingScreen.cs" />
+     <Compile Include="Assets\FlagSprite.cs" />
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
      <Compile Include="Assets\Neshko\3D_Pick_Scripts\HighlightTexture.cs" />
      <Compile Include="Assets\Neshko\3D_Pick_Scripts\RotationManager.cs" />
      <Compile Include="Assets\Neshko\Continents_2D\Buttons\ButtonAlphaHit.cs" />
@@ -96,6 +104,10 @@
      <Compile Include="Assets\Neshko\Continents_2D\Singleton.cs" />
      <Compile Include="Assets\Neshko\Continents_2D\UIContriesStyle.cs" />
      <Compile Include="Assets\Neshko\Menu_Scripts\ChangeFont.cs" />
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
      <Compile Include="Assets\Neshko\Quiz\Quiz\Scripts\CategoryBtnScript.cs" />
      <Compile Include="Assets\Neshko\Quiz\Quiz\Scripts\FadeContinentsMenu.cs" />
      <Compile Include="Assets\Neshko\Quiz\Quiz\Scripts\FadeUI.cs" />
@@ -105,13 +117,41 @@
      <Compile Include="Assets\Neshko\Quiz\Quiz\Scripts\QuizGameUI.cs" />
      <Compile Include="Assets\Neshko\Quiz\Quiz\Scripts\QuizManager.cs" />
      <Compile Include="Assets\Neshko\Quiz\Quiz\Scripts\RandomAnswersList.cs" />
+<<<<<<< Updated upstream
      <Compile Include="Assets\RaycastQuiz.cs" />
+=======
+     <Compile Include="Assets\Neshko\RaycastQuiz.cs" />
+     <Compile Include="Assets\Neshko\SliderPop.cs" />
+     <Compile Include="Assets\Neshko\SwipeSlider.cs" />
+     <Compile Include="Assets\Neshko\SwipeUI.cs" />
+     <Compile Include="Assets\Neshko\flagSprite.cs" />
+=======
+     <Compile Include="Assets\Neshko\Quiz_Scripts\Quiz\Scripts\CategoryBtnScript.cs" />
+     <Compile Include="Assets\Neshko\Quiz_Scripts\Quiz\Scripts\FadeContinentsMenu.cs" />
+     <Compile Include="Assets\Neshko\Quiz_Scripts\Quiz\Scripts\FadeUI.cs" />
+     <Compile Include="Assets\Neshko\Quiz_Scripts\Quiz\Scripts\MoveInParabola.cs" />
+     <Compile Include="Assets\Neshko\Quiz_Scripts\Quiz\Scripts\QuizDataScriptable.cs" />
+     <Compile Include="Assets\Neshko\Quiz_Scripts\Quiz\Scripts\QuizEnabler.cs" />
+     <Compile Include="Assets\Neshko\Quiz_Scripts\Quiz\Scripts\QuizGameUI.cs" />
+     <Compile Include="Assets\Neshko\Quiz_Scripts\Quiz\Scripts\QuizManager.cs" />
+     <Compile Include="Assets\Neshko\Quiz_Scripts\Quiz\Scripts\RandomAnswersList.cs" />
+     <Compile Include="Assets\RaycastQuiz.cs" />
+     <Compile Include="Assets\RotateObject.cs" />
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
      <Compile Include="Assets\Scripts\AR\ARInput_altered\ARInput_Altered.cs" />
      <Compile Include="Assets\Scripts\AR\BasicLightEstimation.cs" />
      <Compile Include="Assets\Scripts\ARInput.cs" />
      <Compile Include="Assets\Scripts\Azure\AssetBundleAzure.cs" />
      <Compile Include="Assets\Scripts\BoardController.cs" />
+<<<<<<< Updated upstream
      <Compile Include="Assets\Scripts\CameraTesting.cs" />
+=======
+<<<<<<< Updated upstream
+     <Compile Include="Assets\Scripts\CameraTesting.cs" />
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
      <Compile Include="Assets\Scripts\ChangeScene.cs" />
      <Compile Include="Assets\Scripts\CrowdScripts\AI\CharacterBase.cs" />
      <Compile Include="Assets\Scripts\CrowdScripts\AI\TypeA.cs" />
@@ -149,9 +189,12 @@
      <Compile Include="Assets\Scripts\PlayFab Scripts\PlayFabController.cs" />
      <Compile Include="Assets\Scripts\SceneIndexes.cs" />
      <Compile Include="Assets\Scripts\VillageController.cs" />
+<<<<<<< Updated upstream
      <Compile Include="Assets\SliderPop.cs" />
      <Compile Include="Assets\SwipeSlider.cs" />
      <Compile Include="Assets\SwipeUI.cs" />
+=======
+>>>>>>> Stashed changes
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -185,7 +228,10 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+<<<<<<< Updated upstream
      <Compile Include="Assets\flagSprite.cs" />
+=======
+>>>>>>> Stashed changes
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

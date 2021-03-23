@@ -66,6 +66,13 @@
           <e p="CreateAssetBundles.cs" t="Include" />
           <e p="PreserveCode.cs" t="Include" />
         </e>
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+=======
+        <e p="FakeLoadingScreen.cs" t="Include" />
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
         <e p="flagSprite.cs" t="Include" />
         <e p="Materials" t="Include">
           <e p="TransparentShadowCollector.shader" t="Include" />
@@ -339,6 +346,7 @@
           </e>
         </e>
         <e p="RaycastQuiz.cs" t="Include" />
+        <e p="RotateObject.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AR" t="Include">
             <e p="ARInput_altered" t="Include">
@@ -351,7 +359,14 @@
             <e p="AssetBundleAzure.cs" t="Include" />
           </e>
           <e p="BoardController.cs" t="Include" />
+<<<<<<< Updated upstream
           <e p="CameraTesting.cs" t="Include" />
+=======
+<<<<<<< Updated upstream
+          <e p="CameraTesting.cs" t="Include" />
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
           <e p="ChangeScene.cs" t="Include" />
           <e p="CrowdScripts" t="Include">
             <e p="AI" t="Include">
