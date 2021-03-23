@@ -7,6 +7,7 @@ public class PlaceController : MonoBehaviour
 {
     public BoardController boardController;
     private AssetBundleAzure az;
+    private FlagController flagCont;
 
     public string AssetbundleName;
     public string AssetName;
@@ -15,6 +16,10 @@ public class PlaceController : MonoBehaviour
     public GameObject baseSectionsPrefabs;
     public GameObject baseSections;
     public PlacementVariables baseSectionVariables;
+    public GameObject countryFlag;
+
+    [Header("Inside Variables")]
+    List<GameObject> roads = new List<GameObject>();
 
     private bool isTesting;
 
@@ -24,6 +29,7 @@ public class PlaceController : MonoBehaviour
         boardController = (BoardController)FindObjectOfType(typeof(BoardController));
         isTesting = boardController.isTesting;
         az = (AssetBundleAzure)FindObjectOfType(typeof(AssetBundleAzure));
+        flagCont = (FlagController)FindObjectOfType(typeof(FlagController));
     }
 
     // Start is called before the first frame update
@@ -60,6 +66,8 @@ public class PlaceController : MonoBehaviour
                 StartCoroutine(downloader());
             }      
         }
+
+        StartCoroutine(flagCont.SelectNewFlag(countryFlag));
 
     }
 
@@ -100,6 +108,8 @@ public class PlaceController : MonoBehaviour
 
     IEnumerator VariablesResizing(int newScale)
     {
+        yield return new WaitForSeconds(0.5f);
+
         //If the new scale is = 1, it's getting bigger, if it's not
         //it's getting smaller.
         if (newScale == 1)
@@ -115,8 +125,23 @@ public class PlaceController : MonoBehaviour
                 //i.transform.DOScaleY(newScale, 0.1f);
             }
 
-            baseSectionVariables.variables[0].transform.DOScaleY(newScale + 0.2f, 0.5f);
-            yield return new WaitForSeconds(0.1f);
+            if (roads.Count == 0)
+            {
+                foreach (Transform child in baseSectionVariables.variables[0].transform)
+                {
+                    roads.Add(child.gameObject);
+                }
+            }
+            else
+            {
+                //DoNothing
+            }
+
+            baseSectionVariables.variables[0].transform.DOScaleY(newScale, 0);
+            StartCoroutine(RoadAnimation(newScale));
+
+            //baseSectionVariables.variables[0].transform.DOScaleY(newScale + 0.2f, 0.5f);
+            //yield return new WaitForSeconds(0.1f);
 
             baseSectionVariables.variables[1].transform.DOScaleY(newScale + 0.2f, 0.5f);
             yield return new WaitForSeconds(0.1f);
@@ -131,11 +156,11 @@ public class PlaceController : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
 
             baseSectionVariables.variables[5].transform.DOScaleY(newScale + 0.2f, 0.5f);
-            baseSectionVariables.variables[0].transform.DOScaleY(newScale - 0.1f, 0.1f);
+            //baseSectionVariables.variables[0].transform.DOScaleY(newScale - 0.1f, 0.1f);
             yield return new WaitForSeconds(0.1f);
 
             baseSectionVariables.variables[6].transform.DOScaleY(newScale + 0.2f, 0.5f);
-            baseSectionVariables.variables[0].transform.DOScaleY(newScale, 0.1f);
+            //baseSectionVariables.variables[0].transform.DOScaleY(newScale, 0.1f);
             baseSectionVariables.variables[1].transform.DOScaleY(newScale - 0.1f, 0.1f);
             yield return new WaitForSeconds(0.1f);
 
@@ -175,5 +200,27 @@ public class PlaceController : MonoBehaviour
                 i.SetActive(false);
             }
         }
+    }
+
+    IEnumerator RoadAnimation(float number)
+    {
+        if (number == 1)
+        {
+            for (int i = 0; i < roads.Count; i++)
+            {
+                yield return new WaitForSeconds(0.03f);
+                roads[i].SetActive(true);
+            }
+        }
+        else
+        {
+            foreach (GameObject roadSection in roads)
+            {
+                roadSection.SetActive(false);
+
+                yield return new WaitForSeconds(0.02f);
+            }
+        }
+
     }
 }

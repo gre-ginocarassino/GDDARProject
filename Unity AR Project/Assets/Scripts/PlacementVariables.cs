@@ -8,5 +8,6 @@ public class PlacementVariables : MonoBehaviour
     [Tooltip("0 = Foliage, 1 - 5 = BaseTown, 6 = Landmarks")]
     public GameObject[] variables;
 
+
 }
  
