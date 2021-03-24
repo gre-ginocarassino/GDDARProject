@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/crowdTest.unity
     guid: 2d549788afd03d747a588ad51f8f7ee9
-  - enabled: 0
+  - enabled: 1
     path: Assets/Neshko/Continents.unity
     guid: a9c2d22c8a5486443b85fcf27c791fe7
   m_configObjects:
