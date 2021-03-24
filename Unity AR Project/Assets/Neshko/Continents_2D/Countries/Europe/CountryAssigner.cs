@@ -44,7 +44,7 @@ public class CountryAssigner : MonoBehaviour
         
         thisImage = this.gameObject.GetComponent<Image>().sprite;
         displayFlagImg.sprite = thisImage;
-        flagSprite.gameObject.GetComponent<Image>().enabled = true;
+//        flagSprite.gameObject.GetComponent<Image>().enabled = true;
     }
 
 }

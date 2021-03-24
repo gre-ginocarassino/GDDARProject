@@ -42,7 +42,7 @@ public class QuizEnabler : MonoBehaviour
                      StartCoroutine(FadeUI.Fade(1, _canvasGroups[0], 1f));
                      Prefabs[0].gameObject.SetActive(true);
                      ShrinkToInitialSize();
-                     _removeContinents.gameObject.SetActive(true);
+
 
                 // AR Spawn Method for that country can be called here
                 // Activate the button that can take the player to the quiz section

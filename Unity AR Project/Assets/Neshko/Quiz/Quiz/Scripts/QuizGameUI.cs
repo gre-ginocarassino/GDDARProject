@@ -25,6 +25,7 @@ public class QuizGameUI : MonoBehaviour
     [SerializeField] private Button _interactBtn;
     [SerializeField] private Button _closeBtn;
 
+    [SerializeField] private GameObject[] _buttonsPos;
    
     public Button _retryButton;
     [SerializeField] public TextMeshProUGUI endGameReasonText;
@@ -148,8 +149,10 @@ public class QuizGameUI : MonoBehaviour
         //Here it is checked how many difficulty categories are in the list
         for (int i = 0; i < quizManager.QuizData.Count; i++)
         {
-            CategoryBtnScript categoryBtn = Instantiate(difficultyButtonPrefab, scrollHolder.transform);
-            categoryBtn.SetButton(quizManager.QuizData[i].categoryName, quizManager.QuizData[i].questions.Count, quizManager.QuizData[i].timeToComplete); // Here we set the button values
+           // CategoryBtnScript categoryBtn = Instantiate(difficultyButtonPrefab, scrollHolder.transform);
+           CategoryBtnScript categoryBtn = Instantiate(difficultyButtonPrefab, _buttonsPos[i].transform);
+
+           categoryBtn.SetButton(quizManager.QuizData[i].categoryName, quizManager.QuizData[i].questions.Count, quizManager.QuizData[i].timeToComplete); // Here we set the button values
             int index = i;
             
             categoryBtn.Btn.onClick.AddListener(() => DifficultyButton(index, quizManager.QuizData[index].categoryName));
@@ -212,7 +215,7 @@ public class QuizGameUI : MonoBehaviour
     {
         _retryButton.interactable = false;
         StartCoroutine(FadeUI.Fade(0, SpotQuizUI, 1f));
-        StartCoroutine(FadeUI.Fade( 1,SpotWelcomePage, 1f));
+      //  StartCoroutine(FadeUI.Fade( 1,SpotWelcomePage, 1f));
         StartCoroutine(FadeUI.Fade( 0,GameOverUI, 1f));
     }
     
