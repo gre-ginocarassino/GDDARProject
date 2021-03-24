@@ -12,6 +12,8 @@ public class BoardController : MonoBehaviour
     [Header("Loaded GameObjects")]
     public PlaceController villageController;
     public PlaceController englandController;
+    public PlaceController franceController;
+    public PlaceController italyController;
 
     public bool isTesting;
 

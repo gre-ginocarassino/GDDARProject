@@ -42,18 +42,34 @@ public class QuizEnabler : MonoBehaviour
                      StartCoroutine(FadeUI.Fade(1, _canvasGroups[0], 1f));
                      Prefabs[0].gameObject.SetActive(true);
                      ShrinkToInitialSize();
+                     bCont = (BoardController)FindObjectOfType(typeof(BoardController));
+                     bCont.NewSection(bCont.franceController);
 
+                break;
 
-                // AR Spawn Method for that country can be called here
-                // Activate the button that can take the player to the quiz section
-                //this is the code for growing england
-                bCont = (BoardController)FindObjectOfType(typeof(BoardController));
-                bCont.NewSection(bCont.englandController);
+                case Countries.England:
+                    Deselect();
+                    Deactivate();
+                    StartCoroutine(FadeUI.Fade(1, _canvasGroups[0], 1f));
+                    Prefabs[0].gameObject.SetActive(true);
+                    ShrinkToInitialSize();
+                    bCont = (BoardController)FindObjectOfType(typeof(BoardController));
+                    bCont.NewSection(bCont.englandController);
 
-                   
-                     break;
-                 
-                 case Countries.China : 
+                break;
+
+            case Countries.Italy:
+                    Deselect();
+                    Deactivate();
+                    StartCoroutine(FadeUI.Fade(1, _canvasGroups[0], 1f));
+                    Prefabs[0].gameObject.SetActive(true);
+                    ShrinkToInitialSize();
+                    bCont = (BoardController)FindObjectOfType(typeof(BoardController));
+                    bCont.NewSection(bCont.italyController);
+
+                break;
+
+            case Countries.China : 
 
                      Deselect();
                      Deactivate();
@@ -128,7 +144,7 @@ public class QuizEnabler : MonoBehaviour
     public enum Countries 
     { 
      France, 
-     UnitedKingdom, 
+     England, 
      Italy, 
      China
     };
