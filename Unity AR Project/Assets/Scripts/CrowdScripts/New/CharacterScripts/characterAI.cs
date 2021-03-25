@@ -8,6 +8,7 @@ public class characterAI : characterTypes
     public bool confirmLeader;
     public bool IsGroupFormed;
     public float time;
+    public float distanceFromPoint;
     
     public enum CurrentStatus { Solo, InGroup}
     public enum SoloAction { Idling, Wandering}
@@ -22,7 +23,8 @@ public class characterAI : characterTypes
     protected override void Start()
     {
         base.Start();
-        time = 5;
+        time = 4;
+        distanceFromPoint = 1;
 
         currentStatus = CurrentStatus.Solo;
         currentCharacterType = CharacaterType.Passenger;
@@ -47,25 +49,25 @@ public class characterAI : characterTypes
         {
             navmeshAgent.SetDestination(targetLocation.position);
             //navmeshAgent.destination = targetLocation.position;
-            animator.SetBool("shouldAnimating", true);
+            animator.SetBool("StartWalking", true);
 
             switch (currentCharacterType) //switch from type to type
             {
                 case CharacaterType.Tourist:
-                    if (Vector3.Distance(transform.position, targetLocation.position) < 0.5)
+                    if (Vector3.Distance(transform.position, targetLocation.position) < distanceFromPoint)
                     {
                         currentCharacterType = CharacaterType.Wanderer;
                     }
                     break;
                 case CharacaterType.Wanderer:
-                    if (Vector3.Distance(transform.position, targetLocation.position) < 0.5)
+                    if (Vector3.Distance(transform.position, targetLocation.position) < distanceFromPoint)
                     {
                         time -= Time.deltaTime;
-                        animator.SetBool("shouldAnimating", false);
+                        animator.SetBool("StartWalking", false);
                         if (time <= 0)
                         {
                             chooseLocation();
-                            time = Random.Range(2,5);
+                            time = Random.Range(1,4);
                             int i = Random.Range(1, 11);
                             IsLeaderFormed = SetLeader.IfLeaderAvailable(i, false);
                             confirmLeader = CharacterParent.characterParent.ChooseLeader(IsLeaderFormed);
@@ -79,7 +81,7 @@ public class characterAI : characterTypes
                     }
                     break;
                 case CharacaterType.Leader:
-                    Debug.Log("yes formed leader");
+                    //Debug.Log("yes formed leader");
                     break;
             }
         }

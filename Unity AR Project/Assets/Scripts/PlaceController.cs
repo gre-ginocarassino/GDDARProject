@@ -5,6 +5,10 @@ using DG.Tweening;
 
 public class PlaceController : MonoBehaviour
 {
+    //Crowd related
+    private Pooler pooler;
+    private bool Spawned;
+
     public BoardController boardController;
     private AssetBundleAzure az;
     private FlagController flagCont;
@@ -30,6 +34,8 @@ public class PlaceController : MonoBehaviour
         isTesting = boardController.isTesting;
         az = (AssetBundleAzure)FindObjectOfType(typeof(AssetBundleAzure));
         flagCont = (FlagController)FindObjectOfType(typeof(FlagController));
+
+        pooler = new Pooler();
     }
 
     // Start is called before the first frame update
@@ -185,9 +191,27 @@ public class PlaceController : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
 
             baseSectionVariables.variables[6].transform.DOScaleY(newScale, 0.1f);
+
+            yield return new WaitForSeconds(0.1f);
+
+            if (Spawned == false)
+            {
+                Spawn._Spawn.PrepareCharacters();
+                Spawned = true;
+            }
+            yield return new WaitForSeconds(1f);
+            //pass bool true to pooler
+            if (Spawned == true)
+            {
+                pooler.startSpawn(true);
+            }
+
         } 
         else
         {
+            pooler.startSpawn(false);
+            CharacterParent.characterParent.DisableCharacter();
+
             foreach (GameObject i in baseSectionVariables.variables)
             {
                 i.transform.DOScaleY(newScale, 0.5f);
@@ -199,6 +223,8 @@ public class PlaceController : MonoBehaviour
             {
                 i.SetActive(false);
             }
+
+            baseSectionVariables.gameObject.SetActive(false);
         }
     }
 
