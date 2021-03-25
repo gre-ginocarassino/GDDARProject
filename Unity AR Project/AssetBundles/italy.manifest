@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 18070440
+CRC: 4088015677
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b81b3e494b382cc83111ebcb724b5d02
+    Hash: 35d110f0fc5d3e34a6cdf0417f61f16e
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 5787cf93d6627863ee82acc550485811
+    Hash: ee9dd1747588de97b1086515057adf0c
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -27,17 +27,9 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 65
   Script: {instanceID: 0}
-- Class: 74
-  Script: {instanceID: 0}
 - Class: 82
   Script: {instanceID: 0}
-- Class: 91
-  Script: {instanceID: 0}
-- Class: 95
-  Script: {instanceID: 0}
 - Class: 96
-  Script: {instanceID: 0}
-- Class: 111
   Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
@@ -116,5 +108,5 @@ ClassTypes:
 - Class: 328
   Script: {instanceID: 0}
 Assets:
-- Assets/Prefabs/Sections/England/England1.prefab
+- Assets/Prefabs/Sections/Italy/Italy1.prefab
 Dependencies: []
