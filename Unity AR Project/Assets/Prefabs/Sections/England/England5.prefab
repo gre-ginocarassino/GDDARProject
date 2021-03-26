@@ -9382,10 +9382,10 @@ RectTransform:
   m_Father: {fileID: 1752252255082227749}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0.65939593}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1080, y: 1011.8677}
+  m_SizeDelta: {x: 0, y: 357.86768}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1752252254829350917
 MonoBehaviour:
@@ -9587,7 +9587,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752252254900330913}
   m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: -2.87, y: 0.525, z: 3.843}
+  m_LocalPosition: {x: -3.73, y: 0.525, z: 3.843}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1752252255142435011}
@@ -39802,3 +39802,13 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1029 &102900000
+DefaultAsset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Message: This default asset was generated because the worker process has crashed
+    during last import.
+  m_IsWarning: 1

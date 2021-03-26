@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f611d797432e3f846885b2b12fde5f35, type: 3}
+  m_Name: quiz_England_Medium
+  m_EditorClassIdentifier: 
+  categoryName: Medium
+  timeToComplete: 20
+  questions:
+  - questionInfo: What year was Big Ben completed?
+    answerOptions:
+    - 1912
+    - 1945
+    - 2000
+    - 1887
+    correctAnswer: 1887
+  - questionInfo: What is the name of the tower Big Ben is located in?
+    answerOptions:
+    - Clock Tower
+    - London Tower
+    - Queen Tower
+    - Elizabeth Tower
+    correctAnswer: Elizabeth Tower
+  - questionInfo: What famous river is Big Ben located next to?
+    answerOptions:
+    - River Nile
+    - River Tyne
+    - River Thames
+    - River of London
+    correctAnswer: River Thames

@@ -25,8 +25,8 @@ public class SliderPop : MonoBehaviour
     private 
     void Start()
     {
-        startPos = new Vector2(13, -1906);
-        finalPos = new Vector2(13, -1400);
+        startPos = new Vector2(13, -300);
+        finalPos = new Vector2(13, 500);
         _counter = 0;
         StartCoroutine(LerpObjectUp(_transforms[0]));
     }
