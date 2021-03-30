@@ -61,16 +61,19 @@ public class PlaceController : MonoBehaviour
             {
                 baseSections = Instantiate(baseSectionsPrefabs, transform);
 
-                if (baseSectionVariables == null)
-                {
-                    baseSectionVariables = baseSections.GetComponent<PlacementVariables>();
-                }
-                baseSections.SetActive(true);
-                StartCoroutine(VariablesResizing(1));
+                //if (baseSectionVariables == null)
+                //{
+                //    baseSectionVariables = baseSections.GetComponent<PlacementVariables>();
+                //}
+                //baseSections.SetActive(true);
+                //StartCoroutine(VariablesResizing(1));
             } else
             {
                 StartCoroutine(downloader());
             }      
+        } else
+        {
+            StartCoroutine(VariablesResizing(1));
         }
 
         StartCoroutine(flagCont.SelectNewFlag(countryFlag));
@@ -84,19 +87,7 @@ public class PlaceController : MonoBehaviour
 
         az.TappedLoadAssetBundle(this);
 
-        yield return new WaitForSeconds(1);
-
-        baseSectionVariables = transform.GetComponentInChildren<PlacementVariables>();
-        baseSections = baseSectionVariables.gameObject;
-
-        //Make the place grow
-
-        if (baseSectionVariables == null)
-        {
-            baseSectionVariables = baseSections.GetComponent<PlacementVariables>();
-        }
-        baseSections.SetActive(true);
-        StartCoroutine(VariablesResizing(1));
+        yield return new WaitForSeconds(0f);
     }
 
     public virtual void ShrinkPlace()
@@ -112,7 +103,7 @@ public class PlaceController : MonoBehaviour
         StartCoroutine(VariablesResizing(0));
     }
 
-    IEnumerator VariablesResizing(int newScale)
+    public IEnumerator VariablesResizing(int newScale)
     {
         yield return new WaitForSeconds(0.5f);
 

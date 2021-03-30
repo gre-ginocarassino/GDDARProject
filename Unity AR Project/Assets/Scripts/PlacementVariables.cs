@@ -8,6 +8,21 @@ public class PlacementVariables : MonoBehaviour
     [Tooltip("0 = Foliage, 1 - 5 = BaseTown, 6 = Landmarks")]
     public GameObject[] variables;
 
+    public bool spawnonLoad;
 
+    private void Awake()
+    {
+        if (spawnonLoad)
+        {
+            PlaceController newPC = transform.GetComponentInParent<PlaceController>();
+
+            newPC.baseSectionVariables = this;
+            newPC.baseSections = this.gameObject;
+
+            //Make the place grow
+            StartCoroutine(newPC.VariablesResizing(1));
+        }
+
+    }
 }
  

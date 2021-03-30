@@ -17451,6 +17451,7 @@ MonoBehaviour:
   - {fileID: 8627292998571521202}
   - {fileID: 6081449740358584867}
   - {fileID: 1881782743}
+  spawnonLoad: 0
 --- !u!4 &3378178070780833042
 Transform:
   m_ObjectHideFlags: 0
