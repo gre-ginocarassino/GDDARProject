@@ -71,7 +71,7 @@ public class characterAI : characterTypes
                             int i = Random.Range(1, 11);
                             IsLeaderFormed = SetLeader.IfLeaderAvailable(i, false);
                             confirmLeader = CharacterParent.characterParent.ChooseLeader(IsLeaderFormed);
-                            Debug.Log(i);
+                            //Debug.Log(i);
                             
                         }
                     }
@@ -92,11 +92,17 @@ public class characterAI : characterTypes
         switch (action)
         {
             case 0:
-                currentCharacterType = CharacaterType.Tourist;
-                chooseLocation();
+                if (currentCharacterType == CharacaterType.Passenger)
+                {
+                    currentCharacterType = CharacaterType.Tourist;
+                    chooseLocation();
+                }
                 break;
             case 1:
-                currentCharacterType = CharacaterType.Passenger;
+                if (currentCharacterType == CharacaterType.Passenger)
+                {
+                    currentCharacterType = CharacaterType.Passenger;
+                }
                 break;
         }
     }

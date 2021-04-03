@@ -8681,7 +8681,7 @@ MonoBehaviour:
   boardController: {fileID: 81523427344692836}
   AssetbundleName: england
   AssetName: England1
-  baseSectionsPrefabs: {fileID: 5016095340869575420, guid: a59e0c5adeec493409b52d1929bac2aa,
+  baseSectionsPrefabs: {fileID: 7020847686739884954, guid: 4866e2031b01e7a4e8beb7dbbd999a4f,
     type: 3}
   baseSections: {fileID: 0}
   baseSectionVariables: {fileID: 0}
@@ -24466,7 +24466,7 @@ MonoBehaviour:
   boardController: {fileID: 81523427344692836}
   AssetbundleName: italy
   AssetName: Italy1
-  baseSectionsPrefabs: {fileID: 613493201944606131, guid: 4940c816e51769d4d91cf3b4e0e156a9,
+  baseSectionsPrefabs: {fileID: 7077016190534250750, guid: c07180ce7e119764ebd517b5ba767046,
     type: 3}
   baseSections: {fileID: 0}
   baseSectionVariables: {fileID: 0}
@@ -24486,7 +24486,7 @@ MonoBehaviour:
   boardController: {fileID: 81523427344692836}
   AssetbundleName: france
   AssetName: France1
-  baseSectionsPrefabs: {fileID: 309197932957371079, guid: 0531a3e2d0d7b004d8d1ebc5b9120659,
+  baseSectionsPrefabs: {fileID: 5735976695561907589, guid: 15598fe4e00a30246a74b1c81e7b37b7,
     type: 3}
   baseSections: {fileID: 0}
   baseSectionVariables: {fileID: 0}

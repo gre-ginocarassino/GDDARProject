@@ -12,20 +12,20 @@ public class navigationSign : MonoBehaviour
     {
         if (other.TryGetComponent<characterAI>(out characterAI _characterAI))
         {
-            randomSelection = Random.Range(0, 2);
+                randomSelection = Random.Range(0, 2);
 
-            if (threshold < maxThreshold)
-            {
-                if (randomSelection == 0) //Become tourist
+                if (threshold < maxThreshold)
                 {
-                    _characterAI.selectAction(randomSelection);
-                    threshold += 1;
+                    if (randomSelection == 0) //Become tourist
+                    {
+                        _characterAI.selectAction(randomSelection);
+                        threshold += 1;
+                    }
+                    else //Become passenger
+                    {
+                        _characterAI.selectAction(randomSelection);
+                    }
                 }
-                else //Become passenger
-                {
-                    _characterAI.selectAction(randomSelection);
-                }
-            }
         }
     }
 }

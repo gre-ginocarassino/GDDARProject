@@ -40,7 +40,7 @@ public class CharacterParent : MonoBehaviour
                 if (child.GetComponent<characterAI>().currentCharacterType == characterTypes.CharacaterType.Wanderer && count < 1)
                 {
                     count++;
-                    return true;
+                    return true; //true to form leader
                 }
             }
             return false;

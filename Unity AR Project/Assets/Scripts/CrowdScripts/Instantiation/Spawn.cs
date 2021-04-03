@@ -37,7 +37,7 @@ public class Spawn : MonoBehaviour
     private void Awake()
     {
         _Spawn = this;
-
+        spawnPool = new Dictionary<string, Queue<GameObject>>();
        
     }
     public void PrepareCharacters()
@@ -51,7 +51,10 @@ public class Spawn : MonoBehaviour
                 
         NavMeshHit closestHit;
 
-        spawnPool = new Dictionary<string, Queue<GameObject>>();
+        if (spawnPool == null)
+        {
+            spawnPool = new Dictionary<string, Queue<GameObject>>();
+        }
 
        //Instantiate during initialisation
         foreach (Pool pool in pools)
@@ -105,9 +108,10 @@ public class Spawn : MonoBehaviour
     {
         if (!spawnPool.ContainsKey(tag))
         {
-            Debug.LogWarning("Pool with tag" + tag + "doesnt exist");
+        //    Debug.LogWarning("Pool with tag" + tag + "doesnt exist");
             return null;
         }
+        
         GameObject objectToSpawn = spawnPool[tag].Dequeue(); //remove from item at the start of queue 
 
         objectToSpawn.transform.position = position;
