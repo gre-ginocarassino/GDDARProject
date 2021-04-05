@@ -8,20 +8,8 @@ using PlayFab.Json;
 
 public class MainController : MonoBehaviour
 {
+    #region [SINGLETON]
     public static MainController MCC; //Singleton
-
-    public string MyPlayfabID;
-    public string MyPlayfabUsername;
-
-    public GameObject leaderboardPanel;
-    public GameObject listingPrefab;
-    public Transform listingContainer;
-    public Text UsernameText;
-    public Text LVText;
-
-    public GameObject loadingPanel;
-
-
     private void OnEnable()
     {
         if (MainController.MCC == null)
@@ -37,9 +25,51 @@ public class MainController : MonoBehaviour
         }
         DontDestroyOnLoad(this.gameObject);
     }
+    #endregion
+
+    #region[PLAYER STATS]
+    public string MyPlayfabID;
+    public string MyPlayfabUsername;
+    public int playerLevel;
+    public int playerPoints;
+    public int totalEngland;
+    public int totalFrance;
+    public int totalItaly;
+    public int totalChina;
+    public int totalBulgaria;
+    public int geoPoints;
+
+    public bool GeoEngland;
+    public bool GeoItaly;
+    public bool GeoFrance;
+    #endregion
+
+    #region [BAR]
+    public Text T_Username;
+    public Text T_Level;
+    public Text T_Points;
+    public Text T_GeoPoints;
+    #endregion
+
+    #region [COUNTRIES_STATS]
+    public Text ENG_Points;
+    public Text ITA_Points;
+    public Text FRA_Points;
+
+    public GameObject IMG_GeoEng;
+    public GameObject IMG_GeoIta;
+    public GameObject IMG_GeoFra;
+    #endregion
+
+    public GameObject leaderboardPanel;
+    public GameObject listingPrefab;
+    public Transform listingContainer;
+    public GameObject loadingPanel;
 
     public void Start()
     {
+        GetStatistics();
+
         StartCoroutine(ActivationRoutine());
 
         //If the Title ID is null or empty, goes in here
@@ -51,37 +81,33 @@ public class MainController : MonoBehaviour
         GetAccountInfo();
     }
 
-    private IEnumerator ActivationRoutine()
+    private void Update()
     {
-        loadingPanel.SetActive(true);
+        T_Level.text = playerLevel.ToString();
+        T_Points.text = playerPoints.ToString();
+        T_GeoPoints.text = geoPoints.ToString();
+        ENG_Points.text = totalEngland.ToString();
+        ITA_Points.text = totalItaly.ToString();
+        FRA_Points.text = totalFrance.ToString();
 
-        //Turn the Game Oject back off after 1 sec.
-        yield return new WaitForSeconds(3);
-
-        //Game object will turn off
-        loadingPanel.SetActive(false);
+        UpdateTotalScore();
+        UpdateLevel();
+        UpdateGeoPoints(100);
     }
 
     #region AccountInfo
-
-
     void GetAccountInfo()
     {
         GetAccountInfoRequest request = new GetAccountInfoRequest();
         PlayFabClientAPI.GetAccountInfo(request, Successs, fail);
     }
-
-
     void Successs(GetAccountInfoResult result)
     {
 
         MyPlayfabID = result.AccountInfo.PlayFabId;
         MyPlayfabUsername = result.AccountInfo.Username;
-        UsernameText.text = MyPlayfabUsername;
-
+        T_Username.text = MyPlayfabUsername;
     }
-
-
     void fail(PlayFabError error)
     {
 
@@ -90,7 +116,6 @@ public class MainController : MonoBehaviour
     #endregion
 
     #region LeaderBoard
-
     public void getLeaderBoard()
     {
         var requestLeaderboard = new GetLeaderboardRequest { StartPosition = 0, StatisticName = "PlayerLevel", MaxResultsCount = 20 };
@@ -125,10 +150,7 @@ public class MainController : MonoBehaviour
     }
     #endregion
 
-    #region PlayerStats
-    public int playerLevel;
-    public int playerPoints;
-
+    #region [GET/SET_STATS]
     public void SetStats()
     {
         //sending POST request with UpdatePlayerStatistic function
@@ -137,12 +159,18 @@ public class MainController : MonoBehaviour
             // request.Statistics is a list, so multiple StatisticUpdate objects can be defined if required.
             Statistics = new List<StatisticUpdate> {
         new StatisticUpdate { StatisticName = "PlayerLevel", Value = playerLevel },
+        new StatisticUpdate { StatisticName = "PlayerPoints", Value = playerPoints },
+        new StatisticUpdate { StatisticName = "GeoPoints", Value = geoPoints },
+        new StatisticUpdate { StatisticName = "TotalEngland", Value = totalEngland },
+        new StatisticUpdate { StatisticName = "TotalFrance", Value = totalFrance },
+        new StatisticUpdate { StatisticName = "TotalItaly", Value = totalItaly },
+        new StatisticUpdate { StatisticName = "TotalChina", Value = totalChina },
+        new StatisticUpdate { StatisticName = "TotalBulgaria", Value = totalBulgaria },
     }
         },
         result => { Debug.Log("User statistics updated"); }, //callback for successful POST
         error => { Debug.LogError(error.GenerateErrorReport()); }); //failed POST
     }
-
     void GetStatistics()
     {
         PlayFabClientAPI.GetPlayerStatistics(
@@ -151,7 +179,6 @@ public class MainController : MonoBehaviour
             error => Debug.LogError(error.GenerateErrorReport())
         );
     }
-
     void OnGetStatistics(GetPlayerStatisticsResult result)
     {
         Debug.Log("Received the following Statistics:");
@@ -166,23 +193,45 @@ public class MainController : MonoBehaviour
                 case "PlayerPoints":
                     playerPoints = eachStat.Value;
                     break;
+                case "GeoPoints":
+                    geoPoints = eachStat.Value;
+                    break;
+                case "TotalEngland":
+                    totalEngland = eachStat.Value;
+                    break;
+                case "TotalFrance":
+                    totalFrance = eachStat.Value;
+                    break;
+                case "TotalItaly":
+                    totalItaly = eachStat.Value;
+                    break;
+                case "TotalChina":
+                    totalChina = eachStat.Value;
+                    break;
+                case "TotalBulgaria":
+                    totalBulgaria = eachStat.Value;
+                    break;
             }
         }
 
     }
-    // Build the request object and access the API 
-    //
     public void StartCloudUpdatePlayerStats()
     {
         PlayFabClientAPI.ExecuteCloudScript(new ExecuteCloudScriptRequest()
         {
             FunctionName = "UpdatePlayerStats", // Arbitrary function name (must exist in your uploaded cloud.js file)
-            FunctionParameter = new { argsPlayerLevel = playerLevel, argsPlayerPoints = playerPoints }, // The parameter provided to your function
+            FunctionParameter = new { argsPlayerLevel = playerLevel,
+                argsPlayerPoints = playerPoints,
+                argsGeoPoints = geoPoints,
+                argsTotalEngland = totalEngland,
+                argsTotalFrance = totalFrance,
+                argsTotalItaly = totalItaly,
+                argsTotalChina = totalChina,
+                argsTotalBulgaria = totalBulgaria
+            }, // The parameter provided to your function
             GeneratePlayStreamEvent = true, // Optional - Shows this event in PlayStream
         }, OnCloudUpdateStats, OnErrorShared);
     }
-    // OnCloudHelloWorld defined in the next code block
-
     private static void OnCloudUpdateStats(ExecuteCloudScriptResult result)
     {
         // CloudScript returns arbitrary results, so you have to evaluate them one step and one parameter at a time
@@ -193,10 +242,56 @@ public class MainController : MonoBehaviour
         jsonResult.TryGetValue("messageValue", out messageValue); // note how "messageValue" directly corresponds to the JSON values set in CloudScript
         Debug.Log((string)messageValue);
     }
-
     private static void OnErrorShared(PlayFabError error)
     {
         Debug.Log(error.GenerateErrorReport());
     }
     #endregion
+
+    #region [INTERNAL_ECONOMICS]
+    private void UpdateTotalScore()
+    {
+        playerPoints = totalEngland + totalFrance + totalItaly + totalChina + totalBulgaria;
+        T_Points.text = playerPoints.ToString();
+    }
+    private void UpdateLevel()
+    {
+        int a = 30;
+
+        playerLevel = playerPoints / a;
+        T_Level.text = playerLevel.ToString();
+    }
+    private void UpdateGeoPoints(int threshold)
+    {
+        if (totalEngland >= threshold && GeoEngland == false)
+        {
+            geoPoints++;
+            GeoEngland = true;
+            IMG_GeoEng.SetActive(true);
+        }
+        if (totalItaly >= threshold && GeoItaly == false)
+        {
+            geoPoints++;
+            GeoItaly = true;
+            IMG_GeoIta.SetActive(true);
+        }
+        if (totalFrance >= threshold && GeoFrance == false)
+        {
+            geoPoints++;
+            GeoFrance = true;
+            IMG_GeoFra.SetActive(true);
+        }
+    }
+    #endregion
+
+    private IEnumerator ActivationRoutine()
+    {
+        loadingPanel.SetActive(true);
+
+        //Turn the Game Oject back off after 1 sec.
+        yield return new WaitForSeconds(3);
+
+        //Game object will turn off
+        loadingPanel.SetActive(false);
+    }
 }

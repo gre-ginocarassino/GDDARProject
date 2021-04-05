@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayFabController : MonoBehaviour
 {
-    public static PlayFabController PFC; //Singleton
+    //public static PlayFabController PFC; //Singleton
 
     public GameObject loginPanel;
     public GameObject registerPanel;
@@ -24,21 +24,21 @@ public class PlayFabController : MonoBehaviour
     private string userPassword;
     public string username;
 
-    private void OnEnable()
-    {
-        if (PlayFabController.PFC == null)
-        {
-            PlayFabController.PFC = this;
-        }
-        else
-        {
-            if (PlayFabController.PFC != this)
-            {
-                Destroy(this.gameObject);
-            }
-        }
-        DontDestroyOnLoad(this.gameObject);
-    }
+    //private void OnEnable()
+    //{
+    //    if (PlayFabController.PFC == null)
+    //    {
+    //        PlayFabController.PFC = this;
+    //    }
+    //    else
+    //    {
+    //        if (PlayFabController.PFC != this)
+    //        {
+    //            Destroy(this.gameObject);
+    //        }
+    //    }
+    //    DontDestroyOnLoad(this.gameObject);
+    //}
 
     private IEnumerator ActivationRoutine()
     {
@@ -143,6 +143,8 @@ public class PlayFabController : MonoBehaviour
         registerPanel.SetActive(false);
 
         PlayFabClientAPI.UpdateUserTitleDisplayName(new UpdateUserTitleDisplayNameRequest { DisplayName = username }, onDisplayName, OnLoginAndroidFailure); //set displayname as username
+        SetBeginningStats();
+
         OnChangeScene();
     }
     void onDisplayName(UpdateUserTitleDisplayNameResult result)
@@ -185,6 +187,27 @@ public class PlayFabController : MonoBehaviour
     public void OpenAddLogin()
     {
         addLoginPanel.SetActive(true);
+    }
+
+    public void SetBeginningStats()
+    {
+        //sending POST request with UpdatePlayerStatistic function
+        PlayFabClientAPI.UpdatePlayerStatistics(new UpdatePlayerStatisticsRequest
+        {
+            // request.Statistics is a list, so multiple StatisticUpdate objects can be defined if required.
+            Statistics = new List<StatisticUpdate> {
+        new StatisticUpdate { StatisticName = "PlayerLevel", Value = 0 },
+        new StatisticUpdate { StatisticName = "PlayerPoints", Value = 0 },
+        new StatisticUpdate { StatisticName = "GeoPoints", Value = 0 },
+        new StatisticUpdate { StatisticName = "TotalEngland", Value = 0 },
+        new StatisticUpdate { StatisticName = "TotalFrance", Value = 0 },
+        new StatisticUpdate { StatisticName = "TotalItaly", Value = 0 },
+        new StatisticUpdate { StatisticName = "TotalChina", Value = 0 },
+        new StatisticUpdate { StatisticName = "TotalBulgaria", Value = 0 },
+    }
+        },
+        result => { Debug.Log("User statistics updated"); }, //callback for successful POST
+        error => { Debug.LogError(error.GenerateErrorReport()); }); //failed POST
     }
 
     #region GET

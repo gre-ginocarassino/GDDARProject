@@ -3523,7 +3523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loginPanel: {fileID: 1376908436}
-  registerPanel: {fileID: 0}
+  registerPanel: {fileID: 328430829}
   addLoginPanel: {fileID: 1472634558}
   recoverButton: {fileID: 1941619357}
   loadingPanel: {fileID: 2328703599701668368}
