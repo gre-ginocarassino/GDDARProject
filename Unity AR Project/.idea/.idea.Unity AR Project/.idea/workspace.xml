@@ -20,180 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d885654-4c70-4e37-9d41-86e83ef60ba9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Characters.meta~Stashed changes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NavMeshComponents.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NavMeshComponentsEditor.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PlayFab.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PlayFabEditorExtensions.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PlayFabSDKEditor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity AR Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity AR Project/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity AR Project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity AR Project/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity AR Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity AR Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dependencies/RESTClient-master/helpers.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dependencies/RESTClient-master/helpers.meta~Updated upstream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Characters.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Characters.meta~Updated upstream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-Bold SDF.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-Bold SDF.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-Bold.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-Light SDF.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-Light SDF.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-Light.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-Medium SDF.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-Medium SDF.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-Medium.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-Regular SDF.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-Regular SDF.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-Regular.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-SemiBold SDF.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-SemiBold SDF.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-SemiBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Fonts/Quicksand-SemiBold.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Prefabs/CategoryBtn.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Prefabs/CategoryBtn.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Resources/Questions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Resources/Questions/France.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Resources/Questions/France/Eifel_Easy.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Resources/Questions/France/Eifel_Easy.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Resources/Questions/France/Eifel_Hard.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Resources/Questions/France/Eifel_Hard.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Resources/Questions/France/Eifel_Medium.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Resources/Questions/France/Eifel_Medium.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/CategoryBtnScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/CategoryBtnScript.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/FadeContinentsMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/FadeContinentsMenu.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/FadeUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/FadeUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/MoveInParabola.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/MoveInParabola.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/QuizDataScriptable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/QuizDataScriptable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/QuizEnabler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/QuizEnabler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/QuizGameUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/QuizGameUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/QuizManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/QuizManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/RandomAnswersList.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/RandomAnswersList.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/Asset 6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/Asset 6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/Asset 7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/Asset 7.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/ButtonShadow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/ButtonShadow.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/Circle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/Circle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/OptionBackground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/OptionBackground.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/QuestionOption.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/QuestionOption.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/Slider1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/Slider1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/Slider2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/Slider2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/Square.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/Square.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/SquareCurveCorner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/SquareCurveCorner.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/SquareCurveCornerLarge.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/SquareCurveCornerLarge.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/TimerIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/TimerIcon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/Timer_Cirle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/Timer_Cirle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/frame_category.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/frame_category.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/sound.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_1/sound.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/Asset 14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/Asset 14.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/Border_Line.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/Border_Line.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/CircularFrame_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/CircularFrame_1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/CurvedButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/CurvedButton.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/Eiffel_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/Eiffel_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/FrameGameOver.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/FrameGameOver.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/FrameOption.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/FrameOption.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/Frame_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/Frame_1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/GameOverBg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/GameOverBg.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/OptionButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/OptionButton.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/Star.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/Star.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/Timer_Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/Timer_Icon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/back_btn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/back_btn.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/back_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/back_icon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/small_frame.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/UI/Version_2/small_frame.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayFab/PlayFabEditorExtensions/Editor/Resources/PlayFabUnitySdk.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Authentication.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Authentication.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/Anguilla.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/Anguilla.PNG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/Bermuda.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/Bermuda.PNG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/British Virgin Islands.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/British Virgin Islands.PNG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/Caribbean Netherlands.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/Caribbean Netherlands.PNG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/Cayman Islands.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/Cayman Islands.PNG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/Costa_Rica_Final.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/Costa_Rica_Final.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/Greenland.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/Greenland.PNG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/Guadeloupe 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/Guadeloupe 1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/antigua-and-barbuda-flag-xs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/antigua-and-barbuda-flag-xs.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/bahamas-flag-xs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/bahamas-flag-xs.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/barbados-flag-xs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/barbados-flag-xs.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/belize-flag-xs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/belize-flag-xs.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/canada-flag-xs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/canada-flag-xs.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/cuba-flag-xs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/cuba-flag-xs.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/dominica-flag-xs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/dominica-flag-xs.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/dominican-republic-flag-xs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/dominican-republic-flag-xs.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/el-salvador-flag-xs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/el-salvador-flag-xs.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/grenada-flag-xs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/grenada-flag-xs.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/guatemala-flag-xs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Flags/NorthAmerica/guatemala-flag-xs.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Prefabs_Neshko/France_Quiz_FInal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Neshko/Prefabs_Neshko/France_Quiz_FInal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz/Quiz/Resources/Questions/England/quiz_England_Medium.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Neshko/Quiz/Quiz/Resources/Questions/England/quiz_England_Medium.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz/Quiz/Resources/Questions/England/quiz_England_Medium.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Neshko/Quiz/Quiz/Resources/Questions/England/quiz_England_Medium.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz/Quiz/Scripts/QuizGameUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Neshko/Quiz/Quiz/Scripts/QuizGameUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Neshko/Quiz/Quiz/Scripts/QuizManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Neshko/Quiz/Quiz/Scripts/QuizManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayFabEditorExtensions/Editor/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Sections/England/England1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Sections/England/England1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AR-Dan.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AR-Dan.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CrowdScripts/New/CharacterScripts/characterAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CrowdScripts/New/CharacterScripts/characterAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NavMeshComponents.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NavMeshComponents.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NavMeshComponentsEditor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NavMeshComponentsEditor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayFab.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PlayFab.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayFabEditorExtensions.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PlayFabEditorExtensions.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayFabSDKEditor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PlayFabSDKEditor.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,22 +49,23 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Neshko/Continents_2D/Buttons/ContinentObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neshko/Quiz/Quiz/Scripts/CategoryBtnScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neshko/Continents_2D/Countries/Europe/CountryAssigner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Neshko/Continents_2D/ChosenFlag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Neshko/Menu_Scripts/ChangeFont.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neshko/3D_Pick_Scripts/HighlightTexture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Neshko/Continents_2D/Buttons/LanguageBackBtn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Neshko/Continents_2D/ChosenLanguageAndFlag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Neshko/Continents_2D/UIContriesStyle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/RaycastQuiz.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SwipeSlider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FB001E01-371B-4ADC-A200-13E0AC763896/03/1f0d763c/Void.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/flagSprite.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Neshko/Continents_2D/Countries/Europe/CountryAssigner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Neshko/3D_Pick_Scripts/HighlightTexture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SliderPop.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Neshko/3D_Pick_Scripts/RotationManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neshko/Quiz/Quiz/Scripts/QuizManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CrowdScripts/New/CharacterScripts/characterAI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayFab Scripts/PlayFabController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neshko/Quiz/Quiz/Scripts/QuizEnabler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://D:/Programs/Unity/UnityLatest/2019.4.9f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Neshko/Quiz/Quiz/Scripts/QuizGameUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://D:/Programs/Unity/UnityLatest/2019.4.9f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FB001E01-371B-4ADC-A200-13E0AC763896/03/1f0d763c/Void.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -259,6 +104,9 @@
         <option value="$PROJECT_DIR$/Assets/RaycastQuiz.cs" />
         <option value="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/MoveInParabola.cs" />
         <option value="$PROJECT_DIR$/Assets/Neshko/Quiz_Scripts/Quiz/Scripts/QuizEnabler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CrowdScripts/New/CharacterScripts/characterAI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Neshko/Quiz/Quiz/Scripts/QuizManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Neshko/Quiz/Quiz/Scripts/QuizGameUI.cs" />
       </list>
     </option>
   </component>
@@ -290,10 +138,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7360">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="7360" />
       <method v="2" />
     </configuration>
   </component>
@@ -348,70 +196,70 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="510" height="464" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615282616669" />
-    <state width="1877" height="375" key="GridCell.Tab.0.bottom" timestamp="1615389622694">
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom" timestamp="1617174798123">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615389622694" />
-    <state width="1877" height="375" key="GridCell.Tab.0.center" timestamp="1615389622694">
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617174798123" />
+    <state width="1877" height="375" key="GridCell.Tab.0.center" timestamp="1617174798123">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615389622694" />
-    <state width="1877" height="375" key="GridCell.Tab.0.left" timestamp="1615389622693">
+    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617174798123" />
+    <state width="1877" height="375" key="GridCell.Tab.0.left" timestamp="1617174798123">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615389622693" />
-    <state width="1877" height="375" key="GridCell.Tab.0.right" timestamp="1615389622694">
+    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617174798123" />
+    <state width="1877" height="375" key="GridCell.Tab.0.right" timestamp="1617174798123">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615389622694" />
-    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1615389622694">
+    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617174798123" />
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1617174814842">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615389622694" />
-    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1615389622694">
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617174814842" />
+    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1617174814842">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615389622694" />
-    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1615389622694">
+    <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617174814842" />
+    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1617174814842">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615389622694" />
-    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1615389622694">
+    <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617174814842" />
+    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1617174814842">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615389622694" />
-    <state width="1877" height="375" key="GridCell.Tab.2.bottom" timestamp="1615389622694">
+    <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617174814842" />
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom" timestamp="1617174798044">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615389622694" />
-    <state width="1877" height="375" key="GridCell.Tab.2.center" timestamp="1615389622694">
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617174798044" />
+    <state width="1877" height="375" key="GridCell.Tab.2.center" timestamp="1617174798044">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615389622694" />
-    <state width="1877" height="375" key="GridCell.Tab.2.left" timestamp="1615389622694">
+    <state width="1877" height="375" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617174798044" />
+    <state width="1877" height="375" key="GridCell.Tab.2.left" timestamp="1617174798044">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615389622694" />
-    <state width="1877" height="375" key="GridCell.Tab.2.right" timestamp="1615389622694">
+    <state width="1877" height="375" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617174798044" />
+    <state width="1877" height="375" key="GridCell.Tab.2.right" timestamp="1617174798044">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615389622694" />
-    <state width="1877" height="375" key="GridCell.Tab.3.bottom" timestamp="1615389622695">
+    <state width="1877" height="375" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617174798044" />
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom" timestamp="1617174798044">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615389622695" />
-    <state width="1877" height="375" key="GridCell.Tab.3.center" timestamp="1615389622694">
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617174798044" />
+    <state width="1877" height="375" key="GridCell.Tab.3.center" timestamp="1617174798044">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615389622694" />
-    <state width="1877" height="375" key="GridCell.Tab.3.left" timestamp="1615389622694">
+    <state width="1877" height="375" key="GridCell.Tab.3.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617174798044" />
+    <state width="1877" height="375" key="GridCell.Tab.3.left" timestamp="1617174798044">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615389622694" />
-    <state width="1877" height="375" key="GridCell.Tab.3.right" timestamp="1615389622694">
+    <state width="1877" height="375" key="GridCell.Tab.3.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617174798044" />
+    <state width="1877" height="375" key="GridCell.Tab.3.right" timestamp="1617174798044">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615389622694" />
+    <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617174798044" />
     <state x="733" y="221" key="RiderGenerateDialog" timestamp="1614433440091">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -428,10 +276,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1614448387145" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614620076020">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1617171177107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1614620076020" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617171177107" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

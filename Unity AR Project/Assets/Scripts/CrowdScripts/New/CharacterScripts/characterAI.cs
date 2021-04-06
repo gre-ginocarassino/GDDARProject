@@ -71,8 +71,12 @@ public class characterAI : characterTypes
                             int i = Random.Range(1, 11);
                             IsLeaderFormed = SetLeader.IfLeaderAvailable(i, false);
                             confirmLeader = CharacterParent.characterParent.ChooseLeader(IsLeaderFormed);
+<<<<<<< Updated upstream
                             //Debug.Log(i);
                             
+=======
+                            Debug.Log(i);
+>>>>>>> Stashed changes
                         }
                     }
                     if (confirmLeader == true)
