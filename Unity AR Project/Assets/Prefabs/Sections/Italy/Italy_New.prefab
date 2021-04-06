@@ -29524,6 +29524,7 @@ MonoBehaviour:
   - {fileID: 7077016190534250748}
   - {fileID: 7077016190534250831}
   - {fileID: 7077016190534250878}
+  spawnonLoad: 1
 --- !u!114 &7077016190534250751
 MonoBehaviour:
   m_ObjectHideFlags: 0

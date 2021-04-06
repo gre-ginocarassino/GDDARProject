@@ -33141,6 +33141,7 @@ MonoBehaviour:
   - {fileID: 7020847686739884952}
   - {fileID: 7020847686739884587}
   - {fileID: 7020847686739884570}
+  spawnonLoad: 1
 --- !u!114 &7020847686739884953
 MonoBehaviour:
   m_ObjectHideFlags: 0

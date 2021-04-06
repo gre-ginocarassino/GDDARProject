@@ -25644,6 +25644,7 @@ MonoBehaviour:
   - {fileID: 5735976695561907591}
   - {fileID: 5735976695561907252}
   - {fileID: 5735976695561907205}
+  spawnonLoad: 1
 --- !u!114 &5735976695561907590
 MonoBehaviour:
   m_ObjectHideFlags: 0
