@@ -31,7 +31,13 @@ public class BoardController : MonoBehaviour
 
     public void NewSection(PlaceController newS)
     {
-        GrowSection(newS);
+        if (newS == activeSection)
+        {
+            Debug.Log("Board Controller : Already an Active Section");
+        } else
+        {
+            GrowSection(newS);
+        }
     }
 
     /// <summary>

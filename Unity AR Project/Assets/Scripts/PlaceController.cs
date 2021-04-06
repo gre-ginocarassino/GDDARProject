@@ -74,6 +74,7 @@ public class PlaceController : MonoBehaviour
         } else
         {
             StartCoroutine(VariablesResizing(1));
+            Debug.Log("Place Controller : Already One In The Scene : VR1");
         }
 
         StartCoroutine(flagCont.SelectNewFlag(countryFlag));
@@ -105,15 +106,22 @@ public class PlaceController : MonoBehaviour
 
     public IEnumerator VariablesResizing(int newScale)
     {
-        yield return new WaitForSeconds(0.5f);
+        baseSectionVariables.gameObject.SetActive(true);
+
+
 
         //If the new scale is = 1, it's getting bigger, if it's not
         //it's getting smaller.
         if (newScale == 1)
         {
+            foreach (GameObject roadSection in roads)
+            {
+                roadSection.SetActive(false);
+            }
+
             foreach (GameObject i in baseSectionVariables.variables)
             {
-                i.SetActive(true);
+                i.SetActive(false);
 
                 //i.transform.DOScaleY(newScale + 0.2f, 0.5f);
                 //yield return new WaitForSeconds(0.5f);
@@ -121,6 +129,8 @@ public class PlaceController : MonoBehaviour
                 //yield return new WaitForSeconds(0.1f);
                 //i.transform.DOScaleY(newScale, 0.1f);
             }
+
+            yield return new WaitForSeconds(0.5f);
 
             if (roads.Count == 0)
             {
@@ -134,28 +144,35 @@ public class PlaceController : MonoBehaviour
                 //DoNothing
             }
 
+            baseSectionVariables.variables[0].SetActive(true);
             baseSectionVariables.variables[0].transform.DOScaleY(newScale, 0);
             StartCoroutine(RoadAnimation(newScale));
 
             //baseSectionVariables.variables[0].transform.DOScaleY(newScale + 0.2f, 0.5f);
             //yield return new WaitForSeconds(0.1f);
 
+            baseSectionVariables.variables[1].SetActive(true);
             baseSectionVariables.variables[1].transform.DOScaleY(newScale + 0.2f, 0.5f);
             yield return new WaitForSeconds(0.1f);
 
+            baseSectionVariables.variables[2].SetActive(true);
             baseSectionVariables.variables[2].transform.DOScaleY(newScale + 0.2f, 0.5f);
             yield return new WaitForSeconds(0.1f);
 
+            baseSectionVariables.variables[3].SetActive(true);
             baseSectionVariables.variables[3].transform.DOScaleY(newScale + 0.2f, 0.5f);
             yield return new WaitForSeconds(0.1f);
 
+            baseSectionVariables.variables[4].SetActive(true);
             baseSectionVariables.variables[4].transform.DOScaleY(newScale + 0.2f, 0.5f);
             yield return new WaitForSeconds(0.1f);
 
+            baseSectionVariables.variables[5].SetActive(true);
             baseSectionVariables.variables[5].transform.DOScaleY(newScale + 0.2f, 0.5f);
             //baseSectionVariables.variables[0].transform.DOScaleY(newScale - 0.1f, 0.1f);
             yield return new WaitForSeconds(0.1f);
 
+            baseSectionVariables.variables[6].SetActive(true);
             baseSectionVariables.variables[6].transform.DOScaleY(newScale + 0.2f, 0.5f);
             //baseSectionVariables.variables[0].transform.DOScaleY(newScale, 0.1f);
             baseSectionVariables.variables[1].transform.DOScaleY(newScale - 0.1f, 0.1f);
@@ -215,6 +232,13 @@ public class PlaceController : MonoBehaviour
                 i.SetActive(false);
             }
 
+            foreach (GameObject roadSection in roads)
+            {
+                roadSection.SetActive(false);
+
+                yield return new WaitForSeconds(0.02f);
+            }
+
             baseSectionVariables.gameObject.SetActive(false);
         }
     }
@@ -231,12 +255,12 @@ public class PlaceController : MonoBehaviour
         }
         else
         {
-            foreach (GameObject roadSection in roads)
-            {
-                roadSection.SetActive(false);
+            //foreach (GameObject roadSection in roads)
+            //{
+            //    roadSection.SetActive(false);
 
-                yield return new WaitForSeconds(0.02f);
-            }
+            //    yield return new WaitForSeconds(0.02f);
+            //}
         }
 
     }
