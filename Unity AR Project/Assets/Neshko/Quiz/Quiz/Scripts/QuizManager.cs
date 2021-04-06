@@ -33,7 +33,7 @@ public class QuizManager : MonoBehaviour
 
 
     private GameStatus _gameStatus = GameStatus.NextGame;
-    private ScoreStatus _scoreStatus;
+ 
 
     public GameStatus GameStatus
     {
@@ -94,29 +94,7 @@ public class QuizManager : MonoBehaviour
     }
 
     // This Method sets score stars and score text result
-    public void SetScoreStars()
-    {
-        switch (_scoreStatus)
-        {
-            case ScoreStatus.Poor:
-                quizUi.GradingText.text = "Poor!";
-                quizUi.scoreImageList[0].GetComponent<Image>().color = Color.yellow; 
-                
-                break;
-            case ScoreStatus.VeryGood:
-                quizUi.GradingText.text = "Very Good!";
-                quizUi.scoreImageList[0].GetComponent<Image>().color = Color.yellow;   
-                quizUi.scoreImageList[1].GetComponent<Image>().color = Color.yellow;   
-                break;
-            case ScoreStatus.Excellent:
-                quizUi.GradingText.text = "Excellent!";
-                foreach (var stars in quizUi.scoreImageList)
-                {
-                    stars.GetComponent<Image>().color = Color.yellow; 
-                } 
-                break;
-        }
-    }
+   
     private void Update()
     {
 
@@ -162,29 +140,14 @@ public class QuizManager : MonoBehaviour
             quizUi.ScoreText.text = "Score:" + _gameScore;
             
            // Displaying grading stars
-            if (correctAnswers <= 3)
-            {
-                SetScoreStars();
-                
-            }
-            if (correctAnswers == 4)
-            {
-                _scoreStatus++;
-                SetScoreStars();
-                
-            }
-            if (correctAnswers == 5)
-            {
-                _scoreStatus++; 
-                SetScoreStars();
-            }
+          
         }
-        else
+        else if (_selectedQuestion.correctAnswer != selectedOption)
         {
             // If the answer is wrong
             remainingAttempts--;
             quizUi.ReduceAttempts(remainingAttempts);
-
+           // print("CorrectAnswers" +  correctAnswers);
             if (remainingAttempts == 0)
             {
                 GameOver(); 
@@ -203,7 +166,27 @@ public class QuizManager : MonoBehaviour
                 GameOver();
             }
         }
-        
+        if (correctAnswers <= 3)
+        {
+            quizUi.GradingText.text = "Poor!";
+            quizUi.scoreImageList[0].GetComponent<Image>().color = Color.yellow; 
+                
+        }
+        if (correctAnswers == 4)
+        {
+            quizUi.GradingText.text = "Very Good!";
+            quizUi.scoreImageList[0].GetComponent<Image>().color = Color.yellow;   
+            quizUi.scoreImageList[1].GetComponent<Image>().color = Color.yellow;  
+                
+        }
+        if (correctAnswers == 5)
+        {
+            quizUi.GradingText.text = "Excellent!";
+            foreach (var stars in quizUi.scoreImageList)
+            {
+                stars.GetComponent<Image>().color = Color.yellow; 
+            } 
+        }
         return correct;
     }
 
@@ -214,6 +197,7 @@ public class QuizManager : MonoBehaviour
         quizUi._retryButton.interactable = true;
         StartCoroutine(FadeUI.Fade( 1,quizUi.GameOverUI,1f));
         //quizUi.GameOverPanel.SetActive(true);
+        remainingAttempts = 3;
     }
 }
 
@@ -232,11 +216,4 @@ public enum GameStatus
 {
     Playing,
     NextGame
-}
-
-public enum ScoreStatus
-{
-    Poor,
-    VeryGood,
-    Excellent
 }

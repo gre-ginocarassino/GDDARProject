@@ -41,10 +41,11 @@ public class QuizGameUI : MonoBehaviour
     public TextMeshProUGUI ScoreText { get => scoreText; }
     public GameObject GameOverPanel { get => gameOverPanel; }
 
-    
+  
 
     private void Start()
     {
+        
         CanvasGroup _canvasGroup = GetComponent<CanvasGroup>();
         TextMeshProUGUI questionInfoText = GetComponent<TextMeshProUGUI>();
         
@@ -217,6 +218,10 @@ public class QuizGameUI : MonoBehaviour
         StartCoroutine(FadeUI.Fade(0, SpotQuizUI, 1f));
       //  StartCoroutine(FadeUI.Fade( 1,SpotWelcomePage, 1f));
         StartCoroutine(FadeUI.Fade( 0,GameOverUI, 1f));
+        for (int i = 0; i < answerAttemptsList.Count; i++)
+        {
+            answerAttemptsList[i].color = normalCol;
+        }
     }
     
    

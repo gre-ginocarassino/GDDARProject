@@ -8626,8 +8626,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quizDataList:
-  - {fileID: 11400000, guid: 6f7b434cdec493d4797997e999d49f0a, type: 2}
-  - {fileID: 11400000, guid: 6f7b434cdec493d4797997e999d49f0a, type: 2}
+  - {fileID: 11400000, guid: 678f3b3ee943425429e2350fab4d28e6, type: 2}
+  - {fileID: 11400000, guid: caf5ccd37aa36d64b92bbf31594c0a5d, type: 2}
   - {fileID: 11400000, guid: 6f7b434cdec493d4797997e999d49f0a, type: 2}
   quizUi: {fileID: 1752252254696912444}
   currentCategory: 
