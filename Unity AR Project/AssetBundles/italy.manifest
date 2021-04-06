@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 4088015677
+CRC: 4052350196
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 35d110f0fc5d3e34a6cdf0417f61f16e
+    Hash: f0390ffb3a8c165e99ceed6677ba1daf
   TypeTreeHash:
     serializedVersion: 2
-    Hash: ee9dd1747588de97b1086515057adf0c
+    Hash: 334a554f899855a27ace8889f57040cc
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -108,5 +108,5 @@ ClassTypes:
 - Class: 328
   Script: {instanceID: 0}
 Assets:
-- Assets/Prefabs/Sections/Italy/Italy1.prefab
+- Assets/Prefabs/Sections/Italy/Italy_New.prefab
 Dependencies: []

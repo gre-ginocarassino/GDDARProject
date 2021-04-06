@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2225747772
+CRC: 1205457588
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 33398cce36dc9a0355c103406ca74e11
+    Hash: 3e4f55f573cd115f2bc7cbdc193701b7
   TypeTreeHash:
     serializedVersion: 2
-    Hash: ee9dd1747588de97b1086515057adf0c
+    Hash: 334a554f899855a27ace8889f57040cc
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -108,5 +108,5 @@ ClassTypes:
 - Class: 328
   Script: {instanceID: 0}
 Assets:
-- Assets/Prefabs/Sections/France/France1.prefab
+- Assets/Prefabs/Sections/France/France_New.prefab
 Dependencies: []
