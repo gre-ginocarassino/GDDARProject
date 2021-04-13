@@ -15,12 +15,15 @@ public class BoardController : MonoBehaviour
     public PlaceController franceController;
     public PlaceController italyController;
 
+    private StatsManager obj_Stats_Manager;
+
     public bool isTesting;
 
     // Start is called before the first frame update
     void Start()
     {
         //arPlane.planePrefab.gameObject.GetComponent<MeshRenderer>().material = arPlane.planeMaterials[1];
+        obj_Stats_Manager = (StatsManager)FindObjectOfType(typeof(StatsManager));
     }
 
     // Update is called once per frame
@@ -62,6 +65,9 @@ public class BoardController : MonoBehaviour
         growingSection.LoadPlace();
         Debug.Log("BoardController : Growing Section : " + growingSection);
         activeSection = growingSection;
+
+        //Load questions stats from JSON File
+        obj_Stats_Manager.Load(growingSection.AssetbundleName);
     }
 
     public void ShrinkSection(PlaceController shrinkingSection)

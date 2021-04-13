@@ -2191,6 +2191,53 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171680229}
   m_Mesh: {fileID: -5321260103611251441, guid: 78158aaf01caf27468704c2d1b40b816, type: 3}
+--- !u!1 &200201088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 200201090}
+  - component: {fileID: 200201089}
+  m_Layer: 0
+  m_Name: QuestionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &200201089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200201088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fa2cc209b88dbf4596431940fb20b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FirstMonument: 
+  SecondMonument: 
+  ThirdMonument: 
+  FourthMonument: 
+--- !u!4 &200201090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200201088}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4565.571, y: -2146.1453, z: -288.6477}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &218664753
 GameObject:
   m_ObjectHideFlags: 0
@@ -3721,7 +3768,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.21766667, y: 0.23222917}
   m_AnchorMax: {x: 0.78333336, y: 0.38831252}
-  m_AnchoredPosition: {x: -0.5, y: 7.499634}
+  m_AnchoredPosition: {x: -0.5, y: 7.4995728}
   m_SizeDelta: {x: -261, y: -99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &388581733
@@ -21375,7 +21422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardController: {fileID: 81523427344692836}
   AssetbundleName: england
-  AssetName: England1
+  AssetName: England_New
   baseSectionsPrefabs: {fileID: 7307679617005710415, guid: 4866e2031b01e7a4e8beb7dbbd999a4f,
     type: 3}
   baseSections: {fileID: 0}
@@ -50261,7 +50308,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c68ba720aec8fc243bfcd9f04d3c939d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 056ddce9bef845e48895e5abd5abd07e, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -56354,7 +56401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardController: {fileID: 81523427344692836}
   AssetbundleName: italy
-  AssetName: Italy1
+  AssetName: Italy_New
   baseSectionsPrefabs: {fileID: 7077016190534250750, guid: c07180ce7e119764ebd517b5ba767046,
     type: 3}
   baseSections: {fileID: 0}
@@ -56567,7 +56614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardController: {fileID: 81523427344692836}
   AssetbundleName: france
-  AssetName: France1
+  AssetName: France_New
   baseSectionsPrefabs: {fileID: 5735976695561907589, guid: 15598fe4e00a30246a74b1c81e7b37b7,
     type: 3}
   baseSections: {fileID: 0}
