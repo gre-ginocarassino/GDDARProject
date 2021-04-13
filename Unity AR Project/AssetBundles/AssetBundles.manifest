@@ -1,13 +1,10 @@
 ManifestFileVersion: 0
-CRC: 3103507407
+CRC: 526173785
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: england
-      Dependencies: {}
-    Info_1:
       Name: france
       Dependencies: {}
-    Info_2:
+    Info_1:
       Name: italy
       Dependencies: {}

@@ -33,7 +33,12 @@ public class QuizManager : MonoBehaviour
 
 
     private GameStatus _gameStatus = GameStatus.NextGame;
- 
+    StatsManager Stats_Manager;
+
+    private void Start()
+    {
+        Stats_Manager = (StatsManager)FindObjectOfType(typeof(StatsManager));
+    }
 
     public GameStatus GameStatus
     {
@@ -126,21 +131,20 @@ public class QuizManager : MonoBehaviour
     }
 // Method for checking if the answer is right
     public bool Answer(string selectedOption)
-    {
-       
+    {      
         bool correct = false;
         
         // checking if the selected question is the same as the right answer
         if (_selectedQuestion.correctAnswer == selectedOption)
         {
-            
             correctAnswers++;
             correct = true;
             _gameScore += 50;
             quizUi.ScoreText.text = "Score:" + _gameScore;
             
+            Stats_Manager.UpdateNumber(Convert.ToInt32(_dataScriptable.MonumentNumber));
+
            // Displaying grading stars
-          
         }
         else if (_selectedQuestion.correctAnswer != selectedOption)
         {
@@ -208,7 +212,6 @@ public class Question
     public string questionInfo;         //question text
     public List<string> answerOptions;        //options to select
     public string correctAnswer;           //correct option
-    
 }
 
 [SerializeField]

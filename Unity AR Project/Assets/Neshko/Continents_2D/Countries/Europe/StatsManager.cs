@@ -1,18 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class StatsManager : MonoBehaviour
 {
-    public string FirstMonument;
-    public string SecondMonument;
-    public string ThirdMonument;
-    public string FourthMonument;
-
     public List<string> monument = new List<string>();
+
+    public string NameOfCountry;
 
     public void Load(string CountryName)
     {
+        NameOfCountry = CountryName;
+
         string Json = SaveSystem.Load(CountryName);
         CountryProp prop = new CountryProp();
 
@@ -56,6 +56,23 @@ public class StatsManager : MonoBehaviour
         {
             EmptyList.Add("0");
         }
+    }
+
+
+    public void UpdateNumber(int index)
+    {
+        int number = Convert.ToInt32(monument[index]);
+        int a = number + 1;
+        monument[index] = a.ToString();
+
+        CountryProp EmptyObject = new CountryProp
+        {
+            CountryName = NameOfCountry,
+            QState = monument
+        };
+
+        string json = JsonUtility.ToJson(EmptyObject);
+        SaveSystem.Save(json, NameOfCountry);
     }
 
 }

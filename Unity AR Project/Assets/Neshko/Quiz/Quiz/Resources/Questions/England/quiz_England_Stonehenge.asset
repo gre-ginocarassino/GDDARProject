@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f611d797432e3f846885b2b12fde5f35, type: 3}
   m_Name: quiz_England_Stonehenge
   m_EditorClassIdentifier: 
+  MonumentNumber: 3
   categoryName: Hard
   timeToComplete: 10
   questions:
