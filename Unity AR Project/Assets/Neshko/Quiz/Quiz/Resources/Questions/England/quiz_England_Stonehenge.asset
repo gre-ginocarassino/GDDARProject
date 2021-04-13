@@ -14,12 +14,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MonumentNumber: 3
   categoryName: Hard
-  timeToComplete: 10
+  timeToComplete: 20
   questions:
-  - questionInfo: StoneHenge
+  - questionInfo: When was StoneHenge built?
     answerOptions:
-    - 1912
+    - 0
+    - 1500BC
+    - 3000BC
+    - 4500BC
+    correctAnswer: 3000BC
+  - questionInfo: Who was the longest reigning English monarch?
+    answerOptions:
+    - Elizabeth the 2nd
+    - Elizabeth the 1st
+    - Victoria
+    - George the 3rd
+    correctAnswer: Elizabeth the 2nd
+  - questionInfo: When did the UK leave the European Union?
+    answerOptions:
+    - 2016
+    - 2020
+    - 2010
     - 1945
-    - 2000
-    - 1887
-    correctAnswer: 1887
+    correctAnswer: 2020
+  - questionInfo: Who was the Prime Minister of England during WW2?
+    answerOptions:
+    - Winston Churchill
+    - Neville Chamberlain
+    - Boris Johnson
+    - Clement Atlee
+    correctAnswer: Winston Churchill
+  - questionInfo: What is the animal of England?
+    answerOptions:
+    - Lion
+    - Cat
+    - Sheep
+    - Cow
+    correctAnswer: Lion

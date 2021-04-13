@@ -375,7 +375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3239914931670909381}
   m_Layer: 0
-  m_Name: France_Quiz_FInal
+  m_Name: England_Quiz_FInal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23802,7 +23802,7 @@ GameObject:
   - component: {fileID: 4082398586175869097}
   - component: {fileID: 4082398586175869098}
   m_Layer: 5
-  m_Name: France
+  m_Name: England
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

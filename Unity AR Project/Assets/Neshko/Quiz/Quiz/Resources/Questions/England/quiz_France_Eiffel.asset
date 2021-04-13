@@ -10,30 +10,44 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f611d797432e3f846885b2b12fde5f35, type: 3}
-  m_Name: quiz_England_Gherkin
+  m_Name: quiz_England_BigBen
   m_EditorClassIdentifier: 
-  MonumentNumber: 0
-  categoryName: Easy
-  timeToComplete: 30
+  MonumentNumber: 3
+  categoryName: Medium
+  timeToComplete: 25
   questions:
-  - questionInfo: Gerkin
+  - questionInfo: What year was Big Ben completed?
     answerOptions:
     - 1912
     - 1945
     - 2000
     - 1887
     correctAnswer: 1887
-  - questionInfo: Gerkin
+  - questionInfo: What is the name of the tower Big Ben is located in?
     answerOptions:
     - Clock Tower
     - London Tower
     - Queen Tower
     - Elizabeth Tower
     correctAnswer: Elizabeth Tower
-  - questionInfo: Gerkin
+  - questionInfo: What famous river is Big Ben located next to?
     answerOptions:
     - River Nile
     - River Tyne
     - River Thames
     - River of London
     correctAnswer: River Thames
+  - questionInfo: What building is located next to Big Ben?
+    answerOptions:
+    - Houses of Parliment
+    - London Eye
+    - Buckingham Palace
+    - The Shard
+    correctAnswer: Houses of Parliment
+  - questionInfo: What area of London is Big Ben in?
+    answerOptions:
+    - Westminster
+    - Whitechapel
+    - Wembley
+    - Piccadilly
+    correctAnswer: Westminster

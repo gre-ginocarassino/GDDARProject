@@ -13,13 +13,34 @@ MonoBehaviour:
   m_Name: quiz_England_Londoneye
   m_EditorClassIdentifier: 
   MonumentNumber: 1
-  categoryName: Hard
-  timeToComplete: 10
+  categoryName: Medium
+  timeToComplete: 25
   questions:
-  - questionInfo: London Eye
+  - questionInfo: Who is the Patron Saint of England?
     answerOptions:
-    - 1912
-    - 1945
-    - 2000
-    - 1887
-    correctAnswer: 1887
+    - Saint Andrew
+    - Saint Patrick
+    - Saint David
+    - Saint George
+    correctAnswer: Saint George
+  - questionInfo: Who is the Patron Saint of Scotland
+    answerOptions:
+    - Saint Andrew
+    - Saint Patrick
+    - Saint David
+    - Saint George
+    correctAnswer: Andrew
+  - questionInfo: Who is the Patron Saint of Wales
+    answerOptions:
+    - Saint Andrew
+    - Saint Patrick
+    - Saint David
+    - Saint George
+    correctAnswer: Saint David
+  - questionInfo: Who is the Patron Saint of North Ireland
+    answerOptions:
+    - Saint Andrew
+    - Saint Patrick
+    - Saint David
+    - Saint George
+    correctAnswer: Saint Patrick

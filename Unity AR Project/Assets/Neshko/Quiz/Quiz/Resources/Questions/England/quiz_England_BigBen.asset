@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f611d797432e3f846885b2b12fde5f35, type: 3}
   m_Name: quiz_England_BigBen
   m_EditorClassIdentifier: 
-  MonumentNumber: 2
+  MonumentNumber: 3
   categoryName: Medium
-  timeToComplete: 20
+  timeToComplete: 25
   questions:
   - questionInfo: What year was Big Ben completed?
     answerOptions:
@@ -37,3 +37,17 @@ MonoBehaviour:
     - River Thames
     - River of London
     correctAnswer: River Thames
+  - questionInfo: What building is located next to Big Ben?
+    answerOptions:
+    - Houses of Parliment
+    - London Eye
+    - Buckingham Palace
+    - The Shard
+    correctAnswer: Houses of Parliment
+  - questionInfo: What area of London is Big Ben in?
+    answerOptions:
+    - Westminster
+    - Whitechapel
+    - Wembley
+    - Piccadilly
+    correctAnswer: Westminster
