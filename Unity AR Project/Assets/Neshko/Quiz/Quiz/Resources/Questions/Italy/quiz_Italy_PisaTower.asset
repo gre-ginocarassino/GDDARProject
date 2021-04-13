@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f611d797432e3f846885b2b12fde5f35, type: 3}
+  m_Name: quiz_Italy_PisaTower
+  m_EditorClassIdentifier: 
+  MonumentNumber: 3
+  categoryName: Medium
+  timeToComplete: 25
+  questions:
+  - questionInfo: How tall is the Tower of Pisa?
+    answerOptions:
+    - 48m
+    - 129m
+    - 90m
+    - 57m
+    correctAnswer: 57m
+  - questionInfo: What is the name of the square in which it is located?
+    answerOptions:
+    - Piazza del popolo
+    - Piazza dei Miracoli
+    - Piazza Navona
+    - Piazza di Spagna
+    correctAnswer: Piazza dei Miracoli
+  - questionInfo: When was it built?
+    answerOptions:
+    - 1840
+    - 250
+    - 1372
+    - 880
+    correctAnswer: 1372
+  - questionInfo: In which region is pisa located?
+    answerOptions:
+    - Lombardy
+    - Tuscany
+    - Sardinia
+    - Lazio
+    correctAnswer: Tuscany
+  - questionInfo: What is the population of Pisa?
+    answerOptions:
+    - 90.000
+    - 1.2 milion
+    - 670.000
+    - 350.000
+    correctAnswer: 90.000

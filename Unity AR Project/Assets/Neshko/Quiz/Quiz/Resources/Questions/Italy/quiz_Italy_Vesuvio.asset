@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f611d797432e3f846885b2b12fde5f35, type: 3}
+  m_Name: quiz_Italy_Vesuvio
+  m_EditorClassIdentifier: 
+  MonumentNumber: 1
+  categoryName: Medium
+  timeToComplete: 25
+  questions:
+  - questionInfo: Where is located the Mount Vesuvius?
+    answerOptions:
+    - Sicily
+    - Campania
+    - Rome
+    - Sardinia
+    correctAnswer: Campania
+  - questionInfo: Which city Vesuvius destroyed?
+    answerOptions:
+    - Pompei
+    - Palermo
+    - Uri
+    - Naples
+    correctAnswer: Pompei
+  - questionInfo: How many people still live close to the Mount?
+    answerOptions:
+    - 3.000.000
+    - 450.000
+    - 0
+    - 10.000
+    correctAnswer: 3.000.000
+  - questionInfo: What's the height of the Mount?
+    answerOptions:
+    - 400 m
+    - 3.100 m
+    - 1.281 m
+    - 2.500 m
+    correctAnswer: 1.281 m
+  - questionInfo: What's the tallest Volcano in Italy
+    answerOptions:
+    - Etna
+    - Vesuvius
+    - Stromboli
+    - Lipari
+    correctAnswer: Etna

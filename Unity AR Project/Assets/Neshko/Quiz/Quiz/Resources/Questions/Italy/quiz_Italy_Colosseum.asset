@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f611d797432e3f846885b2b12fde5f35, type: 3}
+  m_Name: quiz_Italy_Colosseum
+  m_EditorClassIdentifier: 
+  MonumentNumber: 3
+  categoryName: Hard
+  timeToComplete: 20
+  questions:
+  - questionInfo: What year was Colosseum completed?
+    answerOptions:
+    - 400 BC
+    - 60 BC
+    - 2000
+    - 70 BC
+    correctAnswer: 70 BC
+  - questionInfo: In which city is the colosseum?
+    answerOptions:
+    - Rome
+    - Florence
+    - Naples
+    - Sassari
+    correctAnswer: Rome
+  - questionInfo: What famous river is Colosseum located close to?
+    answerOptions:
+    - River Po
+    - River Tiber
+    - River Piave
+    - River Adige
+    correctAnswer: River Tiber
+  - questionInfo: What building is located next to the Colosseum?
+    answerOptions:
+    - Arco della Pace
+    - Duomo
+    - St Peter's Basilica
+    - Tower of Pisa
+    correctAnswer: St Peter's Basilica
+  - questionInfo: What is the dialect spoken in rome?
+    answerOptions:
+    - Sardo
+    - Fiorentino
+    - Romano
+    - Napoletano
+    correctAnswer: Romano

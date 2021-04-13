@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f611d797432e3f846885b2b12fde5f35, type: 3}
+  m_Name: quiz_Italy_Duomo
+  m_EditorClassIdentifier: 
+  MonumentNumber: 0
+  categoryName: Easy
+  timeToComplete: 30
+  questions:
+  - questionInfo: Whats the tallest mountain in the Italy?
+    answerOptions:
+    - Mont Blanc
+    - Monte Rosa
+    - Cervino
+    - Gran Paradiso
+    correctAnswer: Mont Blanc
+  - questionInfo: What is the capitol of Italy?
+    answerOptions:
+    - Milan
+    - Naples
+    - Florence
+    - Rome
+    correctAnswer: Rome
+  - questionInfo: What is Italy's national anthem?
+    answerOptions:
+    - Va Pensiero
+    - Il Canto degli Italiani
+    - Bella Ciao
+    - Lasciatemi Cantare
+    correctAnswer: Il Canto degli Italiani
+  - questionInfo: What currency do they use in Italy?
+    answerOptions:
+    - Euros
+    - Lira
+    - Pound Sterling
+    - Tea
+    correctAnswer: Euros
+  - questionInfo: What is the rough population of Italy?
+    answerOptions:
+    - 0.6million
+    - 6million
+    - 60million
+    - 600million
+    correctAnswer: 60million
