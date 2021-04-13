@@ -125,7 +125,7 @@ public class MainController : MonoBehaviour
     #region LeaderBoard
     public void getLeaderBoard()
     {
-        var requestLeaderboard = new GetLeaderboardRequest { StartPosition = 0, StatisticName = "PlayerLevel", MaxResultsCount = 20 };
+        var requestLeaderboard = new GetLeaderboardRequest { StartPosition = 0, StatisticName = "PlayerPoints", MaxResultsCount = 20 };
         PlayFabClientAPI.GetLeaderboard(requestLeaderboard, onGetLeaderboard, onErrorLeaderboard);
     }
 

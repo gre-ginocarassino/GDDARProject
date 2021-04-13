@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -122, y: -29}
-  m_SizeDelta: {x: 448.51166, y: 75.52991}
+  m_AnchoredPosition: {x: 275, y: 4.0276}
+  m_SizeDelta: {x: 448.51166, y: 179.0783}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7822794524519304023
 CanvasRenderer:
@@ -66,12 +66,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4beb055f07aaff244873dec698d0363e, type: 3}
-    m_FontSize: 60
+    m_FontSize: 90
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 100
-    m_Alignment: 3
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -183,7 +183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -106.9, y: 43}
+  m_AnchoredPosition: {x: -106.9, y: 3}
   m_SizeDelta: {x: 485.10126, y: 65.15027}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4442198237620555778
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 4442198237620555792}
   - component: {fileID: 4442198237620555797}
   m_Layer: 5
-  m_Name: Leaderboard_Listing 1
+  m_Name: Leaderboard_Listing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -320,7 +320,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNameText: {fileID: 4442198237620555793}
-  playerScoreText: {fileID: 4442198237620555805}
+  playerScoreText: {fileID: 894989795953791858}
+  playerLVText: {fileID: 4442198237620555805}
 --- !u!1 &4442198237620556722
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4442198237620555783
 RectTransform:
   m_ObjectHideFlags: 0

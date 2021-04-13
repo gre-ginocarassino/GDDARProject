@@ -3771,7 +3771,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.21766667, y: 0.23222917}
   m_AnchorMax: {x: 0.78333336, y: 0.38831252}
-  m_AnchoredPosition: {x: -0.5, y: 7.4995728}
+  m_AnchoredPosition: {x: -0.5, y: 7.4995117}
   m_SizeDelta: {x: -261, y: -99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &388581733
@@ -21296,6 +21296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeSection: {fileID: 0}
+  activeSectionName: 
   villageController: {fileID: 81523427439330457}
   englandController: {fileID: 81523427793019034}
   franceController: {fileID: 8239282708170521143}
