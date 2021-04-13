@@ -76,13 +76,13 @@ public class QuizManager : MonoBehaviour
 
         if (currentCategory == "Medium")
         {
-            _timeInSeconds = 20;
+            _timeInSeconds = 25;
             _currentTime = _timeInSeconds;
         }
 
         if (currentCategory == "Hard")
         {
-            _timeInSeconds = 10;
+            _timeInSeconds = 20;
             _currentTime = _timeInSeconds;
         }
     }

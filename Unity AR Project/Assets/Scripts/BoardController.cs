@@ -68,11 +68,6 @@ public class BoardController : MonoBehaviour
         Debug.Log("BoardController : Growing Section : " + growingSection);
         activeSection = growingSection;
 
-        if (activeSection == villageController)
-        {
-
-        }
-
         //Load questions stats from JSON File
         obj_Stats_Manager.Load(growingSection.AssetbundleName);
     }
