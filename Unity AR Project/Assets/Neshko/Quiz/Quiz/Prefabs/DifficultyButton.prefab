@@ -319,6 +319,7 @@ GameObject:
   - component: {fileID: 5306246554214843577}
   - component: {fileID: 5306246554214843558}
   - component: {fileID: 5680760579611067452}
+  - component: {fileID: 4219709925072642935}
   m_Layer: 5
   m_Name: DifficultyButton
   m_TagString: Untagged
@@ -445,6 +446,18 @@ MonoBehaviour:
   timeToComplete: {fileID: 4159597005068300388}
   scoreText: {fileID: 4887584746757624877}
   btn: {fileID: 5306246554214843558}
+--- !u!114 &4219709925072642935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5306246554214843556}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41f3742a575f5bf41a124da9ffac2891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5306246554226341315
 GameObject:
   m_ObjectHideFlags: 0

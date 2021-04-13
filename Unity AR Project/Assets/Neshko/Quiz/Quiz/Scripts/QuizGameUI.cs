@@ -41,11 +41,13 @@ public class QuizGameUI : MonoBehaviour
     public TextMeshProUGUI ScoreText { get => scoreText; }
     public GameObject GameOverPanel { get => gameOverPanel; }
 
+    private StatsManager statMan;
   
 
     private void Start()
     {
-        
+        statMan = (StatsManager)FindObjectOfType(typeof(StatsManager));
+
         CanvasGroup _canvasGroup = GetComponent<CanvasGroup>();
         TextMeshProUGUI questionInfoText = GetComponent<TextMeshProUGUI>();
         
@@ -147,13 +149,14 @@ public class QuizGameUI : MonoBehaviour
     // This Method instantiate the Easy/Medium/Hard Buttons
     void CreateDifficultyButtons()
     {
+        Debug.Log("Creating Difficulty Buttons");
         //Here it is checked how many difficulty categories are in the list
         for (int i = 0; i < quizManager.QuizData.Count; i++)
         {
            // CategoryBtnScript categoryBtn = Instantiate(difficultyButtonPrefab, scrollHolder.transform);
            CategoryBtnScript categoryBtn = Instantiate(difficultyButtonPrefab, _buttonsPos[i].transform);
 
-           categoryBtn.SetButton(quizManager.QuizData[i].categoryName, quizManager.QuizData[i].questions.Count, quizManager.QuizData[i].timeToComplete); // Here we set the button values
+           categoryBtn.SetButton(quizManager.QuizData[i].categoryName, quizManager.QuizData[i].questions.Count, quizManager.QuizData[i].timeToComplete, statMan.monument[i]); // Here we set the button values
             int index = i;
             
             categoryBtn.Btn.onClick.AddListener(() => DifficultyButton(index, quizManager.QuizData[index].categoryName));

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f611d797432e3f846885b2b12fde5f35, type: 3}
-  m_Name: quiz_England_Hard
+  m_Name: quiz_England_BigBen
   m_EditorClassIdentifier: 
-  categoryName: Hard
-  timeToComplete: 10
+  categoryName: Medium
+  timeToComplete: 20
   questions:
   - questionInfo: What year was Big Ben completed?
     answerOptions:
@@ -29,20 +29,6 @@ MonoBehaviour:
     - Queen Tower
     - Elizabeth Tower
     correctAnswer: Elizabeth Tower
-  - questionInfo: What famous river is Big Ben located next to?
-    answerOptions:
-    - River Nile
-    - River Tyne
-    - River Thames
-    - River of London
-    correctAnswer: River Thames
-  - questionInfo: What famous river is Big Ben located next to?
-    answerOptions:
-    - River Nile
-    - River Tyne
-    - River Thames
-    - River of London
-    correctAnswer: River Thames
   - questionInfo: What famous river is Big Ben located next to?
     answerOptions:
     - River Nile

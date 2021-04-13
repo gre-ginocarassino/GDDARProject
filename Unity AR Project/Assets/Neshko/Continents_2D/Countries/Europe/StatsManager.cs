@@ -9,6 +9,8 @@ public class StatsManager : MonoBehaviour
     public string ThirdMonument;
     public string FourthMonument;
 
+    public List<string> monument = new List<string>();
+
     public void Load(string CountryName)
     {
         string Json = SaveSystem.Load(CountryName);
@@ -18,10 +20,15 @@ public class StatsManager : MonoBehaviour
         {
             prop = JsonUtility.FromJson<CountryProp>(Json);
 
-            FirstMonument = prop.QState[0];
-            SecondMonument = prop.QState[1];
-            ThirdMonument = prop.QState[2];
-            FourthMonument = prop.QState[3];
+            //FirstMonument = prop.QState[0];
+            //SecondMonument = prop.QState[1];
+            //ThirdMonument = prop.QState[2];
+            //FourthMonument = prop.QState[3];
+
+            for (int i = 0; i < prop.QState.Count; i++)
+            {
+                monument[i] = prop.QState[i];
+            }
         }
         else { SaveEmpty(CountryName); }
     }

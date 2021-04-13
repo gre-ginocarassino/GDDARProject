@@ -21,14 +21,14 @@ public class CategoryBtnScript : MonoBehaviour
         obj_Stats_Manager = (StatsManager)FindObjectOfType(typeof(StatsManager));
     }
 
-    public void SetButton(string title, int totalQuestion, string timeToComplete)
+    public void SetButton(string title, int totalQuestion, string timeToComplete, string score)
     {
        
         categoryTitleText.text = title;
         this.timeToComplete.text = timeToComplete;
-        scoreText.text = PlayerPrefs.GetInt(title, 0) + "/" + totalQuestion;
+        //scoreText.text = PlayerPrefs.GetInt(title, 0) + "/" + totalQuestion;
 
-        //scoreText.text = obj_Stats_Manager.FirstMonument + "/5";
+        scoreText.text = score + "/5";
     }
 
 }

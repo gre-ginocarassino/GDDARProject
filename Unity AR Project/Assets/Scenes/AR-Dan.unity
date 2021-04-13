@@ -2224,6 +2224,11 @@ MonoBehaviour:
   SecondMonument: 
   ThirdMonument: 
   FourthMonument: 
+  monument:
+  - 
+  - 
+  - 
+  - 
 --- !u!4 &200201090
 Transform:
   m_ObjectHideFlags: 0
