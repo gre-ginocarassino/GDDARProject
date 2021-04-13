@@ -80,21 +80,12 @@ public class MainController : MonoBehaviour
 
         GetAccountInfo();
 
-        UpdateGameStatistics();
+        
     }
 
     private void Update()
     {
-        //T_Level.text = playerLevel.ToString();
-        //T_Points.text = playerPoints.ToString();
-        //T_GeoPoints.text = geoPoints.ToString();
-        //ENG_Points.text = totalEngland.ToString();
-        //ITA_Points.text = totalItaly.ToString();
-        //FRA_Points.text = totalFrance.ToString();
 
-        //UpdateTotalScore();
-        //UpdateLevel();
-        //UpdateGeoPoints(100);
     }
 
     public void UpdateGameStatistics()
@@ -108,7 +99,7 @@ public class MainController : MonoBehaviour
 
         UpdateTotalScore();
         UpdateLevel();
-        UpdateGeoPoints(100);
+        UpdateGeoPoints(200);
     }
 
     #region AccountInfo
@@ -194,6 +185,7 @@ public class MainController : MonoBehaviour
             OnGetStatistics,
             error => Debug.LogError(error.GenerateErrorReport())
         );
+        
     }
     void OnGetStatistics(GetPlayerStatisticsResult result)
     {
@@ -230,6 +222,7 @@ public class MainController : MonoBehaviour
             }
         }
 
+        UpdateGameStatistics();
     }
     public void StartCloudUpdatePlayerStats()
     {
