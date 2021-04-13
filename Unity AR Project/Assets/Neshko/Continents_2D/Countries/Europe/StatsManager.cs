@@ -9,6 +9,13 @@ public class StatsManager : MonoBehaviour
 
     public string NameOfCountry;
 
+    private MainController mainCont;
+
+    private void Start()
+    {
+        mainCont = (MainController)FindObjectOfType(typeof(MainController));
+    }
+
     public void Load(string CountryName)
     {
         NameOfCountry = CountryName;
@@ -59,20 +66,44 @@ public class StatsManager : MonoBehaviour
     }
 
 
-    public void UpdateNumber(int index)
+    public void UpdateNumber(int index, int score)
     {
         int number = Convert.ToInt32(monument[index]);
-        int a = number + 1;
-        monument[index] = a.ToString();
-
-        CountryProp EmptyObject = new CountryProp
+        Debug.Log("Updating Score");
+        if (number < score)
         {
-            CountryName = NameOfCountry,
-            QState = monument
-        };
+            monument[index] = score.ToString();
 
-        string json = JsonUtility.ToJson(EmptyObject);
-        SaveSystem.Save(json, NameOfCountry);
+            int newPoints = (score - number) * 10;
+            //Debug.Log(NameOfCountry);
+
+
+            if (NameOfCountry == "england")
+            {
+                mainCont.totalEngland = mainCont.totalEngland + newPoints;
+            }
+            if (NameOfCountry == "italy")
+            {
+                mainCont.totalItaly = mainCont.totalEngland + newPoints;
+            }
+            if (NameOfCountry == "france")
+            {
+                mainCont.totalFrance = mainCont.totalEngland + newPoints;
+            }
+
+            
+            CountryProp EmptyObject = new CountryProp
+            {
+                CountryName = NameOfCountry,
+                QState = monument
+            };
+
+            string json = JsonUtility.ToJson(EmptyObject);
+            SaveSystem.Save(json, NameOfCountry);
+            mainCont.UpdateGameStatistics();
+            mainCont.StartCloudUpdatePlayerStats();
+        }
+
     }
 
 }

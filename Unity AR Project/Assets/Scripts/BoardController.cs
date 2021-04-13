@@ -6,7 +6,9 @@ using UnityEngine.XR.ARFoundation;
 
 public class BoardController : MonoBehaviour
 {
+    [Header("Current")]
     public PlaceController activeSection;
+    public string activeSectionName;
     //TODO: Prefabs -> Asset Bundles
 
     [Header("Loaded GameObjects")]
@@ -65,6 +67,11 @@ public class BoardController : MonoBehaviour
         growingSection.LoadPlace();
         Debug.Log("BoardController : Growing Section : " + growingSection);
         activeSection = growingSection;
+
+        if (activeSection == villageController)
+        {
+
+        }
 
         //Load questions stats from JSON File
         obj_Stats_Manager.Load(growingSection.AssetbundleName);

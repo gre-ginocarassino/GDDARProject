@@ -140,9 +140,7 @@ public class QuizManager : MonoBehaviour
             correctAnswers++;
             correct = true;
             _gameScore += 50;
-            quizUi.ScoreText.text = "Score:" + _gameScore;
-            
-            Stats_Manager.UpdateNumber(Convert.ToInt32(_dataScriptable.MonumentNumber));
+            quizUi.ScoreText.text = "Score:" + _gameScore;           
 
            // Displaying grading stars
         }
@@ -170,27 +168,66 @@ public class QuizManager : MonoBehaviour
                 GameOver();
             }
         }
-        if (correctAnswers <= 3)
+        if (correctAnswers == 0)
         {
-            quizUi.GradingText.text = "Poor!";
-            quizUi.scoreImageList[0].GetComponent<Image>().color = Color.yellow; 
-                
+            quizUi.GradingText.text = "0/5";
+            Stats_Manager.UpdateNumber(Convert.ToInt32(_dataScriptable.MonumentNumber), 0);
+
+        }
+
+        quizUi.scoreImageList[0].GetComponent<Image>().color = Color.white;
+        quizUi.scoreImageList[1].GetComponent<Image>().color = Color.white;
+        quizUi.scoreImageList[2].GetComponent<Image>().color = Color.white;
+        quizUi.scoreImageList[3].GetComponent<Image>().color = Color.white;
+        quizUi.scoreImageList[4].GetComponent<Image>().color = Color.white;
+
+        if (correctAnswers == 1)
+        {
+            quizUi.GradingText.text = "1/5";
+            quizUi.scoreImageList[0].GetComponent<Image>().color = Color.yellow;
+            Stats_Manager.UpdateNumber(Convert.ToInt32(_dataScriptable.MonumentNumber), 1);
+
+        }
+
+        if (correctAnswers == 2)
+        {
+            quizUi.GradingText.text = "2/5";
+            quizUi.scoreImageList[0].GetComponent<Image>().color = Color.yellow;
+            quizUi.scoreImageList[1].GetComponent<Image>().color = Color.yellow;
+            Stats_Manager.UpdateNumber(Convert.ToInt32(_dataScriptable.MonumentNumber), 2);
+
+        }
+
+        if (correctAnswers == 3)
+        {
+            quizUi.GradingText.text = "3/5";
+            quizUi.scoreImageList[0].GetComponent<Image>().color = Color.yellow;
+            quizUi.scoreImageList[2].GetComponent<Image>().color = Color.yellow;
+            quizUi.scoreImageList[1].GetComponent<Image>().color = Color.yellow;
+            Stats_Manager.UpdateNumber(Convert.ToInt32(_dataScriptable.MonumentNumber), 3);
+
         }
         if (correctAnswers == 4)
         {
-            quizUi.GradingText.text = "Very Good!";
+            quizUi.GradingText.text = "4/5";
             quizUi.scoreImageList[0].GetComponent<Image>().color = Color.yellow;   
-            quizUi.scoreImageList[1].GetComponent<Image>().color = Color.yellow;  
-                
+            quizUi.scoreImageList[1].GetComponent<Image>().color = Color.yellow;
+            quizUi.scoreImageList[2].GetComponent<Image>().color = Color.yellow;
+            quizUi.scoreImageList[3].GetComponent<Image>().color = Color.yellow;
+            Stats_Manager.UpdateNumber(Convert.ToInt32(_dataScriptable.MonumentNumber), 4);
+
         }
         if (correctAnswers == 5)
         {
-            quizUi.GradingText.text = "Excellent!";
+            quizUi.GradingText.text = "Excellent! 5/5";
+            Stats_Manager.UpdateNumber(Convert.ToInt32(_dataScriptable.MonumentNumber), 5);
             foreach (var stars in quizUi.scoreImageList)
             {
                 stars.GetComponent<Image>().color = Color.yellow; 
             } 
         }
+
+        quizUi.Resetter();
         return correct;
     }
 

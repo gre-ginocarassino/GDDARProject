@@ -79,9 +79,25 @@ public class MainController : MonoBehaviour
         }
 
         GetAccountInfo();
+
+        UpdateGameStatistics();
     }
 
     private void Update()
+    {
+        //T_Level.text = playerLevel.ToString();
+        //T_Points.text = playerPoints.ToString();
+        //T_GeoPoints.text = geoPoints.ToString();
+        //ENG_Points.text = totalEngland.ToString();
+        //ITA_Points.text = totalItaly.ToString();
+        //FRA_Points.text = totalFrance.ToString();
+
+        //UpdateTotalScore();
+        //UpdateLevel();
+        //UpdateGeoPoints(100);
+    }
+
+    public void UpdateGameStatistics()
     {
         T_Level.text = playerLevel.ToString();
         T_Points.text = playerPoints.ToString();
@@ -217,6 +233,7 @@ public class MainController : MonoBehaviour
     }
     public void StartCloudUpdatePlayerStats()
     {
+
         PlayFabClientAPI.ExecuteCloudScript(new ExecuteCloudScriptRequest()
         {
             FunctionName = "UpdatePlayerStats", // Arbitrary function name (must exist in your uploaded cloud.js file)

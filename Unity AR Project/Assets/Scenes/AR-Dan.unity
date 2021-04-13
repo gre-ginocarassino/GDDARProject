@@ -979,6 +979,7 @@ MonoBehaviour:
   - tag: walker
     charTypes:
     - {fileID: 5081999566116512377, guid: 88fe23991d2dcee448c3ddb1f1ba9c79, type: 3}
+    - {fileID: 5081999566116512377, guid: 88fe23991d2dcee448c3ddb1f1ba9c79, type: 3}
     size: 250
 --- !u!4 &94054013
 Transform:
@@ -2220,15 +2221,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fa2cc209b88dbf4596431940fb20b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FirstMonument: 
-  SecondMonument: 
-  ThirdMonument: 
-  FourthMonument: 
   monument:
   - 
   - 
   - 
   - 
+  NameOfCountry: 
 --- !u!4 &200201090
 Transform:
   m_ObjectHideFlags: 0
@@ -21343,7 +21341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &81523427439330456
 GameObject:
   m_ObjectHideFlags: 0
@@ -27235,6 +27233,7 @@ MonoBehaviour:
   _buttonsPos: []
   _retryButton: {fileID: 743572838670521635}
   endGameReasonText: {fileID: 743572839956910767}
+  difficultyButtons: []
 --- !u!4 &743572839369336742
 Transform:
   m_ObjectHideFlags: 0

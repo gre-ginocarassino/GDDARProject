@@ -33,7 +33,6 @@ public class QuizGameUI : MonoBehaviour
      
     private Question _question;          //store current question data
     private bool itWasAnswered = false;      //bool to keep track if answered or not
-  
 
     public TextMeshProUGUI TimerText { get => timerText; }
 
@@ -42,6 +41,8 @@ public class QuizGameUI : MonoBehaviour
     public GameObject GameOverPanel { get => gameOverPanel; }
 
     private StatsManager statMan;
+
+    public List<CategoryBtnScript> difficultyButtons = new List<CategoryBtnScript>();
   
 
     private void Start()
@@ -155,6 +156,7 @@ public class QuizGameUI : MonoBehaviour
         {
            // CategoryBtnScript categoryBtn = Instantiate(difficultyButtonPrefab, scrollHolder.transform);
            CategoryBtnScript categoryBtn = Instantiate(difficultyButtonPrefab, _buttonsPos[i].transform);
+            difficultyButtons.Add(categoryBtn);
 
            categoryBtn.SetButton(quizManager.QuizData[i].categoryName, quizManager.QuizData[i].questions.Count, quizManager.QuizData[i].timeToComplete, statMan.monument[i]); // Here we set the button values
             int index = i;
@@ -226,8 +228,14 @@ public class QuizGameUI : MonoBehaviour
             answerAttemptsList[i].color = normalCol;
         }
     }
-    
-   
+        
+    public void Resetter()
+    {
+        for (int i = 0; i < quizManager.QuizData.Count; i++)
+        {
+            difficultyButtons[i].SetButton(quizManager.QuizData[i].categoryName, quizManager.QuizData[i].questions.Count, quizManager.QuizData[i].timeToComplete, statMan.monument[i]); // Here we set the button values
+        }
+    }
     
    
 }
