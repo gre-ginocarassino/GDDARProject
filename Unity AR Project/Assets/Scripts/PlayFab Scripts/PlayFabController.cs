@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayFabController : MonoBehaviour
 {
-    //public static PlayFabController PFC; //Singleton
+    public static PlayFabController PFC; //Singleton
 
     public GameObject loginPanel;
     public GameObject registerPanel;
@@ -23,22 +23,23 @@ public class PlayFabController : MonoBehaviour
     private string userEmail;
     private string userPassword;
     public string username;
+    private string myID;
 
-    //private void OnEnable()
-    //{
-    //    if (PlayFabController.PFC == null)
-    //    {
-    //        PlayFabController.PFC = this;
-    //    }
-    //    else
-    //    {
-    //        if (PlayFabController.PFC != this)
-    //        {
-    //            Destroy(this.gameObject);
-    //        }
-    //    }
-    //    DontDestroyOnLoad(this.gameObject);
-    //}
+    private void OnEnable()
+    {
+        if (PlayFabController.PFC == null)
+        {
+            PlayFabController.PFC = this;
+        }
+        else
+        {
+            if (PlayFabController.PFC != this)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     private IEnumerator ActivationRoutine()
     {
@@ -114,7 +115,7 @@ public class PlayFabController : MonoBehaviour
     }
     #endregion
 
-    #region LOGIN PlayerPrefs
+    #region LOGIN NORMAL
     private void OnLoginSuccess(LoginResult result)
     {
         Debug.Log("Congratulations, you made your first successful API call!");
@@ -124,6 +125,7 @@ public class PlayFabController : MonoBehaviour
         loginPanel.SetActive(false);
         recoverButton.SetActive(false);
 
+        myID = result.PlayFabId;
         OnChangeScene();
     }
     private void OnLoginFailure(PlayFabError error)
@@ -157,7 +159,6 @@ public class PlayFabController : MonoBehaviour
         errorMessage.text = "ERROR: " + error.GenerateErrorReport();
     }
     #endregion
-
     #endregion
 
     public void OnChangeScene()

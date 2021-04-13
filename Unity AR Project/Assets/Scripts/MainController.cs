@@ -28,6 +28,7 @@ public class MainController : MonoBehaviour
     #endregion
 
     #region[PLAYER STATS]
+    [Header("PLAYER STATS")]
     public string MyPlayfabID;
     public string MyPlayfabUsername;
     public int playerLevel;
@@ -45,6 +46,7 @@ public class MainController : MonoBehaviour
     #endregion
 
     #region [BAR]
+    [Header("UI")]
     public Text T_Username;
     public Text T_Level;
     public Text T_Points;
@@ -52,6 +54,7 @@ public class MainController : MonoBehaviour
     #endregion
 
     #region [COUNTRIES_STATS]
+    [Header("COUNTRIES STATS")]
     public Text ENG_Points;
     public Text ITA_Points;
     public Text FRA_Points;
@@ -59,6 +62,13 @@ public class MainController : MonoBehaviour
     public GameObject IMG_GeoEng;
     public GameObject IMG_GeoIta;
     public GameObject IMG_GeoFra;
+    #endregion
+
+    #region [SHOP]
+    [Header("SHOP")]
+    public GameObject ShopPanel;
+    public GameObject[] ButtonLocks;
+    public Button[] UnlockedButtons;
     #endregion
 
     public GameObject leaderboardPanel;
@@ -79,8 +89,9 @@ public class MainController : MonoBehaviour
         }
 
         GetAccountInfo();
+        GetPlayerData();
 
-        
+        SetupStore();
     }
 
     private void Update()
@@ -291,6 +302,69 @@ public class MainController : MonoBehaviour
             GeoFrance = true;
             IMG_GeoFra.SetActive(true);
         }
+    }
+    #endregion
+
+    #region [SHOP]
+    public void GetPlayerData()
+    {
+        PlayFabClientAPI.GetUserData(new GetUserDataRequest()
+        {
+            PlayFabId = MyPlayfabID,
+            Keys = null
+        }, UserDataSuccess, onErrorLeaderboard);
+    }
+    void UserDataSuccess(GetUserDataResult result)
+    {
+        if (result.Data == null || !result.Data.ContainsKey("Skins"))
+        {
+            Debug.Log("Skins not set");
+        }
+        else
+        {
+            PersistentData.PD.SkinsStringToData(result.Data["Skins"].Value);
+            
+        }
+
+
+    }
+    public void SetUserData(string SkinsData)
+    {
+        PlayFabClientAPI.UpdateUserData(new UpdateUserDataRequest()
+        {
+            Data = new Dictionary<string, string>()
+            {
+                {"Skins", SkinsData}
+            }
+        }, SetDataSuccess, onErrorLeaderboard);
+    }
+    void SetDataSuccess(UpdateUserDataResult result)
+    {
+        Debug.Log(result.DataVersion);
+    }
+
+
+    public void SetupStore()
+    {
+        for (int i=0; i < PersistentData.PD.allSkins.Length; i++)
+        {
+            ButtonLocks[i].SetActive(!PersistentData.PD.allSkins[i]);
+            UnlockedButtons[i].interactable = PersistentData.PD.allSkins[i];
+        }
+    }
+    public void UnlockSkin(int index)
+    {
+        PersistentData.PD.allSkins[index] = true;
+        SetUserData(PersistentData.PD.SkinsDataToString());
+        SetupStore();
+    }
+    public void OpenShop()
+    {
+        ShopPanel.SetActive(true);
+    }
+    public void SetMySkin(int whichSkin)
+    {
+        PersistentData.PD.mySkin = whichSkin;
     }
     #endregion
 
