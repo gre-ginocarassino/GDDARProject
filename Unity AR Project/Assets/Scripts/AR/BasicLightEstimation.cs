@@ -14,6 +14,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         [SerializeField]
         [Tooltip("The ARCameraManager which will produce frame events containing light estimation information.")]
         ARCameraManager m_CameraManager;
+        BoardController bCont;
 
         /// <summary>
         /// Get or set the <c>ARCameraManager</c>.
@@ -54,6 +55,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         void Awake()
         {
             m_Light = GetComponent<Light>();
+            bCont = (BoardController)FindObjectOfType(typeof(BoardController));
         }
 
         void OnEnable()
@@ -99,6 +101,11 @@ namespace UnityEngine.XR.ARFoundation.Samples
             {
                 colorCorrection = null;
             }
+        }
+
+        public void UpdateLightDirection()
+        {
+            transform.rotation = bCont.transform.rotation;
         }
 
         Light m_Light;

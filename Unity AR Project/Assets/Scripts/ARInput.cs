@@ -67,6 +67,9 @@ public class ARInput : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Disabling and Enabling / Starting and Ending the AR Session
+    /// </summary>
     public void EnablePlaneScanning()
     {
         planeManager.enabled = true;
@@ -83,13 +86,18 @@ public class ARInput : MonoBehaviour
 
         Debug.Log("ARInput : ENABLING Plane Scanning");
 
-        //Disable if thingy
+        //Disable if Using Unity
         CameraTesting camTest = (CameraTesting)FindObjectOfType(typeof(CameraTesting));
         if (camTest.usingUnity)
         {
             DisablePlaneScanning();
             placeableObject.SetActive(true);
         }
+
+        //Changes the Light to face always at the Placeable Object
+        Vector3 lightTrans = new Vector3(placeableObject.transform.eulerAngles.x + 50, placeableObject.transform.eulerAngles.y, placeableObject.transform.eulerAngles.z);
+        bLE.transform.eulerAngles = lightTrans;
+        Debug.Log("Light : " + lightTrans);
     }
 
     public void DisablePlaneScanning()
@@ -112,8 +120,55 @@ public class ARInput : MonoBehaviour
         Debug.Log("ARInput : DISABLING Plane Scanning");
     }
 
+    public void EndARSession()
+    {
+        planeManager.enabled = false;
+
+        placeableObject.SetActive(false);
+
+        GameObject[] planes = GameObject.FindGameObjectsWithTag("Plane");
+
+        if (planes.Length != 0)
+        {
+            foreach (GameObject a in planes)
+            {
+                Destroy(a);
+            }
+        }
+
+        Debug.Log("ARInput : TERMINATING Plane Scanning");
+        spawnMoveState = true;
+    }
+
+    /// <summary>
+    ///Completely Resets the AR Session
+    /// </summary>
+    public void CompleteResetter()
+    {
+        StartCoroutine(PlaneResetter());
+    }
+
+    IEnumerator PlaneResetter()
+    {
+        EndARSession();
+        UIManager.Instance.SlideInOut(UIManager.Instance.scanningPanel);
+        UIManager.Instance.SlideInOut(UIManager.Instance.playPanel);
+
+        Debug.Log("ARInput : RESETTING (Disabling)");
+        
+        yield return new WaitForSeconds(1.5f);
+
+        EnablePlaneScanning();
+    }
+
+    /// <summary>
+    /// Controls the State:
+    /// SpawnOrMove: Spawns or Moves the AR Objects
+    /// Interact: Interacts with the AR Objects
+    /// </summary>
     void SpawnOrMove()
     {
+
         if (!TryGetTouchPosition(out Vector2 touchPos))
         {
             return;
