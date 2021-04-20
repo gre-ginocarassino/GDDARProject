@@ -19,6 +19,7 @@ public class ARInput : MonoBehaviour
 
     public Material scanning;
     public Material playing;
+    public CameraTesting camTest;
 
     [Header("Light Variables")]
     public BasicLightEstimation bLE;
@@ -87,11 +88,11 @@ public class ARInput : MonoBehaviour
         Debug.Log("ARInput : ENABLING Plane Scanning");
 
         //Disable if Using Unity
-        CameraTesting camTest = (CameraTesting)FindObjectOfType(typeof(CameraTesting));
         if (camTest.usingUnity)
         {
             DisablePlaneScanning();
             placeableObject.SetActive(true);
+            spawnMoveState = false;
         }
 
         //Changes the Light to face always at the Placeable Object
@@ -206,13 +207,13 @@ public class ARInput : MonoBehaviour
 
     void Interact()
     {
-        for (var i = 0; i < Input.touchCount; ++i)
+        if (camTest.usingUnity)
         {
-            if (Input.GetTouch(i).phase == TouchPhase.Began)
+            if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log("In");
+                Debug.Log("Touch Phase : Computer Unity");
                 RaycastHit hit = new RaycastHit();
-                Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 // Create a particle if hit
                 if (Physics.Raycast(ray, out hit))
                 {
@@ -221,7 +222,28 @@ public class ARInput : MonoBehaviour
                         Debug.Log("Interactable Object Hit : " + hit.collider.gameObject.name);
                         hit.collider.gameObject.GetComponent<InteracbleObject>().Interact();
                     }
-                }         
+                }
+            }
+        }
+        else
+        {
+            for (var i = 0; i < Input.touchCount; ++i)
+            {
+                if (Input.GetTouch(i).phase == TouchPhase.Began)
+                {
+                    Debug.Log("Touch Phase : Phone Touch Pos");
+                    RaycastHit hit = new RaycastHit();
+                    Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
+                    // Create a particle if hit
+                    if (Physics.Raycast(ray, out hit))
+                    {
+                        if (hit.collider.gameObject.tag == "InteractableObject")
+                        {
+                            Debug.Log("Interactable Object Hit : " + hit.collider.gameObject.name);
+                            hit.collider.gameObject.GetComponent<InteracbleObject>().Interact();
+                        }
+                    }
+                }
             }
         }
     }
