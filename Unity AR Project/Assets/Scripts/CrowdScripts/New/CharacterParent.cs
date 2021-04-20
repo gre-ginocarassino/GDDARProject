@@ -14,7 +14,7 @@ public class CharacterParent : MonoBehaviour
     //    }
     //}
 
-    private int count;
+    public int count;
     public static CharacterParent characterParent;
 
     private void Start()

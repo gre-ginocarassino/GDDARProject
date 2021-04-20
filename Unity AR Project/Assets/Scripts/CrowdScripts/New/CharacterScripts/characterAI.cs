@@ -9,6 +9,9 @@ public class characterAI : characterTypes
     public bool IsGroupFormed;
     public float time;
     public float distanceFromPoint;
+    public int FollowerThreshold;
+
+    public float GroupTime;
     
     public enum CurrentStatus { Solo, InGroup}
     public enum SoloAction { Idling, Wandering}
@@ -81,9 +84,85 @@ public class characterAI : characterTypes
                     }
                     break;
                 case CharacaterType.Leader:
-                    //Debug.Log("yes formed leader");
+                    navmeshAgent.avoidancePriority = 90;
+                    foreach (Transform t in CharacterParent.characterParent.transform)
+                    {
+                        if (FollowerThreshold <= 5)
+                        {
+                            if (Vector3.Distance(transform.position, t.position) < 3f)
+                            {
+                                if (t.GetComponent<characterAI>().currentCharacterType == CharacaterType.Wanderer)
+                                {
+                                    TotalCohesion += t.GetComponent<characterAI>().cohesion;
+                                    FollowerThreshold++;
+                                    IsGroupFormed = FormGroup.IfGroupFormable(TotalCohesion);
+                                    if (IsGroupFormed == true)
+                                    {
+                                        t.GetComponent<characterAI>().currentCharacterType = CharacaterType.Follower;
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (IsGroupFormed == true)
+                            {
+                                GroupTime = TotalCohesion * 2; //this is in update , should not be here 
+                                if (GroupTime >= 1)
+                                {
+                                    GroupTime -= 1 * Time.deltaTime;
+                                }
+                                if (GroupTime <= 0)
+                                {
+                                    TotalCohesion = 0;
+                                    FollowerThreshold = 0;
+                                    currentCharacterType = CharacaterType.Wanderer;
+                                    confirmLeader = false;
+                                }
+                            }
+                            else
+                            {
+                                TotalCohesion = 0;
+                                FollowerThreshold = 0;
+                                currentCharacterType = CharacaterType.Wanderer;
+                                CharacterParent.characterParent.count = 0;
+                                confirmLeader = false;
+                            }
+                        }
+                    }
+                    if (Vector3.Distance(transform.position, targetLocation.position) < distanceFromPoint)
+                    {
+                        time -= Time.deltaTime;
+                        animator.SetBool("StartWalking", false);
+                        if (time <= 0)
+                        {
+                            chooseLocation();
+                            time = Random.Range(1, 4);
+                        }
+                    }
+                    break;
+                case CharacaterType.Follower:
+                    navmeshAgent.avoidancePriority = 80;
+                    foreach (Transform t in CharacterParent.characterParent.transform)
+                    {
+                        if (t.GetComponent<characterAI>().currentCharacterType == CharacaterType.Leader)
+                        {
+                            targetLocation = t.transform;
+                        }
+                    }
+                    if (Vector3.Distance(transform.position, targetLocation.position) < distanceFromPoint)
+                    {
+                        animator.SetBool("StartWalking", false);
+                    }
                     break;
             }
+        }
+    }
+    private void OnDrawGizmos()
+    {
+        if (currentCharacterType == CharacaterType.Leader)
+        {
+            Gizmos.DrawWireSphere(this.transform.position, 3f);
         }
     }
 

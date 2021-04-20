@@ -65,6 +65,9 @@ public class Spawn : MonoBehaviour
             {
                 GameObject obj = Instantiate(pool.charTypes[Random.Range(0, pool.charTypes.Length)], poolerPosition.position, Quaternion.identity);
                 obj.transform.SetParent(parent.transform);
+                obj.GetComponent<NavMeshAgent>().speed = Random.Range(1.5f, 3f);
+                obj.GetComponent<NavMeshAgent>().avoidancePriority = Random.Range(45, 70);
+                obj.GetComponent<characterAI>().personality = (CharacterScript.characterTypes.Personality)Random.Range(-2,3);
                 //obj.GetComponent<NavMeshAgent>().Warp(poolerPosition.transform.position);
 
                 if (NavMesh.SamplePosition(poolerPosition.transform.position, out closestHit, 500, NavMesh.AllAreas))

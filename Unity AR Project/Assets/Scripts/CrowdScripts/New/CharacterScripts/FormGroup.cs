@@ -6,7 +6,7 @@ public static class FormGroup
 {
     public static bool IfGroupFormable(int TotalCohesion)
     {
-        if (TotalCohesion > 5)
+        if (TotalCohesion > 2)
         {
             return true;
         }
