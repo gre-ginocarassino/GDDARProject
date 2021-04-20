@@ -21,8 +21,6 @@ public class characterAI : characterTypes
     //public SoloAction currentSoloAction;
     //public GroupAction currentGroupAction;
     public CurrentStatus currentStatus;
-
-
     protected override void Start()
     {
         base.Start();
@@ -37,7 +35,7 @@ public class characterAI : characterTypes
     {
         base.Update();
 
-        IsGroupFormed = FormGroup.IfGroupFormable(TotalCohesion); //call a method of type bool to return either false or true
+        //IsGroupFormed = FormGroup.IfGroupFormable(TotalCohesion); //call a method of type bool to return either false or true
 
         if (IsGroupFormed == false)
         {
@@ -84,6 +82,7 @@ public class characterAI : characterTypes
                     }
                     break;
                 case CharacaterType.Leader:
+                    List<GameObject> FollowerList = new List<GameObject>();
                     navmeshAgent.avoidancePriority = 90;
                     foreach (Transform t in CharacterParent.characterParent.transform)
                     {
@@ -93,13 +92,22 @@ public class characterAI : characterTypes
                             {
                                 if (t.GetComponent<characterAI>().currentCharacterType == CharacaterType.Wanderer)
                                 {
-                                    TotalCohesion += t.GetComponent<characterAI>().cohesion;
-                                    FollowerThreshold++;
-                                    IsGroupFormed = FormGroup.IfGroupFormable(TotalCohesion);
-                                    if (IsGroupFormed == true)
+                                    TotalCohesion += cohesion + t.GetComponent<characterAI>().cohesion;
+                                    if (TotalCohesion >= 0)
                                     {
-                                        t.GetComponent<characterAI>().currentCharacterType = CharacaterType.Follower;
+                                        FollowerThreshold++;
+                                        FollowerList.Add(t.gameObject);
+                                        TotalCohesion = 0;
                                     }
+                                    else //This part needs to be redone to make it work
+                                    {
+                                        TotalCohesion = 0;
+                                    }
+                                    //IsGroupFormed = FormGroup.IfGroupFormable(TotalCohesion);
+                                    //if (IsGroupFormed == true)
+                                    //{
+                                    //    t.GetComponent<characterAI>().currentCharacterType = CharacaterType.Follower;
+                                    //}
                                 }
                             }
                         }
