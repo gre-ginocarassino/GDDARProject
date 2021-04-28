@@ -5646,18 +5646,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 505260470}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1407599182}
-        m_MethodName: UnlockSkin
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &505260470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14322,18 +14311,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1242934502}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1407599182}
-        m_MethodName: UnlockSkin
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1242934502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18963,18 +18941,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1655410890}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1407599182}
-        m_MethodName: UnlockSkin
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1655410890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23286,18 +23253,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1984480627}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1407599182}
-        m_MethodName: UnlockSkin
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1984480627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25713,7 +25669,7 @@ MonoBehaviour:
   englandController: {fileID: 81523427793019034}
   franceController: {fileID: 8239282708170521143}
   italyController: {fileID: 8153568617886292419}
-  isTesting: 1
+  isTesting: 0
 --- !u!4 &81523427344692837
 Transform:
   m_ObjectHideFlags: 0
