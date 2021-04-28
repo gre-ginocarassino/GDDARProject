@@ -84,11 +84,11 @@ public class StatsManager : MonoBehaviour
             }
             if (NameOfCountry == "italy")
             {
-                mainCont.totalItaly = mainCont.totalEngland + newPoints;
+                mainCont.totalItaly = mainCont.totalItaly + newPoints;
             }
             if (NameOfCountry == "france")
             {
-                mainCont.totalFrance = mainCont.totalEngland + newPoints;
+                mainCont.totalFrance = mainCont.totalFrance + newPoints;
             }
 
             

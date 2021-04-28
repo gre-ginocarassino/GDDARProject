@@ -25713,7 +25713,7 @@ MonoBehaviour:
   englandController: {fileID: 81523427793019034}
   franceController: {fileID: 8239282708170521143}
   italyController: {fileID: 8153568617886292419}
-  isTesting: 0
+  isTesting: 1
 --- !u!4 &81523427344692837
 Transform:
   m_ObjectHideFlags: 0

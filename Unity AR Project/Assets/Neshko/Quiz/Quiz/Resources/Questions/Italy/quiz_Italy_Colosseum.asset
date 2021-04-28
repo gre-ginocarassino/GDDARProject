@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f611d797432e3f846885b2b12fde5f35, type: 3}
   m_Name: quiz_Italy_Colosseum
   m_EditorClassIdentifier: 
-  MonumentNumber: 3
+  MonumentNumber: 0
   categoryName: Hard
   timeToComplete: 20
   questions:

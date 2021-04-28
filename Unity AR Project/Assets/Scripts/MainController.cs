@@ -284,23 +284,60 @@ public class MainController : MonoBehaviour
     }
     private void UpdateGeoPoints(int threshold)
     {
-        if (totalEngland >= threshold && GeoEngland == false)
+        if (totalEngland >= threshold)
         {
-            geoPoints++;
             GeoEngland = true;
             IMG_GeoEng.SetActive(true);
+
+            if (totalEngland == threshold)
+            {
+                totalEngland = totalEngland + 5;
+                geoPoints++;
+                T_GeoPoints.text = geoPoints.ToString();
+
+                UnlockSkin(0);
+
+                UpdateTotalScore();
+                UpdateLevel();
+                StartCloudUpdatePlayerStats();
+            }
         }
-        if (totalItaly >= threshold && GeoItaly == false)
+
+        if (totalItaly >= threshold)
         {
-            geoPoints++;
             GeoItaly = true;
             IMG_GeoIta.SetActive(true);
+
+            if (totalItaly == threshold)
+            {
+                totalItaly = totalItaly + 5;
+                geoPoints++;
+                T_GeoPoints.text = geoPoints.ToString();
+
+                UnlockSkin(1);
+
+                UpdateTotalScore();
+                UpdateLevel();
+                StartCloudUpdatePlayerStats();
+            }
         }
-        if (totalFrance >= threshold && GeoFrance == false)
+
+        if (totalFrance >= (threshold - 50))
         {
-            geoPoints++;
             GeoFrance = true;
             IMG_GeoFra.SetActive(true);
+            if (totalFrance == (threshold - 50))
+            {
+                totalFrance = totalFrance + 5;
+                geoPoints++;
+                T_GeoPoints.text = geoPoints.ToString();
+
+                UnlockSkin(2);
+
+                UpdateTotalScore();
+                UpdateLevel();
+                StartCloudUpdatePlayerStats();
+            }
         }
     }
     #endregion
@@ -323,10 +360,7 @@ public class MainController : MonoBehaviour
         else
         {
             PersistentData.PD.SkinsStringToData(result.Data["Skins"].Value);
-            
         }
-
-
     }
     public void SetUserData(string SkinsData)
     {
@@ -342,7 +376,6 @@ public class MainController : MonoBehaviour
     {
         Debug.Log(result.DataVersion);
     }
-
 
     public void SetupStore()
     {
@@ -378,4 +411,5 @@ public class MainController : MonoBehaviour
         //Game object will turn off
         loadingPanel.SetActive(false);
     }
+
 }

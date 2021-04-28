@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f611d797432e3f846885b2b12fde5f35, type: 3}
   m_Name: quiz_Italy_Vesuvio
   m_EditorClassIdentifier: 
-  MonumentNumber: 1
+  MonumentNumber: 3
   categoryName: Medium
   timeToComplete: 25
   questions:
