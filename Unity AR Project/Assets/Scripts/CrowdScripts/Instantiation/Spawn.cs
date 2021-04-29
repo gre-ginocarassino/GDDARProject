@@ -68,6 +68,12 @@ public class Spawn : MonoBehaviour
                 obj.GetComponent<NavMeshAgent>().speed = Random.Range(1.5f, 3f);
                 obj.GetComponent<NavMeshAgent>().avoidancePriority = Random.Range(45, 70);
                 obj.GetComponent<characterAI>().personality = (CharacterScript.characterTypes.Personality)Random.Range(-2,3);
+                int h = Random.Range(0, obj.GetComponent<characterAI>().Hairstyles.Length);
+                int a = Random.Range(0, obj.GetComponent<characterAI>().Accessories.Length);
+                obj.GetComponent<characterAI>().Hairstyles[h].SetActive(true);
+                obj.GetComponent<characterAI>().Accessories[a].SetActive(true);
+
+
                 //obj.GetComponent<NavMeshAgent>().Warp(poolerPosition.transform.position);
 
                 if (NavMesh.SamplePosition(poolerPosition.transform.position, out closestHit, 500, NavMesh.AllAreas))

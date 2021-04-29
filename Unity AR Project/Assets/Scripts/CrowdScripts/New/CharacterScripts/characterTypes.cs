@@ -7,6 +7,9 @@ namespace CharacterScript
 {
     public class characterTypes : MonoBehaviour
     {
+        [Header ("Hairstyles and accessories")]
+        public GameObject[] Hairstyles;
+        public GameObject[] Accessories;
         [Header("Group Cohesion")]
         public int cohesion;
         public int TotalCohesion;
