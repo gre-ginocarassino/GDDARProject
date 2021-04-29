@@ -382,7 +382,7 @@ public class MainController : MonoBehaviour
         for (int i=0; i < PersistentData.PD.allSkins.Length; i++)
         {
             ButtonLocks[i].SetActive(!PersistentData.PD.allSkins[i]);
-            UnlockedButtons[i].interactable = PersistentData.PD.allSkins[i];
+            //UnlockedButtons[i].interactable = PersistentData.PD.allSkins[i];
         }
     }
     public void UnlockSkin(int index)
