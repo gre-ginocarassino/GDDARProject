@@ -25,6 +25,9 @@ public class PlaceController : MonoBehaviour
     [Header("Inside Variables")]
     List<GameObject> roads = new List<GameObject>();
 
+    [Header("")]
+    public string countryScore;
+
     private bool isTesting;
 
     public virtual void Awake()
@@ -262,6 +265,11 @@ public class PlaceController : MonoBehaviour
             //    yield return new WaitForSeconds(0.02f);
             //}
         }
+
+    }
+
+    public virtual void GetData()
+    {
 
     }
 }

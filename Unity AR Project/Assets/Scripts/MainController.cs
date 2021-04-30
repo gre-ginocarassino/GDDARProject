@@ -45,6 +45,14 @@ public class MainController : MonoBehaviour
     public bool GeoFrance;
     #endregion
 
+    #region [SECTIONS PLACE CONTROLLERS]
+    [Header("Sections")]
+    public PlaceController greatBritainPC;
+    public PlaceController francePC;
+    public PlaceController italyPC;
+    public PlaceController homeVilage;
+    #endregion
+
     #region [BAR]
     [Header("UI")]
     public Text T_Username;
@@ -111,6 +119,11 @@ public class MainController : MonoBehaviour
         UpdateTotalScore();
         UpdateLevel();
         UpdateGeoPoints(200);
+
+        greatBritainPC.countryScore = "Score : " + totalEngland.ToString() + " / 200";
+        italyPC.countryScore = "Score : " + totalItaly.ToString() + " / 200";
+        francePC.countryScore = "Score : " + totalFrance.ToString() + " / 200";
+        homeVilage.countryScore = "Geo Points : " + geoPoints + " / 4";
     }
 
     #region AccountInfo
@@ -188,6 +201,7 @@ public class MainController : MonoBehaviour
         },
         result => { Debug.Log("User statistics updated"); }, //callback for successful POST
         error => { Debug.LogError(error.GenerateErrorReport()); }); //failed POST
+
     }
     void GetStatistics()
     {

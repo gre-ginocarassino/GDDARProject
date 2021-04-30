@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.XR.ARFoundation;
+using TMPro;
 
 public class BoardController : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class BoardController : MonoBehaviour
 
     private StatsManager obj_Stats_Manager;
 
+    [Header("Board Variables")]
+    public TMP_Text headingText;
+    public TMP_Text subheadingText;
+
+    [Header("True Loads from Game, False Loads from Cloud")]
     public bool isTesting;
 
     // Start is called before the first frame update
@@ -26,6 +32,9 @@ public class BoardController : MonoBehaviour
     {
         //arPlane.planePrefab.gameObject.GetComponent<MeshRenderer>().material = arPlane.planeMaterials[1];
         obj_Stats_Manager = (StatsManager)FindObjectOfType(typeof(StatsManager));
+
+        headingText.text = "";
+        subheadingText.text = "";
     }
 
     // Update is called once per frame
@@ -56,6 +65,9 @@ public class BoardController : MonoBehaviour
 
     IEnumerator NewSectionCoroutine(PlaceController growingSection)
     {
+        headingText.text = "";
+        subheadingText.text = "";
+
         if (activeSection != null)
         {
             ShrinkSection(activeSection);
@@ -67,6 +79,9 @@ public class BoardController : MonoBehaviour
         growingSection.LoadPlace();
         Debug.Log("BoardController : Growing Section : " + growingSection);
         activeSection = growingSection;
+
+        headingText.text = growingSection.name;
+        subheadingText.text = growingSection.countryScore;
 
         //Load questions stats from JSON File
         obj_Stats_Manager.Load(growingSection.AssetbundleName);

@@ -3650,7 +3650,7 @@ MonoBehaviour:
   _closeBtn: {fileID: 1321745384975822473}
   _buttonsPos:
   - {fileID: 1321745384713238645}
-  - {fileID: 1321745384949202909}
+  - {fileID: 302969586886949049}
   - {fileID: 1321745384949202909}
   - {fileID: 3343306855918126224}
   _retryButton: {fileID: 1321745386105736135}
@@ -3967,6 +3967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizDataList:
   - {fileID: 11400000, guid: 678f3b3ee943425429e2350fab4d28e6, type: 2}
+  - {fileID: 11400000, guid: fc10fae0555b01f4582997b2bd637477, type: 2}
   - {fileID: 11400000, guid: 2181dfab0b3c6cd43b0c1424ccdf1505, type: 2}
   - {fileID: 11400000, guid: c36848ed5b9e3e9448f524695394b686, type: 2}
   quizUi: {fileID: 1321745384337389893}
@@ -5639,7 +5640,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -12905.6045}
+  m_AnchoredPosition: {x: 0, y: -14234.873}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1321745384808154559
@@ -9565,7 +9566,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.041, y: 0.13662638}
   m_AnchorMax: {x: 0.367282, y: 0.8633737}
-  m_AnchoredPosition: {x: 671, y: 27}
+  m_AnchoredPosition: {x: 671.0001, y: 27.00003}
   m_SizeDelta: {x: -1.0999985, y: -2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1321745386032961800
