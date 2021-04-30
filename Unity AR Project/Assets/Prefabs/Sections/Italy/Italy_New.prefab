@@ -42857,6 +42857,7 @@ MonoBehaviour:
   - {fileID: 7077016190534250748}
   - {fileID: 7077016190534250831}
   - {fileID: 7077016190534250878}
+  CountrySign: {fileID: 8589463580372484433}
   spawnonLoad: 1
 --- !u!114 &7077016190534250751
 MonoBehaviour:

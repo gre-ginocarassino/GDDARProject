@@ -27,6 +27,7 @@ public class PlaceController : MonoBehaviour
 
     [Header("")]
     public string countryScore;
+    public int floatScore;
 
     private bool isTesting;
 

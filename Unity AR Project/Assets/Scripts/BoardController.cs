@@ -85,6 +85,8 @@ public class BoardController : MonoBehaviour
 
         //Load questions stats from JSON File
         obj_Stats_Manager.Load(growingSection.AssetbundleName);
+
+        MainController.MCC.UpdateGameStatistics();
     }
 
     public void ShrinkSection(PlaceController shrinkingSection)

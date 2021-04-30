@@ -83,9 +83,14 @@ public class MainController : MonoBehaviour
     public GameObject listingPrefab;
     public Transform listingContainer;
     public GameObject loadingPanel;
+    private navigationSign Navigation_Sign;
+    private BoardController Board_Controller;
 
     public void Start()
     {
+        Navigation_Sign = (navigationSign)FindObjectOfType(typeof(navigationSign));
+        Board_Controller = (BoardController)FindObjectOfType(typeof(BoardController));
+
         GetStatistics();
 
         StartCoroutine(ActivationRoutine());
@@ -124,6 +129,18 @@ public class MainController : MonoBehaviour
         italyPC.countryScore = "Score : " + totalItaly.ToString() + " / 200";
         francePC.countryScore = "Score : " + totalFrance.ToString() + " / 200";
         homeVilage.countryScore = "Geo Points : " + geoPoints + " / 4";
+
+        greatBritainPC.floatScore = totalEngland;
+        italyPC.floatScore = totalItaly;
+        francePC.floatScore = totalFrance;
+        homeVilage.floatScore = playerPoints;
+
+        if (Board_Controller == null)
+        {
+            Board_Controller = (BoardController)FindObjectOfType(typeof(BoardController));
+        }
+
+        Board_Controller.activeSection.baseSectionVariables.CountrySign.maxThreshold = Board_Controller.activeSection.floatScore;
     }
 
     #region AccountInfo
