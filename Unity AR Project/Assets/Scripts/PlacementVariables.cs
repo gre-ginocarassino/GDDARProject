@@ -9,6 +9,10 @@ public class PlacementVariables : MonoBehaviour
     public GameObject[] variables;
     public navigationSign CountrySign;
 
+    [Header("Music")]
+    public AudioSource musicSource;
+    public AudioClip musicClip;
+
     public bool spawnonLoad;
 
     private void Awake()

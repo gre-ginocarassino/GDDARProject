@@ -114,6 +114,8 @@ public class MainController : MonoBehaviour
 
     public void UpdateGameStatistics()
     {
+        Debug.Log("Main Controller : Updating Game Stats");
+
         T_Level.text = playerLevel.ToString();
         T_Points.text = playerPoints.ToString();
         T_GeoPoints.text = geoPoints.ToString();

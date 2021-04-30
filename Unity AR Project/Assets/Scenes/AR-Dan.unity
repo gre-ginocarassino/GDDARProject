@@ -3925,7 +3925,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 996193260166437515}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!1 &336083464
 GameObject:
@@ -9711,6 +9711,87 @@ RectTransform:
   m_AnchoredPosition: {x: 120, y: -177}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &776379486
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 996193260166437515}
+    m_Modifications:
+    - target: {fileID: 2183438241717802750, guid: 546a02a3bb5b9c540943c94d8c23784c,
+        type: 3}
+      propertyPath: m_Name
+      value: Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098696542729866856, guid: 546a02a3bb5b9c540943c94d8c23784c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098696542729866856, guid: 546a02a3bb5b9c540943c94d8c23784c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098696542729866856, guid: 546a02a3bb5b9c540943c94d8c23784c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098696542729866856, guid: 546a02a3bb5b9c540943c94d8c23784c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098696542729866856, guid: 546a02a3bb5b9c540943c94d8c23784c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098696542729866856, guid: 546a02a3bb5b9c540943c94d8c23784c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098696542729866856, guid: 546a02a3bb5b9c540943c94d8c23784c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098696542729866856, guid: 546a02a3bb5b9c540943c94d8c23784c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098696542729866856, guid: 546a02a3bb5b9c540943c94d8c23784c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098696542729866856, guid: 546a02a3bb5b9c540943c94d8c23784c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098696542729866856, guid: 546a02a3bb5b9c540943c94d8c23784c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 546a02a3bb5b9c540943c94d8c23784c, type: 3}
+--- !u!4 &776379487 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7098696542729866856, guid: 546a02a3bb5b9c540943c94d8c23784c,
+    type: 3}
+  m_PrefabInstance: {fileID: 776379486}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &776379488 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7338088925659621943, guid: 546a02a3bb5b9c540943c94d8c23784c,
+    type: 3}
+  m_PrefabInstance: {fileID: 776379486}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &789694367
 GameObject:
   m_ObjectHideFlags: 0
@@ -10895,7 +10976,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 996193260166437515}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!1 &908610375
 GameObject:
@@ -15061,7 +15142,7 @@ Transform:
   - {fileID: 1574268106}
   - {fileID: 4683294073846185646}
   m_Father: {fileID: 996193260166437515}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!1 &1290939961
 GameObject:
@@ -16728,7 +16809,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 996193260166437515}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!1 &1488667661
 GameObject:
@@ -19274,7 +19355,7 @@ Transform:
   - {fileID: 506447663}
   - {fileID: 1291745661}
   m_Father: {fileID: 996193260166437515}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!1 &1707684075 stripped
 GameObject:
@@ -19808,6 +19889,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742029404}
   m_CullTransparentMesh: 0
+--- !u!114 &1747580507 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2844244370178006320, guid: 791aa079b55250348a3e8eab74a9c682,
+    type: 3}
+  m_PrefabInstance: {fileID: 6002231699578707100}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1753552567
 GameObject:
   m_ObjectHideFlags: 0
@@ -25813,6 +25906,8 @@ MonoBehaviour:
   italyController: {fileID: 8153568617886292419}
   headingText: {fileID: 1276093781}
   subheadingText: {fileID: 1052155305}
+  populationText: {fileID: 1747580507}
+  musicEffect: {fileID: 0}
   isTesting: 1
 --- !u!4 &81523427344692837
 Transform:
@@ -25849,6 +25944,7 @@ GameObject:
   - component: {fileID: 81523427344692837}
   - component: {fileID: 81523427344692836}
   - component: {fileID: 7121915117675654133}
+  - component: {fileID: 81523427344692840}
   m_Layer: 0
   m_Name: Base Board
   m_TagString: Untagged
@@ -25856,6 +25952,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &81523427344692840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81523427344692839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef4691e297392e4b9f984428973f968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &81523427439330456
 GameObject:
   m_ObjectHideFlags: 0
@@ -25893,6 +26001,7 @@ MonoBehaviour:
   baseSectionVariables: {fileID: 996193260166436961}
   countryFlag: {fileID: 7345078671441958375}
   countryScore: 
+  floatScore: 0
   italyUnlocked: 0
   italyMonument: {fileID: 753258468}
   italyLockedObject: {fileID: 4683294073846185633}
@@ -25955,6 +26064,7 @@ MonoBehaviour:
   baseSectionVariables: {fileID: 0}
   countryFlag: {fileID: 2686733018560394810}
   countryScore: 
+  floatScore: 0
 --- !u!4 &81523427793019035
 Transform:
   m_ObjectHideFlags: 0
@@ -27175,6 +27285,7 @@ MonoBehaviour:
   baseSectionVariables: {fileID: 0}
   countryFlag: {fileID: 0}
   countryScore: 
+  floatScore: 0
 --- !u!1 &551331309962831992
 GameObject:
   m_ObjectHideFlags: 0
@@ -35382,6 +35493,9 @@ MonoBehaviour:
   - {fileID: 1284094007}
   - {fileID: 330243899}
   - {fileID: 1480255986}
+  CountrySign: {fileID: 1789700748404157305}
+  musicSource: {fileID: 776379488}
+  musicClip: {fileID: 0}
   spawnonLoad: 0
 --- !u!4 &996193260166437396
 Transform:
@@ -35398,7 +35512,7 @@ Transform:
   - {fileID: 644039976}
   - {fileID: 1578974975}
   m_Father: {fileID: 996193260166437515}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!4 &996193260166437515
 Transform:
@@ -35411,6 +35525,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 776379487}
   - {fileID: 996193260166437596}
   - {fileID: 900167534}
   - {fileID: 996193260166437396}
@@ -35551,7 +35666,7 @@ Transform:
   - {fileID: 683015912}
   - {fileID: 69723825}
   m_Father: {fileID: 996193260166437515}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!1 &996193260166437721
 GameObject:
@@ -39334,6 +39449,7 @@ MonoBehaviour:
   baseSectionVariables: {fileID: 0}
   countryFlag: {fileID: 0}
   countryScore: 
+  floatScore: 0
 --- !u!23 &2321881899115248870
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -62190,6 +62306,7 @@ MonoBehaviour:
   baseSectionVariables: {fileID: 0}
   countryFlag: {fileID: 7815927698120158635}
   countryScore: 
+  floatScore: 0
 --- !u!33 &8162574113665599588
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -62404,6 +62521,7 @@ MonoBehaviour:
   baseSectionVariables: {fileID: 0}
   countryFlag: {fileID: 3895618245111883539}
   countryScore: 
+  floatScore: 0
 --- !u!4 &8241085825668767857
 Transform:
   m_ObjectHideFlags: 0

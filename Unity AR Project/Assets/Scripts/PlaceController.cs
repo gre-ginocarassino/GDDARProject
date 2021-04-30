@@ -25,7 +25,7 @@ public class PlaceController : MonoBehaviour
     [Header("Inside Variables")]
     List<GameObject> roads = new List<GameObject>();
 
-    [Header("")]
+    [Header("Score")]
     public string countryScore;
     public int floatScore;
 
@@ -71,17 +71,23 @@ public class PlaceController : MonoBehaviour
                 //}
                 //baseSections.SetActive(true);
                 //StartCoroutine(VariablesResizing(1));
-            } else
+            }
+            else
             {
                 StartCoroutine(downloader());
-            }      
-        } else
+            }
+        }
+        else
         {
             StartCoroutine(VariablesResizing(1));
             Debug.Log("Place Controller : Already One In The Scene : VR1");
         }
 
         StartCoroutine(flagCont.SelectNewFlag(countryFlag));
+
+        baseSectionVariables.musicSource.clip = baseSectionVariables.musicClip;
+        baseSectionVariables.musicSource.Play();
+        boardController.musicEffect.Play();
 
     }
 
@@ -102,7 +108,8 @@ public class PlaceController : MonoBehaviour
             baseSections.GetComponent<PlacementVariables>();
         }
 
-
+        baseSectionVariables.musicSource.Stop();
+        boardController.musicEffect.Stop();
 
         //baseSections.transform.DOScaleY(0, 1);
         StartCoroutine(VariablesResizing(0));
@@ -147,6 +154,8 @@ public class PlaceController : MonoBehaviour
             {
                 //DoNothing
             }
+
+            #region GROW SECTION
 
             baseSectionVariables.variables[0].SetActive(true);
             baseSectionVariables.variables[0].transform.DOScaleY(newScale, 0);
@@ -206,6 +215,8 @@ public class PlaceController : MonoBehaviour
 
             yield return new WaitForSeconds(0.1f);
 
+            #endregion
+
             if (Spawned == false)
             {
                 Spawn._Spawn.PrepareCharacters();
@@ -218,7 +229,7 @@ public class PlaceController : MonoBehaviour
                 pooler.startSpawn(true);
             }
 
-        } 
+        }
         else
         {
             pooler.startSpawn(false);

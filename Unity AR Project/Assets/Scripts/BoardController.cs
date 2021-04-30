@@ -23,6 +23,10 @@ public class BoardController : MonoBehaviour
     [Header("Board Variables")]
     public TMP_Text headingText;
     public TMP_Text subheadingText;
+    public TMP_Text populationText;
+
+    [Header("Music")]
+    public ParticleSystem musicEffect;
 
     [Header("True Loads from Game, False Loads from Cloud")]
     public bool isTesting;
@@ -40,7 +44,8 @@ public class BoardController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (activeSection != null)
+            populationText.text = "Population : " + activeSection.baseSectionVariables.CountrySign.threshold.ToString();
     }
 
     public void NewSection(PlaceController newS)
