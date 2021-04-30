@@ -10,12 +10,19 @@ public class Pooler : MonoBehaviour
     public float wait;
     public float startWait;
 
+    private bool[] SpecSpawned;
     private void Start()
     {
+        
         spawn = Spawn._Spawn;
         isSpawned = false;
         ShouldSpawn = this;
         wait = 2f;
+
+        for (int i = 0; i < 3; i++)
+        {
+            SpecSpawned[i] = false;
+        }
     }
 
     public void startSpawn(bool shouldSpawn)
@@ -30,7 +37,8 @@ public class Pooler : MonoBehaviour
         {
             if (isSpawned == true && wait <= 0)
             {
-                spawn.SpawnFromPool("walker", transform.position, transform.rotation);
+                spawn.SpawnFromPool("Walker", transform.position, transform.rotation);
+
                 wait = startWait;
             }
             else
@@ -45,9 +53,10 @@ public class Pooler : MonoBehaviour
                 }
             }
         }
+
     }
 
-    
+
 
 
 }

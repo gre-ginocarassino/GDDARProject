@@ -206,7 +206,13 @@ public class characterAI : characterTypes
         {
             if (Spawn._Spawn != null)
             {
-                Spawn._Spawn.ReturnObjToQueue(this.gameObject, "walker");
+                Spawn._Spawn.ReturnObjToQueue(this.gameObject, "Walker");
+            }
+        }
+        if (currentCharacterType == CharacaterType.Leader)
+        {
+            if (Spawn._Spawn != null)
+            {
             }
         }
     }

@@ -18,6 +18,7 @@ public class CharacterParent : MonoBehaviour
     public int count;
     public static CharacterParent characterParent;
 
+
     private void Start()
     {
         characterParent = this;
@@ -29,6 +30,21 @@ public class CharacterParent : MonoBehaviour
         foreach (Transform eachChild in transform)
         {
             eachChild.gameObject.SetActive(false);
+        }
+    }
+
+    public void EnableCharacter(int count)
+    {
+        foreach (Transform child in transform)
+        {
+            if (count == 0)
+            {
+                if (child.name == "SpecialCharacter")
+                {
+                    child.gameObject.SetActive(true);
+                    count++;
+                }
+            }
         }
     }
 
