@@ -21729,7 +21729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -8748.4}
+  m_AnchoredPosition: {x: 0, y: -9149.118}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &4082398585832768629
@@ -33951,7 +33951,7 @@ MonoBehaviour:
   - {fileID: 7307679617005710799}
   CountrySign: {fileID: 5836406245422343847}
   musicSource: {fileID: 1603100994625921011}
-  musicClip: {fileID: 0}
+  musicClip: {fileID: 8300000, guid: f3f309fafb589ff4ca15e4720c4cbda1, type: 3}
   spawnonLoad: 1
 --- !u!114 &7307679617005710412
 MonoBehaviour:
