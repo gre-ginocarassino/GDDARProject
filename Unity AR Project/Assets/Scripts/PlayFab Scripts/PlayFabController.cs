@@ -163,7 +163,7 @@ public class PlayFabController : MonoBehaviour
 
     public void OnChangeScene()
     {
-        SceneManager.LoadScene("AR-Dan");
+        SceneManager.LoadScene("AR-Playscene");
     }
     public void onClickLogin()
     {

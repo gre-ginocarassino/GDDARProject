@@ -73,9 +73,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e42f1238d0f4cb14ea74b7aa6e0bfcd3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f3f309fafb589ff4ca15e4720c4cbda1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.094
+  m_Volume: 0.115
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -83,7 +83,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 0
   DopplerLevel: 0
-  MinDistance: 0.18050003
+  MinDistance: 100
   MaxDistance: 100
   Pan2D: 0
   rolloffMode: 2
@@ -103,8 +103,8 @@ AudioSource:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.064040124
-      value: 0.1954931
+      time: 0.56925863
+      value: 0.054992676
       inSlope: -0.309418
       outSlope: -0.309418
       tangentMode: 0
@@ -112,7 +112,7 @@ AudioSource:
       inWeight: 1
       outWeight: 0.16338037
     - serializedVersion: 3
-      time: 1
+      time: 0.91373444
       value: 0
       inSlope: 0
       outSlope: 0
@@ -209,9 +209,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e42f1238d0f4cb14ea74b7aa6e0bfcd3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f3f309fafb589ff4ca15e4720c4cbda1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.141
+  m_Volume: 0.347
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -219,7 +219,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 0
   DopplerLevel: 0
-  MinDistance: 0.18050003
+  MinDistance: 100
   MaxDistance: 100
   Pan2D: 0
   rolloffMode: 2
@@ -239,8 +239,8 @@ AudioSource:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.16378683
-      value: 0.044006348
+      time: 0.56925863
+      value: 0.054992676
       inSlope: -0.309418
       outSlope: -0.309418
       tangentMode: 0
@@ -248,7 +248,7 @@ AudioSource:
       inWeight: 1
       outWeight: 0.16338037
     - serializedVersion: 3
-      time: 0.32169342
+      time: 0.91373444
       value: 0
       inSlope: 0
       outSlope: 0
