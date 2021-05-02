@@ -7,7 +7,7 @@ public class PlaceController : MonoBehaviour
 {
     //Crowd related
     private Pooler pooler;
-    private bool Spawned;
+    //private bool Spawned;
 
     public BoardController boardController;
     private AssetBundleAzure az;
@@ -217,14 +217,9 @@ public class PlaceController : MonoBehaviour
 
             #endregion
 
-            if (Spawned == false)
-            {
-                Spawn._Spawn.PrepareCharacters();
-                Spawned = true;
-            }
             yield return new WaitForSeconds(1f);
             //pass bool true to pooler
-            if (Spawned == true)
+            if (boardController.Spawned == true)
             {
                 pooler.startSpawn(true);
             }

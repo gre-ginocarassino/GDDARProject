@@ -31,6 +31,9 @@ public class BoardController : MonoBehaviour
     [Header("True Loads from Game, False Loads from Cloud")]
     public bool isTesting;
 
+    [Header("Check if it has been spawned")]
+    public bool Spawned;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -81,7 +84,13 @@ public class BoardController : MonoBehaviour
             yield return new WaitForSeconds(1.4f);
         }
 
+        if (Spawned == false)
+        {
+            Spawn._Spawn.PrepareCharacters();
+            Spawned = true;
+        }
         growingSection.LoadPlace();
+
         Debug.Log("BoardController : Growing Section : " + growingSection);
         activeSection = growingSection;
 

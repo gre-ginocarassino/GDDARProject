@@ -98,7 +98,7 @@ public class Spawn : MonoBehaviour
                     }
                     else
                     {
-                        Debug.LogError("could not find position on NavMesh");
+                        //Debug.LogError("could not find position on NavMesh");
 
                     }
 
