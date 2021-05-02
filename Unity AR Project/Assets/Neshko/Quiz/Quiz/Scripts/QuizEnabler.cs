@@ -41,7 +41,7 @@ public class QuizEnabler : MonoBehaviour
                      Deactivate();
                      StartCoroutine(FadeUI.Fade(1, _canvasGroups[0], 1f));
                      Prefabs[0].gameObject.SetActive(true);
-                     ShrinkToInitialSize();
+                    // ShrinkToInitialSize();
                      bCont = (BoardController)FindObjectOfType(typeof(BoardController));
                      bCont.NewSection(bCont.franceController);
 
@@ -52,7 +52,7 @@ public class QuizEnabler : MonoBehaviour
                     Deactivate();
                     StartCoroutine(FadeUI.Fade(1, _canvasGroups[0], 1f));
                     Prefabs[0].gameObject.SetActive(true);
-                    ShrinkToInitialSize();
+                   // ShrinkToInitialSize();
                     bCont = (BoardController)FindObjectOfType(typeof(BoardController));
                     bCont.NewSection(bCont.englandController);
 
@@ -63,7 +63,7 @@ public class QuizEnabler : MonoBehaviour
                     Deactivate();
                     StartCoroutine(FadeUI.Fade(1, _canvasGroups[0], 1f));
                     Prefabs[0].gameObject.SetActive(true);
-                    ShrinkToInitialSize();
+                   // ShrinkToInitialSize();
                     bCont = (BoardController)FindObjectOfType(typeof(BoardController));
                     bCont.NewSection(bCont.italyController);
 
@@ -98,10 +98,19 @@ public class QuizEnabler : MonoBehaviour
     
     void Deselect()
     {
-        for (int i = 0; i < _canvasGroups.Length; i++)
+        try
         {
-            StartCoroutine(FadeUI.Fade(0, _canvasGroups[i], 1f));
+            for (int i = 0; i < _canvasGroups.Length; i++)
+            {
+                StartCoroutine(FadeUI.Fade(0, _canvasGroups[i], 1f));
+            }
         }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+      
     }
     
     
@@ -131,13 +140,13 @@ public class QuizEnabler : MonoBehaviour
         Debug.Log(timeToGrow);
     }
 
-    void ShrinkToInitialSize()
-    {
-        for (int i = 0; i < _objectToShrink.Length; i++)
-        {
-            _objectToShrink[i].localScale = new Vector3(0.1f, 0.1f);
-        }
-    }
+    // void ShrinkToInitialSize()
+    // {
+    //     for (int i = 0; i < _objectToShrink.Length; i++)
+    //     {
+    //         _objectToShrink[i].localScale = new Vector3(0.1f, 0.1f);
+    //     }
+    // }
 
   
 
