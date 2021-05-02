@@ -6,15 +6,7 @@ using CharacterScript;
 public class CharacterParent : MonoBehaviour
 {
 
-    //public void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Escape))
-    //    {
-    //        DisableCharacter();
-    //    }
-    //}
-
-
+    public int leaderCount;
     public int count;
     public static CharacterParent characterParent;
 
@@ -45,11 +37,34 @@ public class CharacterParent : MonoBehaviour
                     return true; //true to form leader
                 }
             }
+            checkIfLeaderexist();
             return false;
         }
         else
         {
             return false;
+        }
+    }
+
+    private void checkIfLeaderexist()
+    {
+        foreach (Transform child in transform)
+        {
+            //if the child equal to leader
+            if (child.GetComponent<characterAI>().currentCharacterType == characterTypes.CharacaterType.Leader)
+            {
+                leaderCount++;
+            }
+        }
+        //no leader
+        confirmExistence(leaderCount);
+    }
+
+    public void confirmExistence(int leaderCount)
+    {
+        if (leaderCount <= 0)
+        {
+            count = 0;
         }
     }
 }

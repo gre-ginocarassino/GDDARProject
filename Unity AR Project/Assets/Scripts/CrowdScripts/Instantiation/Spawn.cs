@@ -176,7 +176,6 @@ public class Spawn : MonoBehaviour
                 objectToSpawn.SetActive(true);
                 break;
         }
-        //spawnPool[tag].Enqueue(objectToSpawn); //put item in the end of queue
 
         return objectToSpawn;
     }

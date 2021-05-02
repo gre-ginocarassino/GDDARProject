@@ -8,11 +8,17 @@ public class characterAI : characterTypes
     public bool confirmLeader;
     public bool IsGroupFormed;
     public float time;
+    public float countdown;
+    private float startCountdown;
     public float distanceFromPoint;
     public int FollowerThreshold;
 
+    private bool GTTriggered;
     public float GroupTime;
-    
+
+    private bool leaderPrepared;
+
+    public List<GameObject> FollowerList;
     public enum CurrentStatus { Solo, InGroup}
     public enum SoloAction { Idling, Wandering}
     public enum GroupAction { Following, Leading}
@@ -24,11 +30,15 @@ public class characterAI : characterTypes
     protected override void Start()
     {
         base.Start();
+        startCountdown = 9;
         time = 4;
-        distanceFromPoint = 1;
+        countdown = 4;
+        distanceFromPoint = 2;
 
         currentStatus = CurrentStatus.Solo;
         currentCharacterType = CharacaterType.Passenger;
+
+        FollowerList = new List<GameObject>();
     }
 
     protected override void Update()
@@ -37,17 +47,18 @@ public class characterAI : characterTypes
 
         //IsGroupFormed = FormGroup.IfGroupFormable(TotalCohesion); //call a method of type bool to return either false or true
 
-        if (IsGroupFormed == false)
-        {
-            currentStatus = CurrentStatus.Solo;
-        }
-        else
-        {
-            currentStatus = CurrentStatus.InGroup;
-        }
+        //if (IsGroupFormed == false)
+        //{
+        //    currentStatus = CurrentStatus.Solo;
+        //}
+        //else
+        //{
+        //    currentStatus = CurrentStatus.InGroup;
+        //}
 
         if (currentStatus == CurrentStatus.Solo)
         {
+            navmeshAgent.stoppingDistance = 0.1f;
             navmeshAgent.SetDestination(targetLocation.position);
             //navmeshAgent.destination = targetLocation.position;
             animator.SetBool("StartWalking", true);
@@ -62,8 +73,22 @@ public class characterAI : characterTypes
                     {
                         currentCharacterType = CharacaterType.Wanderer;
                     }
+                    else
+                    {
+                        countdown -= Time.deltaTime;
+                    }
+                    if (countdown <= 0)
+                    {
+                        chooseLocation();
+                        countdown = startCountdown;
+                    }
                     break;
                 case CharacaterType.Wanderer:
+                    if (targetLocation == null)
+                    {
+                        chooseLocation();
+                        navmeshAgent.avoidancePriority = Random.Range(45, 70);
+                    }
                     if (Vector3.Distance(transform.position, targetLocation.position) < distanceFromPoint)
                     {
                         time -= Time.deltaTime;
@@ -72,75 +97,34 @@ public class characterAI : characterTypes
                         {
                             chooseLocation();
                             time = Random.Range(1,4);
-                            int i = Random.Range(1, 11);
+                            int i = Random.Range(1, 4);
                             IsLeaderFormed = SetLeader.IfLeaderAvailable(i, false);
                             confirmLeader = CharacterParent.characterParent.ChooseLeader(IsLeaderFormed);
                             //Debug.Log(i);
                             
                         }
                     }
+                    else
+                    {
+                        countdown -= Time.deltaTime;
+                    }
+                    if (countdown <= 0)
+                    {
+                        chooseLocation();
+                        countdown = startCountdown;
+                    }
                     if (confirmLeader == true)
                     {
                         currentCharacterType = CharacaterType.Leader;
+                        confirmLeader = false;
+                    }
+                    else
+                    {
+                        IsLeaderFormed = false;
                     }
                     break;
                 case CharacaterType.Leader:
-                    List<GameObject> FollowerList = new List<GameObject>();
                     navmeshAgent.avoidancePriority = 90;
-                    foreach (Transform t in CharacterParent.characterParent.transform)
-                    {
-                        if (FollowerThreshold <= 5)
-                        {
-                            if (Vector3.Distance(transform.position, t.position) < 3f)
-                            {
-                                if (t.GetComponent<characterAI>().currentCharacterType == CharacaterType.Wanderer)
-                                {
-                                    TotalCohesion += cohesion + t.GetComponent<characterAI>().cohesion;
-                                    if (TotalCohesion >= 0)
-                                    {
-                                        FollowerThreshold++;
-                                        FollowerList.Add(t.gameObject);
-                                        TotalCohesion = 0;
-                                    }
-                                    else //This part needs to be redone to make it work
-                                    {
-                                        TotalCohesion = 0;
-                                    }
-                                    //IsGroupFormed = FormGroup.IfGroupFormable(TotalCohesion);
-                                    //if (IsGroupFormed == true)
-                                    //{
-                                    //    t.GetComponent<characterAI>().currentCharacterType = CharacaterType.Follower;
-                                    //}
-                                }
-                            }
-                        }
-                        else
-                        {
-                            if (IsGroupFormed == true)
-                            {
-                                GroupTime = TotalCohesion * 2; //this is in update , should not be here 
-                                if (GroupTime >= 1)
-                                {
-                                    GroupTime -= 1 * Time.deltaTime;
-                                }
-                                if (GroupTime <= 0)
-                                {
-                                    TotalCohesion = 0;
-                                    FollowerThreshold = 0;
-                                    currentCharacterType = CharacaterType.Wanderer;
-                                    confirmLeader = false;
-                                }
-                            }
-                            else
-                            {
-                                TotalCohesion = 0;
-                                FollowerThreshold = 0;
-                                currentCharacterType = CharacaterType.Wanderer;
-                                CharacterParent.characterParent.count = 0;
-                                confirmLeader = false;
-                            }
-                        }
-                    }
                     if (Vector3.Distance(transform.position, targetLocation.position) < distanceFromPoint)
                     {
                         time -= Time.deltaTime;
@@ -151,9 +135,73 @@ public class characterAI : characterTypes
                             time = Random.Range(1, 4);
                         }
                     }
+                    else
+                    {
+                        countdown -= Time.deltaTime;
+                    }
+                    if (countdown <= 0)
+                    {
+                        chooseLocation();
+                        countdown = startCountdown;
+                    }
+                    foreach (Transform t in CharacterParent.characterParent.transform)
+                    {
+                        if (FollowerThreshold <= 5 && Vector3.Distance(transform.position, t.position) < 3f)
+                        {
+                            if (t.GetComponent<characterAI>().currentCharacterType == CharacaterType.Wanderer)
+                            {
+                                TotalCohesion = TotalCohesion + t.GetComponent<characterAI>().cohesion;
+                                FollowerThreshold++;
+                                FollowerList.Add(t.gameObject);
+                                if (FollowerList.Count >= 6)
+                                {
+                                    leaderPrepared = true;
+                                }
+                            }
+                        }
+                    }
+                    //Yes, form group
+                    if (TotalCohesion >= 0 && leaderPrepared == true)
+                    {
+                        if (GTTriggered != true)
+                        {
+                            GroupTime = FormGroup.DetermineGrouptime(TotalCohesion);
+                            selectAction(2);
+                            GTTriggered = true;
+                        }
+                        if (GroupTime >= 0)
+                        {
+                            GroupTime -= Time.deltaTime;
+                        } 
+                        else
+                        {
+                            selectAction(3);
+                            FollowerList.Clear();
+                            currentCharacterType = CharacaterType.Wanderer;
+                            TotalCohesion = 0;
+                            FollowerThreshold = 0;
+                            leaderPrepared = false;
+                            GTTriggered = false;
+                            //say that there is no leader anymore
+                            CharacterParent.characterParent.confirmExistence(0);
+                        }
+                    }
+                    //No, become a wanderer
+                    else if (TotalCohesion < 0 && leaderPrepared == true)
+                    {
+                        leaderPrepared = false;
+                        GTTriggered = false;
+                        FollowerList.Clear();
+                        currentCharacterType = CharacaterType.Wanderer;
+                        TotalCohesion = 0;
+                        FollowerThreshold = 0;
+                        //say that there is no leader anymore
+                        CharacterParent.characterParent.confirmExistence(0);
+                    }
                     break;
                 case CharacaterType.Follower:
-                    navmeshAgent.avoidancePriority = 80;
+                    navmeshAgent.avoidancePriority = 70;
+                    //check for leader
                     foreach (Transform t in CharacterParent.characterParent.transform)
                     {
                         if (t.GetComponent<characterAI>().currentCharacterType == CharacaterType.Leader)
@@ -169,6 +217,7 @@ public class characterAI : characterTypes
             }
         }
     }
+
     private void OnDrawGizmos()
     {
         if (currentCharacterType == CharacaterType.Leader)
@@ -192,6 +241,18 @@ public class characterAI : characterTypes
                 if (currentCharacterType == CharacaterType.Passenger)
                 {
                     currentCharacterType = CharacaterType.Passenger;
+                }
+                break;
+            case 2: //For the leader to make followers
+                foreach (GameObject follower in FollowerList)
+                {
+                    follower.GetComponent<characterAI>().currentCharacterType = CharacaterType.Follower;
+                }
+                break;
+            case 3: //For the leader to remove followers
+                foreach (GameObject follower in FollowerList)
+                {
+                    follower.GetComponent<characterAI>().currentCharacterType = CharacaterType.Wanderer;
                 }
                 break;
         }

@@ -4,15 +4,15 @@ using UnityEngine;
 
 public static class FormGroup
 {
-    public static bool IfGroupFormable(int TotalCohesion)
+    public static float DetermineGrouptime(int TotalCohesion)
     {
-        if (TotalCohesion > 2)
+        if (TotalCohesion == 0)
         {
-            return true;
+            return 5;
         }
         else
         {
-            return false;
+            return (float)TotalCohesion + 5f;
         }
         
     }
