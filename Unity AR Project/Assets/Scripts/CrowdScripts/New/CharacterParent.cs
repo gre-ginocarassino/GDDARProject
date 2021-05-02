@@ -33,21 +33,6 @@ public class CharacterParent : MonoBehaviour
         }
     }
 
-    public void EnableCharacter(int count)
-    {
-        foreach (Transform child in transform)
-        {
-            if (count == 0)
-            {
-                if (child.name == "SpecialCharacter")
-                {
-                    child.gameObject.SetActive(true);
-                    count++;
-                }
-            }
-        }
-    }
-
     public bool ChooseLeader(bool hasFormed)
     {
         if (hasFormed == true)

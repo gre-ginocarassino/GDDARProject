@@ -1161,6 +1161,7 @@ MonoBehaviour:
   poolerPosition: {fileID: 479605202}
   parent: {fileID: 1142741963}
   persistentData: {fileID: 913554305}
+  prepared: 0
   pools:
   - tag: Walker
     charTypes:

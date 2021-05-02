@@ -38,7 +38,6 @@ public class Pooler : MonoBehaviour
             if (isSpawned == true && wait <= 0)
             {
                 spawn.SpawnFromPool("Walker", transform.position, transform.rotation);
-
                 wait = startWait;
             }
             else

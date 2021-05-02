@@ -25,11 +25,8 @@ public class Spawn : MonoBehaviour
 
     public PersistentData persistentData;
     private int c = 0;
-    //public CharacterBase characterBase;
 
-    //public NavMeshSurface surface;
-    //public NavMeshData[] data;
-    //NavMeshDataInstance navMeshInstance = new NavMeshDataInstance();
+    public bool prepared;
 
     public List<Pool> pools;
 
@@ -44,6 +41,7 @@ public class Spawn : MonoBehaviour
     }
     public void PrepareCharacters()
     {
+        prepared = false;
         //bake navmesh
         //surface.BuildNavMesh();
         
@@ -126,9 +124,14 @@ public class Spawn : MonoBehaviour
     //method to be called from Pooler, to "spawn" objects (set active)
     public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
     {
+        prepared = true;
+        if (spawnPool.Count == 0)
+        {
+            return null;
+        }
         if (!spawnPool.ContainsKey(tag))
         {
-        //    Debug.LogWarning("Pool with tag" + tag + "doesnt exist");
+            //Debug.LogWarning("Pool with tag" + tag + "doesnt exist");
             return null;
         }
 

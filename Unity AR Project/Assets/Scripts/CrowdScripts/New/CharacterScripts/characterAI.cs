@@ -54,6 +54,9 @@ public class characterAI : characterTypes
 
             switch (currentCharacterType) //switch from type to type
             {
+                case CharacaterType.Passenger:
+                    targetLocation = endNode._endNode.nodePoint.transform;
+                    break;
                 case CharacaterType.Tourist:
                     if (Vector3.Distance(transform.position, targetLocation.position) < distanceFromPoint)
                     {
@@ -197,22 +200,21 @@ public class characterAI : characterTypes
 
     public void SetInactive()
     {
-        gameObject.SetActive(false);
-    }
-
-    private void OnDisable() //gameobject ondiasble will be returned to queue
-    {
         if (currentCharacterType == CharacaterType.Passenger)
         {
-            if (Spawn._Spawn != null)
-            {
-                Spawn._Spawn.ReturnObjToQueue(this.gameObject, "Walker");
-            }
+            gameObject.SetActive(false);
         }
-        if (currentCharacterType == CharacaterType.Leader)
+    }
+
+
+    private void OnDisable()
+    {
+        if (Spawn._Spawn.prepared != false)
         {
             if (Spawn._Spawn != null)
             {
+                currentCharacterType = CharacaterType.Passenger;
+                Spawn._Spawn.ReturnObjToQueue(this.gameObject, "Walker");
             }
         }
     }
