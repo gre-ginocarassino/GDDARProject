@@ -20,6 +20,7 @@ public class StatsManager : MonoBehaviour
     {
         NameOfCountry = CountryName;
 
+        SaveSystem.Init();
         string Json = SaveSystem.Load(CountryName);
         CountryProp prop = new CountryProp();
 

@@ -5,7 +5,7 @@ using System.IO;
 
 public class SaveSystem : MonoBehaviour
 {
-    private static readonly string SAVE_FOLDER = Application.dataPath + "/Saves/";
+    private static readonly string SAVE_FOLDER = Application.persistentDataPath + "/Saves/";
 
     public static void Init()
     {
@@ -24,7 +24,7 @@ public class SaveSystem : MonoBehaviour
     {
         string SaveString;
 
-        if (Directory.Exists(Application.dataPath + "/Saves/"))
+        if (Directory.Exists(Application.persistentDataPath + "/Saves/"))
         {
             if (File.Exists(SAVE_FOLDER + "/" + name + ".txt"))
             {

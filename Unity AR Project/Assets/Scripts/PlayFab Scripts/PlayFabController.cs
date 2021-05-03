@@ -58,6 +58,8 @@ public class PlayFabController : MonoBehaviour
 
     public void Start()
     {
+        AndroidRuntimePermissions.Permission result = AndroidRuntimePermissions.RequestPermission("android.permission.WRITE_EXTERNAL_STORAGE");
+
         StartCoroutine(ActivationRoutine());
 
         //If the Title ID is null or empty, goes in here
