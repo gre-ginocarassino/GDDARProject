@@ -464,7 +464,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5864512214628701059, guid: f822f0975b5896548bd3237d8f0ffea5, type: 3}
+  - {fileID: 2100000, guid: c1222672e4d090c42b4ac915c2808feb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21729,7 +21729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -68992.375}
+  m_AnchoredPosition: {x: 0, y: -70444.97}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &4082398585832768629
@@ -39258,6 +39258,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LandMarkInfo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5872082630902892768, guid: a516039ed6f96c547908614649ba3eca,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5872082630902892783, guid: a516039ed6f96c547908614649ba3eca,
         type: 3}
