@@ -30,9 +30,12 @@ public class PlaceController : MonoBehaviour
     public int floatScore;
 
     private bool isTesting;
+    private StatsManager obj_Stats_Manager;
 
     public virtual void Awake()
     {
+        obj_Stats_Manager = (StatsManager)FindObjectOfType(typeof(StatsManager));
+
         //setting the variables we need as this object is going to be spawned at runtime :)
         boardController = (BoardController)FindObjectOfType(typeof(BoardController));
         isTesting = boardController.isTesting;
@@ -40,6 +43,8 @@ public class PlaceController : MonoBehaviour
         flagCont = (FlagController)FindObjectOfType(typeof(FlagController));
 
         pooler = new Pooler();
+
+
     }
 
     // Start is called before the first frame update
@@ -61,6 +66,8 @@ public class PlaceController : MonoBehaviour
 
         if (baseSections == null)
         {
+            Debug.Log("PC : Spawning Start" + name);
+
             if (isTesting)
             {
                 baseSections = Instantiate(baseSectionsPrefabs, transform);
@@ -74,11 +81,13 @@ public class PlaceController : MonoBehaviour
             }
             else
             {
+                Debug.Log("PC : Downloading" + name);
                 StartCoroutine(downloader());
             }
         }
         else
         {
+            Debug.Log("PC : Just Spawning" + name);
             StartCoroutine(VariablesResizing(1));
             Debug.Log("Place Controller : Already One In The Scene : VR1");
         }
@@ -119,7 +128,9 @@ public class PlaceController : MonoBehaviour
     {
         baseSectionVariables.gameObject.SetActive(true);
 
-
+        baseSectionVariables.musicSource.clip = baseSectionVariables.musicClip;
+        baseSectionVariables.musicSource.Play();
+        boardController.musicEffect.Play();
 
         //If the new scale is = 1, it's getting bigger, if it's not
         //it's getting smaller.
@@ -251,6 +262,8 @@ public class PlaceController : MonoBehaviour
 
             baseSectionVariables.gameObject.SetActive(false);
         }
+
+        boardController.activeSection = this;
     }
 
     IEnumerator RoadAnimation(float number)

@@ -65,10 +65,10 @@ public class AssetBundleAzure : MonoBehaviour
     {
         if (assetBundle != null)
         {
-            RemovePrefabs();
-            loadedObject = null;
-            assetBundle.Unload(true);
-            Debug.Log("Unloaded Asset Bundle");
+            //RemovePrefabs();
+            //loadedObject = null;
+            //assetBundle.Unload(true);
+            //Debug.Log("Unloaded Asset Bundle");
         }
     }
 
