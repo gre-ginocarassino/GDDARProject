@@ -91,16 +91,21 @@ public class BoardController : MonoBehaviour
         }
         growingSection.LoadPlace();
 
-        Debug.Log("BoardController : Growing Section : " + growingSection);
-        activeSection = growingSection;
+        
+        if (isTesting)
+        {
+            Debug.Log("BoardController : Growing Section : " + growingSection);
+            activeSection = growingSection;
 
-        headingText.text = growingSection.name;
-        subheadingText.text = growingSection.countryScore;
+            headingText.text = growingSection.name;
+            subheadingText.text = growingSection.countryScore;
 
-        //Load questions stats from JSON File
-        obj_Stats_Manager.Load(growingSection.AssetbundleName);
+            //Load questions stats from JSON File
+            obj_Stats_Manager.Load(growingSection.AssetbundleName);
 
-        MainController.MCC.UpdateGameStatistics();
+            MainController.MCC.UpdateGameStatistics();
+        }
+
     }
 
     public void ShrinkSection(PlaceController shrinkingSection)

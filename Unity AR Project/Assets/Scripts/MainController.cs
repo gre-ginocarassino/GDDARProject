@@ -105,6 +105,7 @@ public class MainController : MonoBehaviour
         GetPlayerData();
 
         SetupStore();
+        UpdateGameStatistics();
     }
 
     private void Update()

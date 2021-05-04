@@ -14,6 +14,8 @@ public class StatsManager : MonoBehaviour
     private void Start()
     {
         mainCont = (MainController)FindObjectOfType(typeof(MainController));
+
+        
     }
 
     public void Load(string CountryName)

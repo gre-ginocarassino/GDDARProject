@@ -25,6 +25,6 @@ public class InteractableObjectARButton : InteracbleObject
     public override void Interact()
     {
         //ardCont.NewSection(thePlace);
-        UIManager.Instance.SlideInOut(uiPanel);
+        UIManager.Instance.MapOpener();
     }
 }
